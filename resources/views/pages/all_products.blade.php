@@ -171,7 +171,7 @@
         </div>
         <div class="container mt-3">
           <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
               <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
                 <div class="product_card_imag_box">
                 <img src="/assets/img/products/product1.webp">
@@ -192,7 +192,7 @@
               </div>
               
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
               <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
                 <div class="product_card_imag_box">
                 <img src="/assets/img/products/image1.webp">
@@ -213,7 +213,7 @@
               </div>
               
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3 " style="">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3 " data-aos="fade-left" data-aos-delay="300" style="">
               <div class="conslutation" style="border-radius: 10px;height: 450px;">
                 
               
@@ -248,7 +248,7 @@
 
         <div class="container mt-3">
           <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
               <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
                 <div class="product_card_imag_box">
                 <img src="/assets/img/products/product1.webp">
@@ -269,7 +269,7 @@
               </div>
               
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
               <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
                 <div class="product_card_imag_box">
                 <img src="/assets/img/products/image1.webp">
@@ -290,7 +290,7 @@
               </div>
               
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
               <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
                 <div class="product_card_imag_box">
                 <img src="/assets/img/products/product1.webp">
@@ -311,7 +311,7 @@
               </div>
               
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
               <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
                 <div class="product_card_imag_box">
                 <img src="/assets/img/products/image1.webp">
@@ -348,7 +348,7 @@
 
         <div class="container mt-3">
           <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3 " >
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3 " data-aos="fade-left" data-aos-delay="300" >
               <div class="spot_light">
              
               <div class="w-100" style="background:url(/assets/img/hero_image/leaf2.webp);height: 180px;">
@@ -377,7 +377,7 @@
           </div>
 
 
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
               <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
                 <div class="product_card_imag_box">
                 <img src="/assets/img/products/product1.webp">
@@ -398,7 +398,7 @@
               </div>
               
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
               <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
                 <div class="product_card_imag_box">
                 <img src="/assets/img/products/image1.webp">

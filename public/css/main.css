@@ -52,6 +52,9 @@ body.show-spinner>* {
 .relative{
   position: relative!important;
 }
+.absolute{
+  position: absolute!important;
+}
 /* Spinner */
 body.show-spinner::after {
   content: " ";
@@ -101,6 +104,11 @@ li{list-style: none;
 .pointer{
   cursor: pointer;
 }
+.little_page_title{
+  color: #F68634 !important;;
+}
+
+
 .btn:focus, .btn.focus {
   outline: 0;
   -webkit-box-shadow: 0 0 0 0 rgba(0,123,255,0.25);
@@ -819,6 +827,34 @@ background: #fff;
   padding-right: 150px;
   padding-top: 50px;
 }
+
+
+/*11.about us*/
+.header_text h1{
+  font-size:48px;
+}
+.w_50_100{
+  width: 50%;
+}
+.about_us_hero{
+  height: 600px;
+
+}
+.about_us_hero img{
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+}
+.white_btn{
+   height: 40px;
+  width: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 0px;
+  box-shadow: 3px 6px 14px rgba(0, 0, 0, 0.1);
+  color: #F68634;
+  padding-bottom: 5px;
+}
 /*footer*/
 footer p,a{
    color: #7c8c9c;
@@ -1089,6 +1125,21 @@ margin-top: 30px;
   padding-right: 30px;
   padding-top: 50px;
 }
+.header_text h1{
+  font-size:48px;
+}
+.w_50_100{
+  width: 50%;
+}
+.about_us_hero{
+  height: 600px;
+
+}
+.about_us_hero img{
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+}
 }
 
 
@@ -1279,6 +1330,21 @@ margin-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 50px;
+}
+.header_text h1{
+  font-size:28px;
+}
+.w_50_100{
+  width: 100%;
+}
+.about_us_hero{
+  height: 300px;
+
+}
+.about_us_hero img{
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
 }
 }
 
@@ -1475,6 +1541,22 @@ margin-left: 7px !important;
   padding-right: 20px;
   padding-top: 10px;
 }
+.header_text h1{
+  font-size:28px;
+}
+.w_50_100{
+  width: 100%;
+}
+
+.about_us_hero{
+  height: 200px;
+
+}
+.about_us_hero img{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
 }
 
 
@@ -1586,5 +1668,20 @@ margin-left: 7px !important;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
+}
+.header_text h1{
+  font-size:28px;
+}
+.w_50_100{
+  width: 100%;
+}
+.about_us_hero{
+  height: 200px;
+
+}
+.about_us_hero img{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
 }
 }

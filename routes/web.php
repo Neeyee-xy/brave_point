@@ -23,5 +23,8 @@ Route::get('/all_products', function () {
 Route::get('/cart', function () {
     return view('pages.cart');
 });
+Route::get('/about_us', function () {
+    return view('pages.about_us');
+});
 
 
