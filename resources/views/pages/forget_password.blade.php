@@ -48,13 +48,17 @@
     }
     .left_sign_box_inner_box{
         position: absolute;
-        height: 65px;
+        height: 200px;
         color: #000;
         width: 60%;
-        background: #fff;
+/*        background: #fff;*/
         bottom: 10%;
         left: 10%;
         border-radius: 10px;
+    }
+    .left_sign_box_inner_box img{
+        height: 100%;
+        width: auto;
     }
     .google_login{
         height: 50px;
@@ -93,8 +97,7 @@
     <div class="left_sign_box w_50_100">
          <img  src="/assets/img/hero_image/login.webp" alt="">
          <div class="left_sign_box_inner_box pl-4 pt-2">
-            <h5>01 -----</h5>
-            <p class="mt-1">Ibacode Herbal tea</p>
+            <img src="/assets/img/logos/logo.jpg" data-aos="zoom-in" data-aos-delay="300">
              
          </div>
         

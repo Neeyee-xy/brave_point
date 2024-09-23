@@ -213,7 +213,49 @@
               </div>
               
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3 " data-aos="fade-left" data-aos-delay="300" style="">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
+              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
+                <div class="product_card_imag_box">
+                <img src="/assets/img/products/product5.png">
+              </div>
+                <div class="product_description p-1">
+                  <h6>Ibacode Herbal Tea</h6>
+                  <div class="d-flex justify-content-between">
+                    <p class="font-weight-bold">NGN 35,000.132</p>
+                    <p>100ml</p>
+                    
+                  </div>
+                  <div>
+                    <p>Buy your prescription tincture blend here.</p>
+                  </div>
+                  
+                </div>
+                
+              </div>
+              
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
+              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
+                <div class="product_card_imag_box">
+                <img src="/assets/img/products/product6.png">
+              </div>
+                <div class="product_description p-1">
+                  <h6>Abosad Table Water</h6>
+                  <div class="d-flex justify-content-between">
+                    <p class="font-weight-bold">NGN 35,000.132</p>
+                    <p>100ml</p>
+                    
+                  </div>
+                  <div>
+                    <p>Buy your prescription tincture blend here.</p>
+                  </div>
+                  
+                </div>
+                
+              </div>
+              
+            </div>
+           <!--  <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3 " data-aos="fade-left" data-aos-delay="300" style="">
               <div class="conslutation" style="border-radius: 10px;height: 450px;">
                 
               
@@ -235,7 +277,7 @@
               </div>
             </div>
             </div>
-            </div>
+            </div> -->
             
                  
 
@@ -272,7 +314,28 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
               <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
                 <div class="product_card_imag_box">
-                <img src="/assets/img/products/image1.webp">
+                <img src="/assets/img/products/product3.png">
+              </div>
+                <div class="product_description p-1">
+                  <h6>Abosad Table Water</h6>
+                  <div class="d-flex justify-content-between">
+                    <p class="font-weight-bold">NGN 35,000.132</p>
+                    <p>100ml</p>
+                    
+                  </div>
+                  <div>
+                    <p>Buy your prescription tincture blend here.</p>
+                  </div>
+                  
+                </div>
+                
+              </div>
+              
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
+              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
+                <div class="product_card_imag_box">
+                <img src="/assets/img/products/image7.webp">
               </div>
                 <div class="product_description p-1">
                   <h6>Ibacode Herbal Tea</h6>
@@ -293,28 +356,7 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
               <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
                 <div class="product_card_imag_box">
-                <img src="/assets/img/products/product1.webp">
-              </div>
-                <div class="product_description p-1">
-                  <h6>Ibacode Herbal Tea</h6>
-                  <div class="d-flex justify-content-between">
-                    <p class="font-weight-bold">NGN 35,000.132</p>
-                    <p>100ml</p>
-                    
-                  </div>
-                  <div>
-                    <p>Buy your prescription tincture blend here.</p>
-                  </div>
-                  
-                </div>
-                
-              </div>
-              
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
-              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
-                <div class="product_card_imag_box">
-                <img src="/assets/img/products/image1.webp">
+                <img src="/assets/img/products/image6.webp">
               </div>
                 <div class="product_description p-1">
                   <h6>Ibacode Herbal Tea</h6>
@@ -348,7 +390,49 @@
 
         <div class="container mt-3">
           <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3 " data-aos="fade-left" data-aos-delay="300" >
+             <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
+              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
+                <div class="product_card_imag_box">
+                <img src="/assets/img/products/product4.png">
+              </div>
+                <div class="product_description p-1">
+                  <h6>RECTY-PRO</h6>
+                  <div class="d-flex justify-content-between">
+                    <p class="font-weight-bold">NGN 35,000.132</p>
+                    <p>100ml</p>
+                    
+                  </div>
+                  <div>
+                    <p>Buy your prescription tincture blend here.</p>
+                  </div>
+                  
+                </div>
+                
+              </div>
+              
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
+              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
+                <div class="product_card_imag_box">
+                <img src="/assets/img/products/product5.png">
+              </div>
+                <div class="product_description p-1">
+                  <h6>DE BRAVE Man Booster</h6>
+                  <div class="d-flex justify-content-between">
+                    <p class="font-weight-bold">NGN 35,000.132</p>
+                    <p>100ml</p>
+                    
+                  </div>
+                  <div>
+                    <p>Buy your prescription tincture blend here.</p>
+                  </div>
+                  
+                </div>
+                
+              </div>
+              
+            </div>
+          <!--   <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3 " data-aos="fade-left" data-aos-delay="300" >
               <div class="spot_light">
              
               <div class="w-100" style="background:url(/assets/img/hero_image/leaf2.webp);height: 180px;">
@@ -374,7 +458,7 @@
                  
             </div>
             </div>
-          </div>
+          </div> -->
 
 
             <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">

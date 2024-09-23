@@ -52,13 +52,13 @@
               <div class="slide_wrap w-100">
                 <div class="slide_show">
                 <div class="slide_img">
-                  <div class="slide first_slide d-flex justify-content-center px-5 mr-3">
+                  <div class="slide  d-flex justify-content-center px-5 mr-3">
                     <img  class="slide_img_ my-auto" src="/assets/img/products/image1.webp" >
-                     <div class="slide_inner_box p-3">
+                     <!-- <div class="slide_inner_box p-3">
                       <p>01-</p>
                       <p>Abdocare Herbal Tea</p>
                       
-                    </div>
+                    </div> -->
                   </div>
                   <div class="slide d-flex justify-content-center px-5 mr-3" style="background:#F1F0F3;">
                     <img  class="slide_img_" src="/assets/img/products/image2.webp" alt="">
@@ -90,7 +90,7 @@
 
         <div class="mt-5  container">
           <div class="row">
-            <div class="col-12 col-sm-12  col-md-12 col-lg-4" data-aos="fade-right" data-aos-delay="300">
+            <div class="col-12 col-sm-12  col-md-6 col-lg-6" data-aos="fade-right" data-aos-delay="300">
               <div class="w-100 ">
                 <h1>Why Choose Herbal Remedies?</h1>
 
@@ -101,15 +101,10 @@
 
               </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
-              <div class="w-100  ml-sm-0 ml-lg-4" >
-                <img  class="image_box" src="/assets/img/hero_image/hero_image_1.webp" alt="">
-
-              </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="300">
+           
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="300">
               <div class="w-100 ml-sm-0 ml-md-4">
-                <div class="detail_box">
+                <div class="">
                 <p><b>Natural Ingredients:</b> Made from pure, natural herbs with no artificial additives.</p>
 
                 </div>
@@ -281,10 +276,10 @@
           </div>
             <div class="w-100  product_grid">
               <img  class="mr-2 ml-2" src="/assets/img/products/image4.webp" alt="" data-aos="zoom-in-right"  data-aos-delay="300">
-              <img  class="mr-2 ml-2" src="/assets/img/products/image5.webp" alt="" data-aos="zoom-in-right"  data-aos-delay="300">
+              <img  class="mr-2 ml-2" src="/assets/img/products/image1.webp" alt="" data-aos="zoom-in-right"  data-aos-delay="300">
               <img  class="mr-2 ml-2" src="/assets/img/products/image6.webp" alt=""data-aos="zoom-in-right"  data-aos-delay="300">
               <img  class="mr-2 ml-2" src="/assets/img/products/image7.webp" alt="" data-aos="zoom-in-right"  data-aos-delay="300"> 
-              <img  class="mr-2 ml-2" src="/assets/img/products/image8.webp" alt="" data-aos="zoom-in-right"  data-aos-delay="300">
+              <img  class="mr-2 ml-2" src="/assets/img/products/image3.webp" alt="" data-aos="zoom-in-right"  data-aos-delay="300">
 
               
             </div>

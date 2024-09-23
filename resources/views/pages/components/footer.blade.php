@@ -82,7 +82,7 @@
                
               <div class="w-100  footer_link">
                 <ul>
-                  <li><a href="#" class="first_link">About</a></li>
+                  <li><a href="/about_us" class="first_link">About</a></li>
                   <li><a href="#" class="">Features</a></li>
                   <li><a href="#" class="">Works</a></li>
                   <li><a href="#" class="">Career</a></li>

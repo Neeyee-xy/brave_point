@@ -256,7 +256,7 @@ li{list-style: none;
 /*4. slider */
 
 .slide_show{
-  width: 850px;
+  width: 972px;
   overflow: hidden;
   position: relative;
   margin: 10px auto;
@@ -279,7 +279,7 @@ li{list-style: none;
 }
 .slide_img_{
 width: 100%!important;
-height: 350px;
+height: auto;
 
 }
 
@@ -1096,7 +1096,7 @@ margin-top: 30px;
   overflow-x: scroll;
 }
 .product_grid img{
-  height: 380px;
+  height: 353px;
   margin-top: 10px;
   
 }

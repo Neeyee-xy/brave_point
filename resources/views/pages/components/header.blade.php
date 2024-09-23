@@ -20,7 +20,8 @@
 <body class="show-spinner">
     <nav class="navbar navbar-expand-lg navbar-light white_background">
           <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-          <img src="/assets/img/logos/BravePoint.svg" data-aos="zoom-in" data-aos-delay="300">
+          <a  href="/index"> <img src="/assets/img/logos/BravePoint.svg" data-aos="zoom-in" data-aos-delay="300"></a>
+         
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
