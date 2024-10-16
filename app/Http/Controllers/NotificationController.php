@@ -12,13 +12,13 @@ class NotificationController extends Controller
     public function notifications(Request $request)
    {
       if (Auth::user()->user_type==UserType::ADMIN->title()) {
-            $notifications=Notification::where('user_type',UserType::ADMIN->title())->get();
+            $notifications=Notification::where('user_type',UserType::ADMIN->title())orderby('id','DESC')->get();
              Notification::where('user_type',UserType::ADMIN->title())->update(['status'=>'true']);
 
             return view('pages.admin.notifications.notifications',compact('notifications'))->with(['page_title'=>'Notifications']);
         }
          if (Auth::user()->user_type==UserType::CLIENT->title()) {
-             $notifications=Notification::where('user_id',Auth::user()->id)->where('user_type',UserType::CLIENT->title())->get();
+             $notifications=Notification::where('user_id',Auth::user()->id)->where('user_type',UserType::CLIENT->title())orderby('id','DESC')->get();
              Notification::where('user_id',Auth::user()->id)->update(['status'=>'true']);
             return view('pages.client.notifications.notifications',compact('notifications'))->with(['page_title'=>'Notifications']);
         }
