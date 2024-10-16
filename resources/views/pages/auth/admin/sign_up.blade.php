@@ -79,7 +79,7 @@
             
         </div>
         <div class="w-100 d-flex justify-content-center mt-4">
-            <p>Have an account? <a href="/sign_in" class="active">Sign In</a></p>
+            <p>Have an account? <a href="/auth/sign_in" class="active">Sign In</a></p>
             
             
         </div>
