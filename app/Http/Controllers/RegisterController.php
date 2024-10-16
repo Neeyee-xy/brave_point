@@ -289,7 +289,7 @@ Mail::to($request->email)->queue(new NotificationMaller($data));
         
         $user->email_verified_at=Now();
         $user->save();
-           // Auth::loginUsingId($user->id);
+        Auth::loginUsingId($user->id);
         return redirect('/auth/verified')->with('success', 'Verification successful!');
               
        }else{
