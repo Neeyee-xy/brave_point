@@ -1,5 +1,9 @@
  @include('pages.components.header')
-
+<style type="text/css">
+  .product_img img{
+    width: auto;
+  }
+</style>
 
 
 
