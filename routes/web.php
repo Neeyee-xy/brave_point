@@ -103,10 +103,10 @@ Route::middleware(['Auth'])->group(function () {
 // Route::get('/auth/verifications/{verification_code}', [RegisterController::class, 'verify_user'])->name('verify_user');
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 Route::post('/count_notifications', [NotificationController::class, 'count_notifications'])->name('count_notifications');
-Route::get('/cart', [CartController::class, 'checkout'])->name('checkout');
+Route::get('/cart', [CartController::class, 'checkout'])->name('checkout')->withoutMiddleware('IncompleteTransactions');;
 
-Route::post('/create_order', [OrderController::class, 'create_order'])->name('create_order');
-Route::get('/verify_payment', [OrderController::class, 'verify_payment'])->name('verify_payment');
+Route::post('/create_order', [OrderController::class, 'create_order'])->name('create_order')->withoutMiddleware('IncompleteTransactions');;
+Route::get('/verify_payment', [OrderController::class, 'verify_payment'])->name('verify_payment')->withoutMiddleware('IncompleteTransactions');;
 
 Route::get('/sign_out', [LoginController::class, 'sign_out'])->name('sign_out');
 Route::post('/view_order', [OrderController::class, 'view_order'])->name('view_order');
