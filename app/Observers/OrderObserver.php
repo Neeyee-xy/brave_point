@@ -112,8 +112,8 @@ class OrderObserver
                         $prices[]=$cart->qty*$cart->price;
                     }
                      $order_details[]="<tr style='border: 1px solid;'><td colspan='2' style='border: 1px solid;'>Sub-Total </td><td style='border: 1px solid;'>".number_format(array_sum($prices),2)."</td></tr>";
-                     $order_details[]="<tr style='border: 1px solid;'><td colspan='2' style='border: 1px solid;'>Delivery Fee </td><td style='border: 1px solid;'>".number_format($delivery->price,2)."</td></tr>";
-                     $order_details[]="<tr style='border: 1px solid;'><td colspan='2' style='border: 1px solid;'>Total</td><td style='border: 1px solid;'>".number_format(number_format($delivery->price,2)+number_format(array_sum($prices),2),2)."</td></tr>";
+                     $order_details[]="<tr style='border: 1px solid;'><td colspan='2' style='border: 1px solid;'>Delivery Fee </td><td style='border: 1px solid;'>".number_format((int)$delivery->price,2)."</td></tr>";
+                     $order_details[]="<tr style='border: 1px solid;'><td colspan='2' style='border: 1px solid;'>Total</td><td style='border: 1px solid;'>".number_format(number_format((int)$delivery->price,2)+number_format(array_sum($prices),2),2)."</td></tr>";
                      $order_details[]="</table>";
   $data = [
             'name' =>Auth::user()->name,
@@ -164,7 +164,7 @@ Customer Name: ".Auth::user()->name."
 <br>
 Shipping Address: ".Auth::user()->address.", ".$delivery->location.",".Auth::user()->country."<br>
 Items Ordered: <br>".implode("", $order_details)."<br>
-Total Amount: NGN ".number_format(number_format($delivery->price,2)+number_format(array_sum($prices),2),2)."
+Total Amount: NGN ".number_format(number_format((int)$delivery->price,2)+number_format(array_sum($prices),2),2)."
 Please review the order details and ensure everything is correct. If you need to make any changes, please contact the customer at ".Auth::user()->email." or ".Auth::user()->phone."
 
 Once you've confirmed the order, please proceed with processing and shipping.
