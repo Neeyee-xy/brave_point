@@ -6,6 +6,7 @@ use App\Enums\UserType;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
