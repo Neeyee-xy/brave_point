@@ -159,9 +159,9 @@ $('#summernote').summernote({
 
  
 
-$('#heading_image1').find('input[type="radio"]').filter('[value="{{$settings->heading_image1}}"]').prop('checked', true);
-$('#heading_image2').find('input[type="radio"]').filter('[value="{{$settings->heading_image2}}"]').prop('checked', true);
-$('#heading_image3').find('input[type="radio"]').filter('[value="{{$settings->heading_image3}}"]').prop('checked', true);
+$('#heading_image1').find('input[type="radio"]').filter('[value="{{$settings?->heading_image1}}"]').prop('checked', true);
+$('#heading_image2').find('input[type="radio"]').filter('[value="{{$settings?->heading_image2}}"]').prop('checked', true);
+$('#heading_image3').find('input[type="radio"]').filter('[value="{{$settings?->heading_image3}}"]').prop('checked', true);
 
   $('form[name="product_form"]').on('submit',(function(e){
  
