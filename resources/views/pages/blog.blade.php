@@ -79,7 +79,7 @@ if (!function_exists('find_first_post')) {
               <div class="w-100 leading_blog_box_1">
                 <img src="{{$first_post->image}}">
                 <div class="mb-2 mt-2">
-                  <p class="little_page_title " data-aos="zoom-in" data-aos-delay="300">{{$first_post?->user?->name}} • {{Helper::time_elapsed_string($first_post->created_at, $full = false)}}</p>
+                  <p class="little_page_title " data-aos="zoom-in" data-aos-delay="300">{{ucfirst($first_post?->user?->name)}} • {{Helper::time_elapsed_string($first_post->created_at, $full = false)}}</p>
                 </div>
                 <div class="mb-2 mt-2 d-flex">
                   <h3 class="font-weight-bold">{{$first_post?->title}}</h3>
@@ -110,7 +110,7 @@ if (!function_exists('find_first_post')) {
               <img src="{{$first_post->image}}">
                 <div class="ml-2">
                 <div class="mb-1 mt-1">
-                  <p class="little_page_title " data-aos="zoom-in" data-aos-delay="300">{{$first_post?->user?->name}} • {{Helper::time_elapsed_string($first_post->created_at, $full = false)}}</p>
+                  <p class="little_page_title " data-aos="zoom-in" data-aos-delay="300">{{ucfirst($first_post?->user?->name)}} • {{Helper::time_elapsed_string($first_post->created_at, $full = false)}}</p>
                 </div>
                 <div class="mb-1 mt-1 d_flex_grid">
                   <h6 class="font-weight-bold">{{$first_post?->title}}</h6>
@@ -136,7 +136,7 @@ if (!function_exists('find_first_post')) {
               <img src="{{$first_post->image}}">
                 <div class="ml-2">
                 <div class="mb-1 mt-1">
-                  <p class="little_page_title " data-aos="zoom-in" data-aos-delay="300">{{$first_post?->user?->name}} • {{Helper::time_elapsed_string($first_post->created_at, $full = false)}}</p>
+                  <p class="little_page_title " data-aos="zoom-in" data-aos-delay="300">{{ucfirst($first_post?->user?->name)}} • {{Helper::time_elapsed_string($first_post->created_at, $full = false)}}</p>
                 </div>
                 <div class="mb-1 mt-1 d_flex_grid">
                   <h6 class="font-weight-bold">{{$first_post?->title}}</h6>
@@ -170,7 +170,7 @@ if (!function_exists('find_first_post')) {
                 <img src="{{$blog->image}}">
                 <div class="ml-2">
                 <div class="mb-1 mt-1">
-                  <p class="little_page_title " data-aos="zoom-in" data-aos-delay="300">{{$blog?->user?->name}} • {{Helper::time_elapsed_string($blog->created_at, $full = false)}}</p>
+                  <p class="little_page_title " data-aos="zoom-in" data-aos-delay="300">{{Ucfirst($blog?->user?->name)}} • {{Helper::time_elapsed_string($blog->created_at, $full = false)}}</p>
                 </div>
                 <div class="mb-1 mt-1 d_flex_grid">
                   <h6 class="font-weight-bold">{{$blog?->title}}</h6>
