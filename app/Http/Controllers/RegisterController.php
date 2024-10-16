@@ -56,11 +56,11 @@ Thank you for registering with ".ucfirst(env('APP_NAME'))."! <br>We're excited t
 
 To confirm your registration,<br> please click on the following link:
 
-<p style='color:black;'><a href='". env('APP_URL')."/auth/verifications/".$verification_code."' style='background-color: #263544;padding:10px;text-decoration:none;color:white;border:1 px solid  #263544;border-radius:10px;justifly-content:center; '>Verify Email Address.</a></p>
+<p style='color:black;'><a href='". env('APP_URL')."auth/verifications/".$verification_code."' style='background-color: #263544;padding:10px;text-decoration:none;color:white;border:1 px solid  #263544;border-radius:10px;justifly-content:center; '>Verify Email Address.</a></p>
 <br>
 If you have any trouble clicking on the link, please copy and paste the link below into your web browser.
 <br>
-". env('APP_URL')."/auth/verifications/".$verification_code."
+". env('APP_URL')."auth/verifications/".$verification_code."
 
 
 <br>
@@ -124,11 +124,11 @@ Thank you for registering with ".ucfirst(env('APP_NAME'))."! <br>We're excited t
 
 To confirm your registration,<br> please click on the following link:
 
-<p style='color:black;'><a href='". env('APP_URL')."/auth/verifications/".$verification_code."' style='background-color: #263544;padding:10px;text-decoration:none;color:white;border:1 px solid  #263544;border-radius:10px;justifly-content:center; '>Verify Email Address.</a></p>
+<p style='color:black;'><a href='". env('APP_URL')."auth/verifications/".$verification_code."' style='background-color: #263544;padding:10px;text-decoration:none;color:white;border:1 px solid  #263544;border-radius:10px;justifly-content:center; '>Verify Email Address.</a></p>
 <br>
 If you have any trouble clicking on the link, please copy and paste the link below into your web browser.
 <br>
-". env('APP_URL')."/auth/verifications/".$verification_code."
+". env('APP_URL')."auth/verifications/".$verification_code."
 
 
 <br>
@@ -202,11 +202,11 @@ Mail::to($request->email)->queue(new NotificationMaller($data));
 
                 You have requested to reset your password for ".ucfirst(env('APP_NAME')).". To complete the process, please click on the link below or copy and paste it into your web browser:
 
-                <p style='color:black;'><a href='". env('APP_URL')."/auth/verify_token/".$verification_code."' style='background-color: #263544;padding:10px;text-decoration:none;color:white;border:1 px solid  #263544;border-radius:10px;justifly-content:center; '>Reset Password.</a></p>
+                <p style='color:black;'><a href='". env('APP_URL')."auth/verify_token/".$verification_code."' style='background-color: #263544;padding:10px;text-decoration:none;color:white;border:1 px solid  #263544;border-radius:10px;justifly-content:center; '>Reset Password.</a></p>
                     <br>
                     If you have any trouble clicking on the link, please copy and paste the link below into your web browser.
                     <br>
-                    ". env('APP_URL')."/auth/verify_token/".$verification_code."
+                    ". env('APP_URL')."auth/verify_token/".$verification_code."
 
 
                     <br>
