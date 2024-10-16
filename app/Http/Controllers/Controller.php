@@ -21,7 +21,7 @@ class Controller extends BaseController
             $settings = Setting::firstorfail();
             
         } catch (ModelNotFoundException $e) {
-           if (Auth::user()->user_type==UserType::ADMIN->title()) {
+           if (Auth::user()?->user_type==UserType::ADMIN->title()) {
                        return ([
                             'errors' => 'Paystack secret not found',
                         ]);
