@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('user_id')->nullable();
             $table->string('amount')->nullable();
             $table->string('status')->nullable();
+             $table->string('ref')->nullable();
             $table->timestamps();
         });
     }
