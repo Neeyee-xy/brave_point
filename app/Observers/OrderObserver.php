@@ -113,6 +113,7 @@ class OrderObserver
                     }
                      $order_details[]="<tr style='border: 1px solid;'><td colspan='2' style='border: 1px solid;'>Sub-Total </td><td style='border: 1px solid;'>".number_format(array_sum($prices),2)."</td></tr>";
                      $order_details[]="<tr style='border: 1px solid;'><td colspan='2' style='border: 1px solid;'>Delivery Fee </td><td style='border: 1px solid;'>".number_format((int)$delivery->price,2)."</td></tr>";
+                     dd($delivery->price);
                      $order_details[]="<tr style='border: 1px solid;'><td colspan='2' style='border: 1px solid;'>Total</td><td style='border: 1px solid;'>".number_format((int)$delivery->price+array_sum($prices),2)."</td></tr>";
                      $order_details[]="</table>";
   $data = [
