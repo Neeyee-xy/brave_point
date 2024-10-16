@@ -33,7 +33,7 @@ class CartController extends Controller
         $add_item->product_id=$request->id;
         $add_item->qty=$request->qty;
         $add_item->unit=$request->unit;
-        $add_item->price=str_ireplace(",", "", $request->price);
+        $add_item->price=str_ireplace(".00",''str_ireplace(",", "", $request->price));
         $add_item->status="In Cart";
         $add_item->user_type="Guest";
         $add_item->cart_order_id=time();
