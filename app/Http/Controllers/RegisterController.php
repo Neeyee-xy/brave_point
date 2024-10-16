@@ -140,7 +140,7 @@ Sincerely,
 ".ucfirst(env('APP_NAME'))."";
 
 Notification::create([
-                    'user_id' => $order->user_id,
+                    
                     'user_type' => 'Admin',
                     'message' => 'New User Registered',
                     'message_type' => 'user',
