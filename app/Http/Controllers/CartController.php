@@ -33,7 +33,7 @@ class CartController extends Controller
         $add_item->product_id=$request->id;
         $add_item->qty=$request->qty;
         $add_item->unit=$request->unit;
-        $add_item->price=intval($request->price);
+        $add_item->price=str_ireplace(",", "", $request->price);
         $add_item->status="In Cart";
         $add_item->user_type="Guest";
         $add_item->cart_order_id=time();
@@ -56,7 +56,7 @@ class CartController extends Controller
             $add_item->product_id=$request->id;
             $add_item->qty=$request->qty;
             $add_item->unit=$request->unit;
-            $add_item->price=intval($request->price);
+            $add_item->price=str_ireplace(",", "", $request->price);
             $add_item->status="In Cart";
             $add_item->user_type="Guest";
             $add_item->cart_order_id=time();
@@ -67,7 +67,7 @@ class CartController extends Controller
         $carts=Cart::with('product')->where('user_id',$user_id)->where('status','In Cart')->get();
         $prices=[];
         foreach ($carts as $cart) {
-            $prices[]=$cart->qty*intval($cart->price);
+            $prices[]=$cart->qty*str_ireplace(",", "", $cart->price);
         }
 
         
