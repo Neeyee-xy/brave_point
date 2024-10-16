@@ -1,134 +1,5 @@
  @include('pages.components.header')
-<div class="modal fade " id="product_details_modal" tabindex="-1" aria-labelledby="product_details_modalLabel" aria-hidden="true">
-  <div class="modal-dialog product_detail_model">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="product_details_modalLabel font-weight-bold">Product Details</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="product_details w-100 ">
-          <div class="product_img">
-            
-            <img src="/assets/img/products/product2.webp">
-          </div>
-          <div class="d-flex justify-content-between mt-3">
-            <div>
-              <h3>Ibacode Herbal Tea</h3>
-            </div>
-            <div>
-              <img src="/assets/img/products/rating.svg">
-              <div class="gray_background   mt-2">
-                <p class="font-weight-bold star_rating_reviews"> 24 Reviews</p>
-                
-              </div>
-              
-            </div>
-            
-          </div>
-          <div class="w-100 mt-4">
-            <label class="checkbox-container mt-2">
-              <input type="radio" name="radio-group"  value="option1">
-              <span class="checkmark"></span>
 
-              <div class="d-flex justify-content-between">
-                <span class="relative mt-1 font-weight-bold"style="z-index:100">Carton</span>
-                <span class="relative mt-1 font-weight-bold mr-2"style="z-index:100">NGN 35,000.0/carton</span>
-                
-              </div>
-              
-            </label>
-            <label class="checkbox-container mt-4">
-              <input type="radio" name="radio-group"  value="option1">
-              <span class="checkmark"></span>
-
-              <div class="d-flex justify-content-between">
-                <span class="relative mt-1 font-weight-bold"style="z-index:100">Sachet bags</span>
-                <span class="relative mt-1 font-weight-bold mr-2"style="z-index:100">NGN 15,000.0/bag</span>
-                
-              </div>
-              
-            </label>
-
-          </div>
-          <div class="w-100 d-flex justify-content-between mt-4">
-            <div>
-              <h5 class="font-weight-bolder"> Quantity</h5>
-            </div>
-            <div style="width: 66px;">
-              <input type="number" name="" class="form-control gray_background mr-3" min="0">
-            </div>
-            
-            
-          </div>
-          <div class="gray_background w-100 d-flex justify-content-center mt-4" style="height:40px">
-            <p class="my-auto">One box (16 bags) included with purchase.</p>
-            
-          </div>
-          <div class="w-100 mt-4">
-            <ul class="nav nav-pills mb-3 d-flex w-100" id="pills-tab" role="tablist">
-              <li class="nav-item w-50" role="presentation">
-                <button class="nav-link active w-100 " id="pills-home-tab" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Product Description</button>
-              </li>
-              <li class="nav-item w-50" role="presentation">
-                <button class="nav-link w-100" id="pills-profile-tab" data-toggle="pill" data-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Reviews</button>
-              </li>
-             
-            </ul>
-            <div class="tab-content" id="pills-tabContent mr-2 ml-2">
-                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
-            </div>
-
-            
-          </div>
-          
-          
-        </div>
-        <div class="cart w-100 d-none">
-          <div class="cart_img_box d-flex ">
-            <div class="cart_img w-50">
-              <img src="/assets/img/products/product2.webp">
-            </div>
-            <div class="ml-2 w-50">
-              <div class="d-flex">
-                <h3>Ibacode Herbal Tea</h3>
-                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#F68634" d="M16 9v10H8V9zm-1.5-6h-5l-1 1H5v2h14V4h-3.5zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2z"/></svg>
-                
-              </div>
-              <span class="mt-3 font-weight-bold ">NGN 35,000.00</span>
-               <div class="w-100 cart_info_box mt-2">
-                <p class="p-2 font-weight-bold">One box (16 bags) included with purchase.</p>
-            
-              </div>
-              <div class="w-100 d-flex justify-content-between mt-4">
-                <div>
-                    <h5 class="font-weight-bolder"> Quantity</h5>
-                  </div>
-                  <div style="width: 66px;">
-                    <input type="number" name="" class="form-control gray_background mr-3" min="0" value="1">
-                  </div>
-                </div>
-              
-            </div>
-            
-            
-          </div>
-
-        </div>
-    
-      </div>
-      <div class="modal-footer d-flex justify-content-between">
-       <h2>NGN 37,000.00</h2>
-        <button type="button" class="btn btn-primary btn_primary low_radius add_to_cart">Add To Cart</button>
-         <a type="a" href="/cart"  class="btn btn-primary btn_primary low_radius checkout d-none">Checkout</a>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
@@ -154,7 +25,8 @@
         <div class="container mt-3 mb-5">
           <div class="d-flex justify-content-between w-100">
             <div class="socials  d_flex_grid">
-              <h2 class="add_font remove_white_space">100 Products</h2> <p class="ml-0 mt-3 ml-sm-0  ml-md-5 mt-sm-2 mt-md-0 w-100 w-sm-100">Showing page 1 of 3</p>
+              <h2 class="add_font remove_white_space">{{$product_count}} Products</h2> 
+              <!-- <p class="ml-0 mt-3 ml-sm-0  ml-md-5 mt-sm-2 mt-md-0 w-100 w-sm-100">Showing page 1 of 3</p> -->
               
             </div>
             <div class="d_flex_grid">
@@ -171,139 +43,22 @@
         </div>
         <div class="container mt-3">
           <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
-              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
-                <div class="product_card_imag_box">
-                <img src="/assets/img/products/product1.webp">
-              </div>
-                <div class="product_description p-1">
-                  <h6>Ibacode Herbal Tea</h6>
-                  <div class="d-flex justify-content-between">
-                    <p class="font-weight-bold">NGN 35,000.132</p>
-                    <p>100ml</p>
-                    
-                  </div>
-                  <div>
-                    <p>Buy your prescription tincture blend here.</p>
-                  </div>
-                  
-                </div>
-                
-              </div>
-              
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
-              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
-                <div class="product_card_imag_box">
-                <img src="/assets/img/products/image1.webp">
-              </div>
-                <div class="product_description p-1">
-                  <h6>Ibacode Herbal Tea</h6>
-                  <div class="d-flex justify-content-between">
-                    <p class="font-weight-bold">NGN 35,000.132</p>
-                    <p>100ml</p>
-                    
-                  </div>
-                  <div>
-                    <p>Buy your prescription tincture blend here.</p>
-                  </div>
-                  
-                </div>
-                
-              </div>
-              
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
-              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
-                <div class="product_card_imag_box">
-                <img src="/assets/img/products/product5.png">
-              </div>
-                <div class="product_description p-1">
-                  <h6>Ibacode Herbal Tea</h6>
-                  <div class="d-flex justify-content-between">
-                    <p class="font-weight-bold">NGN 35,000.132</p>
-                    <p>100ml</p>
-                    
-                  </div>
-                  <div>
-                    <p>Buy your prescription tincture blend here.</p>
-                  </div>
-                  
-                </div>
-                
-              </div>
-              
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
-              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
-                <div class="product_card_imag_box">
-                <img src="/assets/img/products/product6.png">
-              </div>
-                <div class="product_description p-1">
-                  <h6>Abosad Table Water</h6>
-                  <div class="d-flex justify-content-between">
-                    <p class="font-weight-bold">NGN 35,000.132</p>
-                    <p>100ml</p>
-                    
-                  </div>
-                  <div>
-                    <p>Buy your prescription tincture blend here.</p>
-                  </div>
-                  
-                </div>
-                
-              </div>
-              
-            </div>
-           <!--  <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3 " data-aos="fade-left" data-aos-delay="300" style="">
-              <div class="conslutation" style="border-radius: 10px;height: 450px;">
-                
-              
-              <div class="pt-5 pb-5 pl-3 pr-2">
-              <div class="w-100">
-                <p>Not sure where to start?</p>
-                <h1>Book a Free 15 Minute Herbal Consultation</h1>
-                
-              </div>
-              <div class="w-100 mt-5">
-                <p>
-                  Book a remote session with one of our experienced Holists to better understand your specific health concerns & goals.
-                </p>
-              </div>
-                <br>
-                <p>n.b. not all Holists offer this type of consultation.</p>
-                 <div class="w-100 mt-5">
-                <button class="btn btn_primary low_radius">Book Now</button>
-              </div>
-            </div>
-            </div>
-            </div> -->
-            
-                 
 
-              
-            
-            
-          </div>
-          
-        </div> 
-
-        <div class="container mt-3">
-          <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
+            @foreach($products as $product)
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 fetch_product_details" product_id="{{$product->id}}" data-aos="fade-left" data-aos-delay="300">
               <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
                 <div class="product_card_imag_box">
-                <img src="/assets/img/products/product1.webp">
+                <img src="{{$product->image}}">
               </div>
                 <div class="product_description p-1">
-                  <h6>Ibacode Herbal Tea</h6>
+                  <h6>{{$product->name}}</h6>
                   <div class="d-flex justify-content-between">
-                    <p class="font-weight-bold">NGN 35,000.132</p>
-                    <p>100ml</p>
+                    <p class="font-weight-bold">NGN {{number_format($product->sachet_price,2)}}</p>
+                    <!-- <p>100ml</p> -->
                     
                   </div>
                   <div>
-                    <p>Buy your prescription tincture blend here.</p>
+                    <p>{{Ucfirst(Str::limit($product->description, $limit = 100, $end = '...'))}}.</p>
                   </div>
                   
                 </div>
@@ -311,216 +66,62 @@
               </div>
               
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
-              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
-                <div class="product_card_imag_box">
-                <img src="/assets/img/products/product3.png">
-              </div>
-                <div class="product_description p-1">
-                  <h6>Abosad Table Water</h6>
-                  <div class="d-flex justify-content-between">
-                    <p class="font-weight-bold">NGN 35,000.132</p>
-                    <p>100ml</p>
-                    
-                  </div>
-                  <div>
-                    <p>Buy your prescription tincture blend here.</p>
-                  </div>
-                  
-                </div>
-                
-              </div>
-              
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
-              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
-                <div class="product_card_imag_box">
-                <img src="/assets/img/products/image7.webp">
-              </div>
-                <div class="product_description p-1">
-                  <h6>Ibacode Herbal Tea</h6>
-                  <div class="d-flex justify-content-between">
-                    <p class="font-weight-bold">NGN 35,000.132</p>
-                    <p>100ml</p>
-                    
-                  </div>
-                  <div>
-                    <p>Buy your prescription tincture blend here.</p>
-                  </div>
-                  
-                </div>
-                
-              </div>
-              
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
-              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
-                <div class="product_card_imag_box">
-                <img src="/assets/img/products/image6.webp">
-              </div>
-                <div class="product_description p-1">
-                  <h6>Ibacode Herbal Tea</h6>
-                  <div class="d-flex justify-content-between">
-                    <p class="font-weight-bold">NGN 35,000.132</p>
-                    <p>100ml</p>
-                    
-                  </div>
-                  <div>
-                    <p>Buy your prescription tincture blend here.</p>
-                  </div>
-                  
-                </div>
-                
-              </div>
-              
-            </div>
-            
-            
-                 
-
-              
-            
-            
-          </div>
-          
-        </div>
-
-
-
-
-        <div class="container mt-3">
-          <div class="row">
-             <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
-              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
-                <div class="product_card_imag_box">
-                <img src="/assets/img/products/product4.png">
-              </div>
-                <div class="product_description p-1">
-                  <h6>RECTY-PRO</h6>
-                  <div class="d-flex justify-content-between">
-                    <p class="font-weight-bold">NGN 35,000.132</p>
-                    <p>100ml</p>
-                    
-                  </div>
-                  <div>
-                    <p>Buy your prescription tincture blend here.</p>
-                  </div>
-                  
-                </div>
-                
-              </div>
-              
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
-              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
-                <div class="product_card_imag_box">
-                <img src="/assets/img/products/product5.png">
-              </div>
-                <div class="product_description p-1">
-                  <h6>DE BRAVE Man Booster</h6>
-                  <div class="d-flex justify-content-between">
-                    <p class="font-weight-bold">NGN 35,000.132</p>
-                    <p>100ml</p>
-                    
-                  </div>
-                  <div>
-                    <p>Buy your prescription tincture blend here.</p>
-                  </div>
-                  
-                </div>
-                
-              </div>
-              
-            </div>
-          <!--   <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3 " data-aos="fade-left" data-aos-delay="300" >
-              <div class="spot_light">
-             
-              <div class="w-100" style="background:url(/assets/img/hero_image/leaf2.webp);height: 180px;">
-              </div>
-              <div class="pt-1 p-sm-1 pt-md-1
-              pb-md-1 pl-md-5 pr-md-5 ">
-                <div class="w-100">
-                  <p>Not sure where to start?</p>
-                  <h4>Discover the Wonders of Nature</h4>
-                
-                </div>
-              <div class="w-100">
-                <p style="color:#595959;">
-                  Explore the fascinating world of herbs with our weekly spotlight. Each post dives deep into the history, uses, and benefits of a unique herb.  Whether you're a culinary enthusiast, a natural health advocate, or simply curious about nature, our detailed descriptions and practical tips will enrich your understanding and appreciation of these incredible plants.
-                </p>
-              </div>
-              
-              <div class="d-flex justify-content-between">
-                <h6>Keep Reading</h6>
-                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
-                
-              </div>
-                 
-            </div>
-            </div>
-          </div> -->
-
-
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
-              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
-                <div class="product_card_imag_box">
-                <img src="/assets/img/products/product1.webp">
-              </div>
-                <div class="product_description p-1">
-                  <h6>Ibacode Herbal Tea</h6>
-                  <div class="d-flex justify-content-between">
-                    <p class="font-weight-bold">NGN 35,000.132</p>
-                    <p>100ml</p>
-                    
-                  </div>
-                  <div>
-                    <p>Buy your prescription tincture blend here.</p>
-                  </div>
-                  
-                </div>
-                
-              </div>
-              
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 " data-aos="fade-left" data-aos-delay="300">
-              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
-                <div class="product_card_imag_box">
-                <img src="/assets/img/products/image1.webp">
-              </div>
-                <div class="product_description p-1">
-                  <h6>Ibacode Herbal Tea</h6>
-                  <div class="d-flex justify-content-between">
-                    <p class="font-weight-bold">NGN 35,000.132</p>
-                    <p>100ml</p>
-                    
-                  </div>
-                  <div>
-                    <p>Buy your prescription tincture blend here.</p>
-                  </div>
-                  
-                </div>
-                
-              </div>
-              
-            </div>
+            @endforeach
+           
           </div>
           
         </div> 
 
 
-        <div class="container mt-3 mb-5">
-          <div class="d-flex justify-content-between w-100">
-            <div class="socials  d-flex">
-            <p class=" ml-5">Showing page 1 of 3</p>
-              
-            </div>
-            <div class="d-flex">
-             <button class="btn btn_primary low_radius">Next  <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></button>
-            </div>
-            
-          </div>
-          
-        </div>
+       @if ($products->hasPages())
+            <nav aria-label="Page navigation" class="d-flex justify-content-center">
+                <ul class="pagination ">
+                    {{-- Previous Page Link --}}
+                    @if ($products->onFirstPage())
+                        <li class="page-item disabled">
+                            <span class="page-link">&laquo;</span>
+                        </li>
+                    @else
+                        <li class="page-item">
+                            <a class="page-link" href="{{ $products->previousPageUrl() }}" rel="prev">&laquo;</a>
+                        </li>
+                    @endif
+
+                    @if($products->currentPage() > 3)
+                        <li class="page-item"><a class="page-link" href="{{ $products->url(1) }}">1</a></li>
+                    @endif
+                    @if($products->currentPage() > 4)
+                        <li class="page-item disabled"><span class="page-link">...</span></li>
+                    @endif
+                    @foreach(range(1, $products->lastPage()) as $i)
+                        @if($i >= $products->currentPage() - 2 && $i <= $products->currentPage() + 2)
+                            @if ($i == $products->currentPage())
+                                <li class="page-item active"><span class="page-link">{{ $i }}</span></li>
+                            @else
+                                <li class="page-item"><a class="page-link" href="{{ $products->url($i) }}">{{ $i }}</a></li>
+                            @endif
+                        @endif
+                    @endforeach
+                    @if($products->currentPage() < $products->lastPage() - 3)
+                        <li class="page-item disabled"><span class="page-link">...</span></li>
+                    @endif
+                    @if($products->currentPage() < $products->lastPage() - 2)
+                        <li class="page-item"><a class="page-link" href="{{ $products->url($products->lastPage()) }}">{{ $products->lastPage() }}</a></li>
+                    @endif
+
+                    {{-- Next Page Link --}}
+                    @if ($products->hasMorePages())
+                        <li class="page-item">
+                            <a class="page-link" href="{{ $products->nextPageUrl() }}" rel="next">&raquo;</a>
+                        </li>
+                    @else
+                        <li class="page-item disabled">
+                            <span class="page-link">&raquo;</span>
+                        </li>
+                    @endif
+                </ul>
+            </nav>
+            @endif
 
 
 
@@ -535,3 +136,205 @@
 
 
         @include('pages.components.footer')
+        <script type="text/javascript">
+          $(document).on("click",".price", function(e){
+
+            $('.price_label').html("NGN "+$(this).attr('price')+"")
+            $('.price_selected').html(""+$(this).attr('price')+"")
+            $('.unit_label').html(""+$(this).attr('unit')+"")
+          })
+
+
+
+           $(document).on("click",".add_to_cart", function(e){
+            
+            $('#product_details_modalLabel').html("Cart Details")
+             $('.cart').html("")
+            $('.spinner-border').show();
+           if (!$('input[name="radio-group"]:checked').length > 0) {
+            toastr.error("Select at least one price")
+            return false;
+            }
+            
+             if ($('.qty').val()=="") {
+              toastr.error("Qty can not be empty")
+              return false;
+            }
+             if ($('.stock').html()=="Out-of-stock") {
+              toastr.error("Sorry, Product is out of stock. Kindly check back in few hours")
+              return false;
+            }
+             $(".add_to_cart").html("Processing");
+             $(".add_to_cart").prop("disabled",true);
+                var formData = new FormData();
+               
+                formData.append( 'id',$('.product_id').val());
+                formData.append( 'price',$('.price_selected').html());
+                formData.append( 'qty',$('.qty').val());
+                formData.append( 'unit',$('.unit_label').html());
+          
+              
+              
+             $('.product_details').html("")
+            $.ajax({
+        url : "/add_to_cart",
+        type : 'POST' ,
+        data : formData ,
+        contentType: false,
+        cache: false,
+        processData:false,
+        dataType: 'json',
+        mimeType: 'multipart/form-data',
+        success:function (data) {
+          // alert(data.success)
+          
+      
+        var success_msg=data.hasOwnProperty('success')
+          var errors_msg=data.hasOwnProperty('errors')
+            
+           
+        
+           if (success_msg== true) {
+         toastr.error(data.errors)
+                return false;
+         
+           }
+            if (success_msg== true) {
+          
+      }
+      $('.spinner-border').hide();
+          $('.cart').html(data.cart_details)
+          $('.checkout').removeClass('d-none')
+          $('.add_to_cart').addClass('d-none');
+          $('.cart').removeClass('d-none')
+          
+          $('.product_details').addClass('d-none');
+          toastr.success("Item added successfully")
+          $('.price_label').html("NGN "+data.total_price+"")
+          $(".add_to_cart").html("Add To Cart");
+             $(".add_to_cart").prop("disabled",false);
+   }, 
+    error: function(data) {
+        if( data.status === 419 ) {
+           toastr.error("CSRF token mismatch, It seams you have open dashboard in a new tab or your session has expired")
+           $(".add_to_cart").html("Add To Cart");
+             $(".add_to_cart").prop("disabled",false);
+        
+
+  
+
+          } 
+         if( data.status === 422 ) {
+            var errors = $.parseJSON(data.responseText);
+            $.each(errors, function (key, value) {
+                // console.log(key+ " " +value);
+          
+
+                if($.isPlainObject(value)) {
+                    $.each(value, function (key, value) {                       
+                        console.log(key+ " " +value);
+                        toastr.error(value)
+                $(".add_to_cart").html("Add To Cart");
+                $(".add_to_cart").prop("disabled",false);
+                     
+
+  
+                   
+
+                    });
+                }else{
+               
+                }
+            });
+       
+
+          } 
+    }
+});
+
+
+    })
+
+
+
+           $(document).on("click",".fetch_product_details", function(e){
+             $('.checkout').addClass('d-none')
+            $('.add_to_cart').removeClass('d-none');
+              $('#product_details_modalLabel').html("Product Details")
+             $('.cart').html("")
+             $('.product_details').html("")
+             $('.product_details').removeClass("d-none")
+             $('.price_label').html("")
+          $('.spinner-border').show();
+                var formData = new FormData();
+                var id=$(this).attr('product_id');
+                formData.append( 'id',$(this).attr('product_id'));
+          
+              
+              
+             
+            $.ajax({
+        url : "/fetch_product_details",
+        type : 'POST' ,
+        data : formData ,
+        contentType: false,
+        cache: false,
+        processData:false,
+        dataType: 'json',
+        mimeType: 'multipart/form-data',
+        success:function (data) {
+          // alert(data.success)
+          
+      
+        var success_msg=data.hasOwnProperty('success')
+          var errors_msg=data.hasOwnProperty('errors')
+            
+           
+        
+           if (errors_msg== true) {
+         showNotification("top", "right", "danger",data.errors,"Error")
+     return false;
+         
+           }
+           $('.spinner-border').hide();
+          $('.product_details').html(data.product_details)
+           $('.product_id').html(id)
+   }, 
+    error: function(data) {
+        if( data.status === 419 ) {
+           toastr.error("CSRF token mismatch, It seams you have open dashboard in a new tab or your session has expired")
+        
+
+  
+
+          } 
+         if( data.status === 422 ) {
+            var errors = $.parseJSON(data.responseText);
+            $.each(errors, function (key, value) {
+                // console.log(key+ " " +value);
+          
+
+                if($.isPlainObject(value)) {
+                    $.each(value, function (key, value) {                       
+                        console.log(key+ " " +value);
+                        toastr.error(value)
+                     
+
+  
+                   
+
+                    });
+                }else{
+               
+                }
+            });
+       
+
+          } 
+    }
+});
+
+
+    })
+    
+        </script>

@@ -1,10 +1,25 @@
  @include('pages.components.header')
+ <?php
+ use App\Models\HomePageSetting;
+ use App\Models\Product;
+if (!function_exists('find_product_image')) {
+  function find_product_image($product_id){
+    if ($product_id!==null) {
+      $product_image=Product::find($product_id);
+      return $product_image->image;
+    }
+
+  }
+}
+
+
+ ?>
 
     <main>
         <div class="hero_image">
             <div class="hero_text">
-              <h1 class="hero_text_text" data-aos="fade-up" data-aos-delay="300">Herbal Remedies for Modern Health Challenges</h1>
-              <p data-aos="zoom-in" data-aos-delay="300">Providing trusted herbal solutions for malaria, typhoid, digestive health, and men's wellness for this seeking Herbal Healthcare Products in Nigeria. Experience the benefits of nature with Brave Point Global LTD</p>
+              <h1 class="hero_text_text" data-aos="fade-up" data-aos-delay="300">{{$settings?->hero_text}}</h1>
+              <p data-aos="zoom-in" data-aos-delay="300">{{$settings?->hero_sub_text}}</p>
               <button class="btn btn_primary low_radius" data-aos="fade-right" data-aos-delay="300">Discover Now</button>
             </div>
         </div> 
@@ -53,7 +68,7 @@
                 <div class="slide_show">
                 <div class="slide_img">
                   <div class="slide  d-flex justify-content-center px-5 mr-3">
-                    <img  class="slide_img_ my-auto" src="/assets/img/products/image1.webp" >
+                    <img  class="slide_img_ my-auto" src="{{find_product_image($settings?->product_id_1)}}" >
                      <!-- <div class="slide_inner_box p-3">
                       <p>01-</p>
                       <p>Abdocare Herbal Tea</p>
@@ -61,18 +76,22 @@
                     </div> -->
                   </div>
                   <div class="slide d-flex justify-content-center px-5 mr-3" style="background:#F1F0F3;">
-                    <img  class="slide_img_" src="/assets/img/products/image2.webp" alt="">
+                    <img  class="slide_img_" src="{{find_product_image($settings?->product_id_2)}}" alt="">
 
                   </div>
                   <div class="slide d-flex justify-content-center px-5 mr-3">
-                    <img  class="slide_img_" src="/assets/img/products/image3.webp" alt="">
+                    <img  class="slide_img_" src="{{find_product_image($settings?->product_id_3)}}" alt="">
+                  </div>
+                   <div class="slide d-flex justify-content-center px-5 mr-3">
+                    <img  class="slide_img_" src="{{find_product_image($settings?->product_id_4)}}" alt="">
                   </div>
                   <div class="slide d-flex justify-content-center px-5 mr-3">
-                    <img  class="slide_img_" src="/assets/img/products/image1.webp" alt="">
+                    <img  class="slide_img_" src="{{find_product_image($settings?->product_id_5)}}" alt="">
                   </div>
                   <div class="slide d-flex justify-content-center px-5 mr-3">
-                    <img  class="slide_img_" src="/assets/img/products/image1.webp" alt="">
+                    <img  class="slide_img_" src="{{find_product_image($settings?->product_id_6)}}" alt="">
                   </div>
+                  
                   </div> 
                 </div>
               

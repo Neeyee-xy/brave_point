@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -21,6 +22,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'phone',
+        'user_type',
+        'verification_code',
     ];
 
     /**
@@ -41,4 +45,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+     public function order(): HasMany
+    {
+        return $this->hasMany(Order::class,'id');
+    }
+     
+     public function blog(): HasMany
+    {
+        return $this->hasMany(Blog::class,'id');
+    }
+     public function transaction(): HasMany
+    {
+        return $this->hasMany(Order::class,'id');
+    }
+
 }

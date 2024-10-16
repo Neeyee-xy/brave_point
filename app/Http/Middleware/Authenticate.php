@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\URL;
 
 class Authenticate extends Middleware
 {
@@ -12,6 +13,12 @@ class Authenticate extends Middleware
      */
     protected function redirectTo(Request $request): ?string
     {
-        return $request->expectsJson() ? null : route('login');
+                           // Store the current page URL in the session
+            session()->put('last_visited_page', URL::previous());
+
+            // Retrieve the last visited page URL
+           
+           
+        return $request->expectsJson() ? null : route('sign_in');
     }
 }

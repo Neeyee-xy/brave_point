@@ -740,7 +740,7 @@ background: #fff;
 }
 .product_img img{
   object-fit: cover;
-  width: 100%;
+  width: auto;
   height: 100%;
 }
 .cart_img_box,.cart_img{

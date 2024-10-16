@@ -168,11 +168,20 @@
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
        
       <script src="/js/vendor/bootstrap.bundle.min.js"></script>
+      <script src="/plugins/toastr/toastr.min.js"></script>
       <script>
  $(document).ready(function(){
+   $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+
     $("body > *").css({ opacity: 0 });
     // preloader
     setTimeout(function () {
+      count_cart_item()
       $("body").removeClass("show-spinner");
       $("main").addClass("default-transition");
       $(".sub-menu").addClass("default-transition");
@@ -190,7 +199,7 @@
 
 
     })
-    
+   
    
 
    // slider
@@ -240,6 +249,465 @@
 
 
 
+
+
+
+
+
+
+
+function count_cart_item(){
+            
+            
+          
+                var formData = new FormData();
+               
+             
+          
+              
+        
+            $.ajax({
+        url : "/count_cart_item",
+        type : 'POST' ,
+        data : formData ,
+        contentType: false,
+        cache: false,
+        processData:false,
+        dataType: 'json',
+        mimeType: 'multipart/form-data',
+        success:function (data) {
+          // alert(data.success)
+          
+      
+        var success_msg=data.hasOwnProperty('success')
+          var errors_msg=data.hasOwnProperty('errors')
+            
+           
+        
+           if (success_msg== true) {
+         toastr.error(data.errors)
+                return false;
+         
+           }
+            if (success_msg== true) {
+          
+      }
+     
+          $('.count_cart_item').html(data.count_cart_item)
+         
+   }, 
+    error: function(data) {
+        if( data.status === 419 ) {
+           toastr.error("CSRF token mismatch, It seams you have open dashboard in a new tab or your session has expired")
+           
+        
+
+  
+
+          } 
+         if( data.status === 422 ) {
+            var errors = $.parseJSON(data.responseText);
+            $.each(errors, function (key, value) {
+                // console.log(key+ " " +value);
+          
+
+                if($.isPlainObject(value)) {
+                    $.each(value, function (key, value) {                       
+                        console.log(key+ " " +value);
+                        toastr.error(value)
+                
+                     
+
+  
+                   
+
+                    });
+                }else{
+               
+                }
+            });
+       
+
+          } 
+    }
+});
+
+
+    }
+
+
+
+
+function count_notifications(){
+            
+            
+          
+                var formData = new FormData();
+               
+             
+          
+              
+        
+            $.ajax({
+        url : "/count_notifications",
+        type : 'POST' ,
+        data : formData ,
+        contentType: false,
+        cache: false,
+        processData:false,
+        dataType: 'json',
+        mimeType: 'multipart/form-data',
+        success:function (data) {
+          // alert(data.success)
+          
+      
+        var success_msg=data.hasOwnProperty('success')
+          var errors_msg=data.hasOwnProperty('errors')
+            
+           
+        
+           if (success_msg== true) {
+         toastr.error(data.errors)
+                return false;
+         
+           }
+            if (success_msg== true) {
+          
+      }
+     
+          $('.count_notifications').html(data.count_notifications)
+         
+   }, 
+    error: function(data) {
+        if( data.status === 419 ) {
+           toastr.error("CSRF token mismatch, It seams you have open dashboard in a new tab or your session has expired")
+           
+        
+
+  
+
+          } 
+         if( data.status === 422 ) {
+            var errors = $.parseJSON(data.responseText);
+            $.each(errors, function (key, value) {
+                // console.log(key+ " " +value);
+          
+
+                if($.isPlainObject(value)) {
+                    $.each(value, function (key, value) {                       
+                        console.log(key+ " " +value);
+                        toastr.error(value)
+                
+                     
+
+  
+                   
+
+                    });
+                }else{
+               
+                }
+            });
+       
+
+          } 
+    }
+});
+
+
+    }
+
+
+
+
+
+
+ $(document).on("change",".qty", function(e){
+            
+            $('.price_label').html("Recalculating...")
+           
+                var formData = new FormData();
+            
+                formData.append( 'id',$(this).attr('cart_id'));
+                formData.append( 'qty',$(this).val());
+               
+              
+              
+              
+             
+            $.ajax({
+            url : "/add_qty",
+            type : 'POST' ,
+            data : formData ,
+            contentType: false,
+            cache: false,
+            processData:false,
+            dataType: 'json',
+            mimeType: 'multipart/form-data',
+        success:function (data) {
+          // alert(data.success)
+          
+      
+        var success_msg=data.hasOwnProperty('success')
+          var errors_msg=data.hasOwnProperty('errors')
+            
+           
+        
+           if (success_msg== true) {
+         toastr.error(data.errors)
+                return false;
+         
+           }
+            if (success_msg== true) {
+          
+      }
+      
+          
+        
+          // toastr.success("Item added successfully")
+          $('.price_label').html("NGN "+data.total_price+"")
+           var item=data.total_price;
+            item=item.replace('NGN ',"");
+            var selectedOption = $('.delivery_price').html();
+            var attributeValue = selectedOption.replace('NGN ',"");;
+
+
+
+            var total=parseInt(item)+parseInt(attributeValue);
+            var delivery_price=parseFloat(attributeValue);
+             var total_price=parseFloat(total);
+            $('.delivery_price').html("NGN "+delivery_price.toFixed(2)+"")
+             $('.total').html("NGN "+total_price.toFixed(2)+"")
+        
+   }, 
+    error: function(data) {
+        if( data.status === 419 ) {
+           toastr.error("CSRF token mismatch, It seams you have open dashboard in a new tab or your session has expired")
+           $(".add_to_cart").html("Add To Cart");
+             $(".add_to_cart").prop("disabled",false);
+        
+
+  
+
+          } 
+         if( data.status === 422 ) {
+            var errors = $.parseJSON(data.responseText);
+            $.each(errors, function (key, value) {
+                // console.log(key+ " " +value);
+          
+
+                if($.isPlainObject(value)) {
+                    $.each(value, function (key, value) {                       
+                        console.log(key+ " " +value);
+                        toastr.error(value)
+                $(".add_to_cart").html("Add To Cart");
+                $(".add_to_cart").prop("disabled",false);
+                     
+
+  
+                   
+
+                    });
+                }else{
+               
+                }
+            });
+       
+
+          } 
+    }
+});
+
+
+    })
+
+
+
+     $(document).on("click",".delete_cart_item", function(e){
+            
+            $('#product_details_modalLabel').html("Cart Details")
+             $('.cart').html("")
+            $('.spinner-border').show();
+           
+                var formData = new FormData();
+            
+                formData.append( 'id',$(this).attr('cart_id'));
+               
+              
+              
+              
+             $('.product_details').html("")
+            $.ajax({
+        url : "/delete_cart_item",
+        type : 'POST' ,
+        data : formData ,
+        contentType: false,
+        cache: false,
+        processData:false,
+        dataType: 'json',
+        mimeType: 'multipart/form-data',
+        success:function (data) {
+          // alert(data.success)
+          
+      
+        var success_msg=data.hasOwnProperty('success')
+          var errors_msg=data.hasOwnProperty('errors')
+            
+           
+        
+           if (success_msg== true) {
+         toastr.error(data.errors)
+                return false;
+         
+           }
+            if (success_msg== true) {
+          
+      }
+      $('.spinner-border').hide();
+          $('.cart').html(data.cart_details)
+          $('.checkout').removeClass('d-none')
+          $('.add_to_cart').addClass('d-none');
+          $('.cart').removeClass('d-none')
+          
+          $('.product_details').addClass('d-none');
+          // toastr.success("Item added successfully")
+          $('.price_label').html("NGN "+data.total_price+"")
+          $(".add_to_cart").html("Add To Cart");
+             $(".add_to_cart").prop("disabled",false);
+   }, 
+    error: function(data) {
+        if( data.status === 419 ) {
+           toastr.error("CSRF token mismatch, It seams you have open dashboard in a new tab or your session has expired")
+           $(".add_to_cart").html("Add To Cart");
+             $(".add_to_cart").prop("disabled",false);
+        
+
+  
+
+          } 
+         if( data.status === 422 ) {
+            var errors = $.parseJSON(data.responseText);
+            $.each(errors, function (key, value) {
+                // console.log(key+ " " +value);
+          
+
+                if($.isPlainObject(value)) {
+                    $.each(value, function (key, value) {                       
+                        console.log(key+ " " +value);
+                        toastr.error(value)
+                $(".add_to_cart").html("Add To Cart");
+                $(".add_to_cart").prop("disabled",false);
+                     
+
+  
+                   
+
+                    });
+                }else{
+               
+                }
+            });
+       
+
+          } 
+    }
+});
+
+
+    })
+
+
+
+
+     $(document).on("click",".get_cart_items", function(e){
+            
+            $('#product_details_modalLabel').html("Cart Details")
+             $('.cart').html("")
+           
+                var formData = new FormData();
+               
+              
+              
+              
+             $('.product_details').html("")
+            $.ajax({
+        url : "/get_cart_items",
+        type : 'POST' ,
+        data : formData ,
+        contentType: false,
+        cache: false,
+        processData:false,
+        dataType: 'json',
+        mimeType: 'multipart/form-data',
+        success:function (data) {
+          // alert(data.success)
+          
+      
+        var success_msg=data.hasOwnProperty('success')
+          var errors_msg=data.hasOwnProperty('errors')
+            
+           
+        
+           if (success_msg== true) {
+         toastr.error(data.errors)
+                return false;
+         
+           }
+            if (success_msg== true) {
+          
+      }
+      $('.spinner-border').hide();
+          $('.cart').html(data.cart_details)
+          $('.checkout').removeClass('d-none')
+          $('.add_to_cart').addClass('d-none');
+          $('.cart').removeClass('d-none')
+          
+          $('.product_details').addClass('d-none');
+          // toastr.success("Item added successfully")
+          $('.price_label').html("NGN "+data.total_price+"")
+          $(".add_to_cart").html("Add To Cart");
+             $(".add_to_cart").prop("disabled",false);
+   }, 
+    error: function(data) {
+        if( data.status === 419 ) {
+           toastr.error("CSRF token mismatch, It seams you have open dashboard in a new tab or your session has expired")
+           $(".add_to_cart").html("Add To Cart");
+             $(".add_to_cart").prop("disabled",false);
+        
+
+  
+
+          } 
+         if( data.status === 422 ) {
+            var errors = $.parseJSON(data.responseText);
+            $.each(errors, function (key, value) {
+                // console.log(key+ " " +value);
+          
+
+                if($.isPlainObject(value)) {
+                    $.each(value, function (key, value) {                       
+                        console.log(key+ " " +value);
+                        toastr.error(value)
+                $(".add_to_cart").html("Add To Cart");
+                $(".add_to_cart").prop("disabled",false);
+                     
+
+  
+                   
+
+                    });
+                }else{
+               
+                }
+            });
+       
+
+          } 
+    }
+});
+
+
+    })
 
 
   // video player
@@ -334,13 +802,6 @@ function rotate(e){
 
 
 
-$('.add_to_cart').on('click', function (e) {
-      
-      $('.checkout').removeClass('d-none')
-      $('.cart').removeClass('d-none')
-      $('.add_to_cart').addClass('d-none');
-      $('.product_details').addClass('d-none');
-       })
 
  AOS.init({
       duration: 1000,
