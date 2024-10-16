@@ -137,7 +137,7 @@ class OrderController extends Controller
                $user->save();
                $reponse= $this->int_payment($order,$transaction);
                // dd($reponse);
-               if ($reponse['status']=="false") {
+               if ($reponse['status']==false) {
                    if (Auth::user()->user_type==UserType::ADMIN->title()) {
                        return (['errors' => $reponse['message']]);
                    }else{
