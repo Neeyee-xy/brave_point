@@ -187,7 +187,7 @@ function int_payment($order,$transaction)
         curl_setopt($ch,CURLOPT_URL, $url);
         curl_setopt($ch,CURLOPT_POST, true);
         curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
-        curl_setopt($ch, CURLOPT_CAINFO, 'C:/wamp64/bin/php/php8.3.0/extras/ssl/cacert.pem');
+       
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         "Authorization: Bearer ".$this->settings->paystack_sk."",
         "Cache-Control: no-cache",
@@ -234,7 +234,7 @@ function cancel_payment($transaction)
         curl_setopt($ch,CURLOPT_URL, $url);
         curl_setopt($ch,CURLOPT_POST, true);
         curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
-        curl_setopt($ch, CURLOPT_CAINFO, 'C:/wamp64/bin/php/php8.3.0/extras/ssl/cacert.pem');
+       
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         "Authorization: Bearer ".$this->settings->paystack_sk."",
         "Cache-Control: no-cache",
