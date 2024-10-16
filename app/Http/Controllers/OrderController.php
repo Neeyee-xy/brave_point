@@ -136,6 +136,7 @@ class OrderController extends Controller
                $user->postal_code=$request->postal_code;
                $user->save();
                $reponse= $this->int_payment($order,$transaction);
+               dd($reponse);
                if ($reponse['status']=="false") {
                    if (Auth::user()->user_type==UserType::ADMIN->title()) {
                        return (['errors' => $reponse['message']]);
