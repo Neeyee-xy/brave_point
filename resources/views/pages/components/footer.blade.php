@@ -198,7 +198,7 @@
       $(".theme-colors").addClass("default-transition");
       $("body > *").animate({ opacity: 1 }, 100);
       $('html, body').css({
-    overflow: 'hidden',
+    overflowX: 'hidden',
     height: '100%'
 });
     }, 300);
