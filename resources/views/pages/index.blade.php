@@ -26,7 +26,34 @@ if (!function_exists('find_product_slug')) {
  ?>
 
     <main>
-        
+       
+        <div class="w-100 conslutation d-flex justify-content-center">
+          <div class="conslutation_inner_box my-auto">
+            <div class="row">
+              <div class="col-11 col-sm-11 col-md-12  col-lg-6 my-auto " data-aos="zoom-in" data-aos-delay="300">
+                <div class="w-100">
+                <p>Not sure where to start?</p>
+                <h1>Book a Free 15 Minute Herbal Consultation</h1>
+                
+              </div>
+            </div>
+              <div class="col-11 col-sm-11 col-md-12  col-lg-6 conslutation_inner_box_right" data-aos="zoom-in" data-aos-delay="300">
+                 <div class="w-100 mt-5">
+                <p>
+                  Book a remote session with one of our experienced Holists to better understand your specific health concerns & goals.
+                </p>
+              </div>
+                <br>
+                <p>n.b. not all Holists offer this type of consultation.</p>
+                 <div class="w-100 mt-5">
+                <a class="btn btn_primary low_radius" href="/contact">Book Now</a>
+              </div>
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
         <div class="container socials mt-5">
           <div class="w-100 d-flex justify-content-between">
             <div class="socials">
