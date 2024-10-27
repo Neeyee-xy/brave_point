@@ -1340,7 +1340,7 @@ margin-top: 30px;
 @media (min-width: 568px) and (max-width: 767px) 
 {
   .slide_show{
-  width: 400px;
+  width: 335px;
   overflow: hidden;
   position: relative;
   margin: 10px auto;
@@ -1568,7 +1568,7 @@ margin-top: 30px;
 @media (min-width: 321px) and (max-width: 567px) {
   /* CSS styles for mobile devices */
   .slide_show{
-  width: 400px;
+  width: 335px;
   overflow: hidden;
   position: relative;
   margin: 10px auto;
@@ -1800,7 +1800,7 @@ margin-left: 7px !important;
 @media (max-width: 320px) {
   /* CSS styles for small screens */
   .slide_show{
-  width: 400px;
+  width: 335px;
   overflow: hidden;
   position: relative;
   margin: 10px auto;
