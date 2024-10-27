@@ -1,4 +1,8 @@
  @include('pages.components.header')
+ <?php
+use Illuminate\Support\Facades\Request;
+$fullUrl = Request::fullUrl();
+ ?>
 <style type="text/css">
   .product_img img{
     width: auto;
@@ -49,8 +53,8 @@
           <div class="row">
 
             @foreach($products as $product)
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 fetch_product_details" product_id="{{$product->id}}" data-aos="fade-left" data-aos-delay="300">
-              <div data-toggle="modal" data-target="#product_details_modal" class="product_card pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 fetch_product_details product_{{$product->id}}" product_id="{{$product->id}}" data-aos="fade-left" data-aos-delay="300">
+              <div data-toggle="modal" data-target="#product_details_modal" class="product_card product_card_{{$product->id}} pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
                 <div class="product_card_imag_box">
                 <img src="{{$product->image}}">
               </div>
@@ -140,47 +144,48 @@
 
 
         @include('pages.components.footer')
-        <script type="text/javascript">
-          $(document).on("click",".price", function(e){
+<script type="text/javascript">
 
-            $('.price_label').html("NGN "+$(this).attr('price')+"")
-            $('.price_selected').html(""+$(this).attr('price')+"")
-            $('.unit_label').html(""+$(this).attr('unit')+"")
-          })
+    $(document).on("click",".price", function(e){
+
+    $('.price_label').html("NGN "+$(this).attr('price')+"")
+    $('.price_selected').html(""+$(this).attr('price')+"")
+    $('.unit_label').html(""+$(this).attr('unit')+"")
+    })
 
 
 
-           $(document).on("click",".add_to_cart", function(e){
-            
-            $('#product_details_modalLabel').html("Cart Details")
-             $('.cart').html("")
-            $('.spinner-border').show();
-           if (!$('input[name="radio-group"]:checked').length > 0) {
-            toastr.error("Select at least one price")
-            return false;
-            }
-            
-             if ($('.qty').val()=="") {
-              toastr.error("Qty can not be empty")
-              return false;
-            }
-             if ($('.stock').html()=="Out-of-stock") {
-              toastr.error("Sorry, Product is out of stock. Kindly check back in few hours")
-              return false;
-            }
-             $(".add_to_cart").html("Processing");
-             $(".add_to_cart").prop("disabled",true);
-                var formData = new FormData();
-               
-                formData.append( 'id',$('.product_id').val());
-                formData.append( 'price',$('.price_selected').html());
-                formData.append( 'qty',$('.qty').val());
-                formData.append( 'unit',$('.unit_label').html());
+$(document).on("click",".add_to_cart", function(e){
+
+    $('#product_details_modalLabel').html("Cart Details")
+    $('.cart').html("")
+    $('.spinner-border').show();
+    if (!$('input[name="radio-group"]:checked').length > 0) {
+        toastr.error("Select at least one price")
+        return false;
+    }
+
+    if ($('.qty').val()=="") {
+        toastr.error("Qty can not be empty")
+        return false;
+    }
+    if ($('.stock').html()=="Out-of-stock") {
+        toastr.error("Sorry, Product is out of stock. Kindly check back in few hours")
+        return false;
+    }
+    $(".add_to_cart").html("Processing");
+    $(".add_to_cart").prop("disabled",true);
+    var formData = new FormData();
+
+    formData.append( 'id',$('.product_id').val());
+    formData.append( 'price',$('.price_selected').html());
+    formData.append( 'qty',$('.qty').val());
+    formData.append( 'unit',$('.unit_label').html());
           
               
               
-             $('.product_details').html("")
-            $.ajax({
+    $('.product_details').html("")
+    $.ajax({
         url : "/add_to_cart",
         type : 'POST' ,
         data : formData ,
@@ -194,57 +199,53 @@
           
       
         var success_msg=data.hasOwnProperty('success')
-          var errors_msg=data.hasOwnProperty('errors')
+        var errors_msg=data.hasOwnProperty('errors')
             
            
         
-           if (success_msg== true) {
-         toastr.error(data.errors)
-                return false;
+        if (success_msg== true) {
+            toastr.error(data.errors)
+            return false;
          
-           }
-            if (success_msg== true) {
+        }
+        if (success_msg== true) {
           
-      }
-      $('.spinner-border').hide();
-          $('.cart').html(data.cart_details)
-          $('.checkout').removeClass('d-none')
-          $('.add_to_cart').addClass('d-none');
-          $('.cart').removeClass('d-none')
-          
-          $('.product_details').addClass('d-none');
-          toastr.success("Item added successfully")
-          $('.price_label').html("NGN "+data.total_price+"")
-          $(".add_to_cart").html("Add To Cart");
-             $(".add_to_cart").prop("disabled",false);
-   }, 
+        }
+        $('.spinner-border').hide();
+        $('.cart').html(data.cart_details)
+        $('.checkout').removeClass('d-none')
+        $('.add_to_cart').addClass('d-none');
+        $('.cart').removeClass('d-none')
+
+        $('.product_details').addClass('d-none');
+        toastr.success("Item added successfully")
+        $('.price_label').html("NGN "+data.total_price+"")
+        $(".add_to_cart").html("Add To Cart");
+        $(".add_to_cart").prop("disabled",false);
+    }, 
     error: function(data) {
         if( data.status === 419 ) {
-           toastr.error("CSRF token mismatch, It seams you have open dashboard in a new tab or your session has expired")
-           $(".add_to_cart").html("Add To Cart");
-             $(".add_to_cart").prop("disabled",false);
+            toastr.error("CSRF token mismatch, It seams you have open dashboard in a new tab or your session has expired")
+            $(".add_to_cart").html("Add To Cart");
+            $(".add_to_cart").prop("disabled",false);
         
 
-  
 
-          } 
-         if( data.status === 422 ) {
+
+        } 
+        if( data.status === 422 ) {
             var errors = $.parseJSON(data.responseText);
             $.each(errors, function (key, value) {
                 // console.log(key+ " " +value);
           
 
                 if($.isPlainObject(value)) {
-                    $.each(value, function (key, value) {                       
+                $.each(value, function (key, value) {                       
                         console.log(key+ " " +value);
                         toastr.error(value)
-                $(".add_to_cart").html("Add To Cart");
-                $(".add_to_cart").prop("disabled",false);
+                    $(".add_to_cart").html("Add To Cart");
+                    $(".add_to_cart").prop("disabled",false);
                      
-
-  
-                   
-
                     });
                 }else{
                
@@ -252,32 +253,31 @@
             });
        
 
-          } 
+        } 
     }
-});
+    });
 
 
-    })
+})
 
 
-
-           $(document).on("click",".fetch_product_details", function(e){
-             $('.checkout').addClass('d-none')
-            $('.add_to_cart').removeClass('d-none');
-              $('#product_details_modalLabel').html("Product Details")
-             $('.cart').html("")
-             $('.product_details').html("")
-             $('.product_details').removeClass("d-none")
-             $('.price_label').html("")
-          $('.spinner-border').show();
-                var formData = new FormData();
-                var id=$(this).attr('product_id');
-                formData.append( 'id',$(this).attr('product_id'));
+$(document).on("click",".fetch_product_details", function(e){
+    $('.checkout').addClass('d-none')
+    $('.add_to_cart').removeClass('d-none');
+    $('#product_details_modalLabel').html("Product Details")
+    $('.cart').html("")
+    $('.product_details').html("")
+    $('.product_details').removeClass("d-none")
+    $('.price_label').html("")
+    $('.spinner-border').show();
+    var formData = new FormData();
+    var id=$(this).attr('product_id');
+    formData.append( 'id',$(this).attr('product_id'));
           
               
               
              
-            $.ajax({
+    $.ajax({
         url : "/fetch_product_details",
         type : 'POST' ,
         data : formData ,
@@ -291,27 +291,24 @@
           
       
         var success_msg=data.hasOwnProperty('success')
-          var errors_msg=data.hasOwnProperty('errors')
+        var errors_msg=data.hasOwnProperty('errors')
             
            
         
-           if (errors_msg== true) {
-         showNotification("top", "right", "danger",data.errors,"Error")
-     return false;
+        if (errors_msg== true) {
+            showNotification("top", "right", "danger",data.errors,"Error")
+            return false;
          
-           }
-           $('.spinner-border').hide();
-          $('.product_details').html(data.product_details)
-           $('.product_id').html(id)
-   }, 
+        }
+        $('.spinner-border').hide();
+        $('.product_details').html(data.product_details)
+        $('.product_id').html(id)
+    }, 
     error: function(data) {
         if( data.status === 419 ) {
-           toastr.error("CSRF token mismatch, It seams you have open dashboard in a new tab or your session has expired")
-        
-
-  
-
-          } 
+            toastr.error("CSRF token mismatch, It seams you have open dashboard in a new tab or your session has expired")
+    
+        } 
          if( data.status === 422 ) {
             var errors = $.parseJSON(data.responseText);
             $.each(errors, function (key, value) {
@@ -324,7 +321,7 @@
                         toastr.error(value)
                      
 
-  
+
                    
 
                     });
@@ -336,9 +333,24 @@
 
           } 
     }
-});
+    });
 
 
     })
-    
+    let url = new URL("{{$fullUrl}}");
+    let searchParams = new URLSearchParams(window.location.search);
+    var keys = searchParams.keys();
+
+    let product_id = searchParams.get('product_id');
+
+    if (product_id!==null) {
+       
+        setTimeout(function(){
+            $('.product_card_'+product_id+'').trigger('click') }, 1000);
+        
+    }
+
+
+  
+
         </script>

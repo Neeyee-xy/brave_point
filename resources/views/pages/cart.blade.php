@@ -412,7 +412,7 @@ $prices[]=$cart?->qty*$cart?->price;
 
     })
 
-             $('form[name="order_form"]').on('submit',(function(e){
+$('form[name="order_form"]').on('submit',(function(e){
  
     // $('#submitButton').addClass("disabled");
      // $('#submitButton').val('processing...')

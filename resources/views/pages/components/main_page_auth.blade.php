@@ -390,7 +390,7 @@ mimeType: 'multipart/form-data',
 
 
 
-            $(document).on("click","#create_admin_account", function(e){
+$(document).on("click","#create_admin_account", function(e){
  
     // $('#submitButton').addClass("disabled");
      // $('#submitButton').val('processing...')

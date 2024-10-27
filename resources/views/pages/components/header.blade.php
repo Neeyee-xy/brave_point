@@ -1,3 +1,9 @@
+<?php
+use App\Models\Product;
+use App\Models\Blog;
+$products_nav=Product::get();
+$blogs_nav=Blog::get();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,10 +60,35 @@
               <li class="nav-item">
                 <a class="nav-link" href="/blog">Blog</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact Us</a>
+              </li>
               
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control search_box search_opacity" type="search" placeholder="Search" aria-label="Search">
+            <form class="form-inline my-2 my-lg-0" style="position: relative;">
+              <input class="form-control search_box search_opacity" type="search" placeholder="Search" aria-label="Search" id="search_list" >
+              <div class="w-100 search_ab_top" style="position: absolute;">
+                          <ul class="search_item mt-3">
+                            @foreach($products_nav as $product_nav)
+                            
+                              <li>
+                                <a  class="" href="/all_products?product_id={{$product_nav->id}}&slug={{$product_nav->slug}}">{{$product_nav->name}}</a>
+                              </li>
+                              @endforeach
+
+                            @foreach($blogs_nav as $blog_nav)
+                            
+                              <li>
+                                <a  class="" href="/read_post?slug={{$product_nav->slug}}">{{$blog_nav->title}}</a>
+                              </li>
+                              @endforeach
+                           
+                              
+                            
+                           
+
+                          </ul>
+                       </div>  
               
               <button class="btn border-0 search_btn" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"/></svg></button>
               <button class="btn border-0 search d-none" type="submit">Search</button>

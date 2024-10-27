@@ -11,6 +11,8 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,10 +32,10 @@ use App\Http\Controllers\BlogController;
 
 
 Route::get('/auth/admin/sign_up', function () {
-    return view('pages.auth.admin.sign_up');
+    return view('pages.auth.admin.sign_up')->with(['page_title'=>'Sign In']);;
 });
 Route::get('/auth/client/sign_up', function () {
-    return view('pages.auth.client.sign_up');
+    return view('pages.auth.client.sign_up')->with(['page_title'=>'Sign In']);;
 });
 
 
@@ -49,7 +51,7 @@ Route::get('/appliance', function () {
 //     return view('pages.cart');
 // });
 Route::get('/about_us', function () {
-    return view('pages.about_us');
+    return view('pages.about_us')->with(['page_title'=>'About Us']);;;
 });
 Route::get('/shop', function () {
     return view('pages.shop');
@@ -58,12 +60,18 @@ Route::get('/shop', function () {
 Route::get('/category', function () {
     return view('pages.category');
 });
+Route::get('/contact', function () {
+    return view('pages.contact')->with(['page_title'=>'Contact Us']);
+});
 
 
 Route::get('/change_password', function () {
     return view('pages.change_password');
 });
 
+
+Route::post('/contact_us', [DashboardController::class, 'contact_us'])->name('contact_us');
+Route::post('/subscribe', [DashboardController::class, 'subscribe'])->name('subscribe');
 
 Route::post('/auth/admin/create_admin_account', [RegisterController::class, 'create_admin_account'])->name('create_admin_account');
 
@@ -84,6 +92,7 @@ Route::middleware(['IncompleteTransactions'])->group(function () {
 Route::get('/', [DashboardController::class, 'index'])->name('index');
 Route::get('/index', [DashboardController::class, 'index'])->name('index');
 Route::get('/blog', [DashboardController::class, 'blog'])->name('blog');
+Route::get('/read_post/{slug}', [BlogController::class, 'read_post'])->name('read_post');
 
    
 Route::POST('/count_cart_item', [CartController::class, 'count_cart_item'])->name('count_cart_item');
@@ -126,6 +135,25 @@ Route::prefix('admin')->group(function(){
     Route::get('/notifications', [NotificationController::class, 'notifications'])->name('notifications');
 
 
+    Route::prefix('users')->group(function(){
+        Route::prefix('admins')->group(function(){
+            Route::get('/', [AdminController::class, 'index'])->name('admins');
+            Route::get('/tables', [AdminController::class, 'tables'])->name('tables');
+            Route::get('/edit/{id}', [AdminController::class, 'edit'])->name('edit');
+            Route::post('/edit/{id}', [AdminController::class, 'update'])->name('update');
+            Route::post('/delete', [AdminController::class, 'delete'])->name('delete');
+        });
+        Route::prefix('clients')->group(function(){
+            Route::get('/', [ClientController::class, 'index'])->name('clients');
+            Route::get('/tables', [ClientController::class, 'tables'])->name('tables');
+            Route::get('/edit/{id}', [ClientController::class, 'edit'])->name('edit');
+            Route::post('/edit/{id}', [ClientController::class, 'update'])->name('update');
+            Route::post('/delete', [ClientController::class, 'delete'])->name('delete');
+        });
+
+
+
+    });
     Route::prefix('blog')->group(function(){
     Route::get('/', [BlogController::class, 'index'])->name('blog');
     Route::post('/', [BlogController::class, 'create'])->name('create');

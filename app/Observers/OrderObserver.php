@@ -66,7 +66,7 @@ class OrderObserver
                 ]);
             Notification::create([
                     'user_type' => 'Admin',
-                    'message' => 'Order is Cancelled for/by '.$order->user->name.'',
+                    'message' => 'Order was Cancelled for/by '.$order->user->name.'',
                     'message_type' => 'order',
                     'status'=> 'false'
                 ]);

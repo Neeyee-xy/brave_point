@@ -81,10 +81,13 @@ if (!function_exists('find_first_post')) {
                 <div class="mb-2 mt-2">
                   <p class="little_page_title " data-aos="zoom-in" data-aos-delay="300">{{ucfirst($first_post?->user?->name)}} • {{Helper::time_elapsed_string($first_post->created_at, $full = false)}}</p>
                 </div>
-                <div class="mb-2 mt-2 d-flex">
-                  <h3 class="font-weight-bold">{{$first_post?->title}}</h3>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd"/></svg>
-                </div>
+                <a href="/read_post/{{$first_post?->slug}}">
+                  <div class="mb-2 mt-2 d-flex">
+
+                    <h3 class="font-weight-bold">{{$first_post?->title}}</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd"/></svg>
+                  </div>
+                </a>
                 <div class="mb-2 mt-2 d-none">
                   <p class="blop_text">Learn about the diverse ways herbal medicine can address health issues and enhance your quality of life.</p>
                 </div>
@@ -112,10 +115,12 @@ if (!function_exists('find_first_post')) {
                 <div class="mb-1 mt-1">
                   <p class="little_page_title " data-aos="zoom-in" data-aos-delay="300">{{ucfirst($first_post?->user?->name)}} • {{Helper::time_elapsed_string($first_post->created_at, $full = false)}}</p>
                 </div>
-                <div class="mb-1 mt-1 d_flex_grid">
-                  <h6 class="font-weight-bold">{{$first_post?->title}}</h6>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd"/></svg>
-                </div>
+                <a href="/read_post/{{$first_post?->slug}}">
+                  <div class="mb-1 mt-1 d_flex_grid">
+                    <h6 class="font-weight-bold">{{$first_post?->title}}</h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd"/></svg>
+                  </div>
+                </a>
                 <div class="mb-1 mt-1 d-none">
                   <p class="blop_text">Explore how herbal remedies can effectively address....</p>
                 </div>
@@ -138,10 +143,12 @@ if (!function_exists('find_first_post')) {
                 <div class="mb-1 mt-1">
                   <p class="little_page_title " data-aos="zoom-in" data-aos-delay="300">{{ucfirst($first_post?->user?->name)}} • {{Helper::time_elapsed_string($first_post->created_at, $full = false)}}</p>
                 </div>
-                <div class="mb-1 mt-1 d_flex_grid">
-                  <h6 class="font-weight-bold">{{$first_post?->title}}</h6>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd"/></svg>
-                </div>
+                <a href="/read_post/{{$first_post?->slug}}">
+                  <div class="mb-1 mt-1 d_flex_grid">
+                    <h6 class="font-weight-bold">{{$first_post?->title}}</h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd"/></svg>
+                  </div>
+                </a>
                 <div class="mb-1 mt-1 d-none">
                   <p class="blop_text">Explore how herbal remedies can effectively address....</p>
                 </div>
@@ -172,10 +179,12 @@ if (!function_exists('find_first_post')) {
                 <div class="mb-1 mt-1">
                   <p class="little_page_title " data-aos="zoom-in" data-aos-delay="300">{{Ucfirst($blog?->user?->name)}} • {{Helper::time_elapsed_string($blog->created_at, $full = false)}}</p>
                 </div>
-                <div class="mb-1 mt-1 d_flex_grid">
-                  <h6 class="font-weight-bold">{{$blog?->title}}</h6>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd"/></svg>
-                </div>
+                <a href="/read_post/{{$first_post?->slug}}">
+                  <div class="mb-1 mt-1 d_flex_grid">
+                    <h6 class="font-weight-bold">{{$blog?->title}}</h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd"/></svg>
+                  </div>
+                </a>
                 <div class="mb-1 mt-1 d-none">
                   <p class="blop_text">Learn how herbal mental models simplify complex processes and relationships.</p>
                 </div>

@@ -67,7 +67,7 @@ class ProductController extends Controller
         $image = "/assets/img/products/".time() . '4.' . $request->image->getClientOriginalExtension();
 
         $request->image->move(public_path('assets/img/products/'), $image);
-        if (Product::create( array_merge($request->all(),['image' =>$image]))){
+        if (Product::create( array_merge($request->all(),['image' =>$image,'slug' =>str_ireplace(" ", "_", $request->name)]))){
     // code...
 
   
@@ -115,7 +115,7 @@ class ProductController extends Controller
     }else{
         $image=$product->image;
 }
-        if ($product?->update(array_merge($request->all(),['image' =>$image]))){
+        if ($product?->update(array_merge($request->all(),['image' =>$image,'slug' =>str_ireplace(" ", "_", $request->name)]))){
     
     // code...
 

@@ -40,6 +40,7 @@
                 </div>
                 <input type="text" class="form-control google_login" id="name" style="border-left: 0px !important;" placeholder="Enter Full Name">
               </div>
+              
               <div class="input-group mb-2 mr-sm-2">
                 <div class="input-group-prepend ">
                   <div class="input-group-text google_login">

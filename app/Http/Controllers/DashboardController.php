@@ -9,8 +9,11 @@ use App\Models\Category;
 use App\Models\BlogSetting;
 use App\Models\Transaction;
 use App\Models\Blog;
+use App\Models\Subscription;
 use App\Models\Order;
 use App\Models\User;
+use App\Mail\NotificationMaller;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -19,6 +22,83 @@ class DashboardController extends Controller
 
 
    
+    public function subscribe(Request $request)
+    {
+        
+
+         $rules = [
+    
+        'email' => ['required','max:255','email','unique:subscriptions,email'],
+
+       
+             
+          
+    ];
+
+    $customMessages = [
+        'required' => 'The :attribute  field is required.',
+    ];
+    $validate= $this->validate($request, $rules, $customMessages);
+
+    if ($validate) {
+        if (Subscription::create( array_merge($request->all()))) {
+            return (['success' => 'You successfully subscribe to our new letter']);
+         }
+
+         
+    }else{
+        return $this->validate($request, $rules, $customMessages);
+    }
+
+    }
+    public function contact_us(Request $request)
+    {
+        
+
+         $rules = [
+        'name' => 'required',
+        'email' => 'required',
+        'time' => 'required',
+        'details' => 'required',
+
+       
+             
+          
+    ];
+
+    $customMessages = [
+        'required' => 'The :attribute  field is required.',
+    ];
+    $validate= $this->validate($request, $rules, $customMessages);
+
+    if ($validate) {
+
+         $data = [
+            'name' =>$request->name,
+            'subject'=>'Appointment Request',
+            'url_description' => 'Appointment Request',
+            'body'=>'',
+        ];
+        $data['body'] ="Hello <b>Admin</b>,<br>
+            You have a new <b>Appointment</b>
+            from <b>".$request->name."</b>, Preferred appointment time <b>".$request->time."</b>, Contact Email <b>".$request->email."</b>
+            <br>
+            <b>Describe Briefly Subject Of Concern</b>
+            <br>
+            ".$request->details."
+            <br>
+
+".ucfirst(env('APP_NAME'))."";
+        $settings=Setting::first();
+        if ($settings->admin_email!==null) {
+            Mail::to($settings->admin_email)->queue(new NotificationMaller($data));
+        }
+        return (['success' => 'Email Sent, We will reach out to confirm your appointment, Thanks']);
+    }else{
+        return $this->validate($request, $rules, $customMessages);
+    }
+
+    }
     public function blog(Request $request)
     {
         $settings = BlogSetting::first();
@@ -31,7 +111,8 @@ class DashboardController extends Controller
         {
             $settings = HomePageSetting::first();
 
-            return view('pages.index',compact('settings'));
+            return view('pages.index',compact('settings'))->with(['page_title'=>'
+Herbal Remedies for Modern Health Challenges']);
 
         }
 
@@ -112,22 +193,32 @@ class DashboardController extends Controller
     public function save_home_page_settings(Request $request)
     {
       $settings=HomePageSetting::get();
-      if (count($settings)>0) {
-        $settings = HomePageSetting::first();
-        if ($settings?->update(array_merge($request->all()))){
-    
-    // code...
+       
 
-  
-      return (['success' => 'Setting update successfully']);
+        if (count($settings)>0) {
+            $settings = HomePageSetting::first();
+            if ($request->file!==null) {
 
-       }
+                $file = "/assets/videos/".time() . '4.' . $request->file->getClientOriginalExtension();
+
+            $request->file->move(public_path('assets/videos/'), $file);
+                // code...
+            }
+            if ($settings?->update(array_merge($request->all(),['file' =>$file]))){
+        
+        // code...
+
+      
+                return (['success' => 'Setting update successfully']);
+
+           }
 
       }else{
-         if (HomePageSetting::create(array_merge($request->all()))) {
+         if (HomePageSetting::create(array_merge($request->all(),['file' =>$file]))) {
             return (['success' => 'Setting saved successfully']);
          }
       }
+      
     }
 
     public function settings(Request $request)

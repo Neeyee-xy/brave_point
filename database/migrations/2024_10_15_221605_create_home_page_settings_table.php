@@ -19,7 +19,7 @@ return new class extends Migration
             $table->longText('product_id_1')->nullable();
             $table->longText('product_id_2')->nullable();
             $table->longText('product_id_3')->nullable();
-             $table->longText('product_id_4')->nullable();
+            $table->longText('product_id_4')->nullable();
             $table->longText('product_id_5')->nullable();
             $table->longText('product_id_6')->nullable();
             $table->timestamps();

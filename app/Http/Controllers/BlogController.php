@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
+     public function read_post(Request $request)
+     {
+        $post=Blog::with('user')->where('slug',$request->slug)->first();
+
+
+     return view('pages.read_post',compact('post'))->with(['page_title'=>'Blog']);
+     }  
+
      public function index(Request $request)
      {
 
@@ -61,8 +69,8 @@ class BlogController extends Controller
 
     $customMessages = [
         'required' => 'The :attribute  field is required.',
-          'category_id.required' => 'The product category field is required.',
-          'title.required'=> 'The question bank name is required'
+        'category_id.required' => 'The product category field is required.',
+        'title.required'=> 'The question bank name is required'
          
 
     ];
@@ -72,7 +80,7 @@ class BlogController extends Controller
         $image = "/assets/img/blog/".time() . '4.' . $request->image->getClientOriginalExtension();
 
         $request->image->move(public_path('assets/img/blog/'), $image);
-        if (Blog::create( array_merge($request->all(),['image' =>$image]))){
+        if (Blog::create( array_merge($request->all(),['image' =>$image,'slug'=>str_ireplace(" ", "_", $request->title)]))){
     // code...
 
   
@@ -118,7 +126,7 @@ class BlogController extends Controller
     }else{
         $image=$blog->image;
 }
-        if ($blog?->update(array_merge($request->all(),['image' =>$image]))){
+        if ($blog?->update(array_merge($request->all(),['image' =>$image,'slug'=>str_ireplace(" ", "_", $request->title)]))){
     
     // code...
 
