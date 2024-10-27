@@ -1348,7 +1348,10 @@ margin-top: 30px;
   width: 100%;
 }
   .slide_show{
-  
+  width: 335px;
+  overflow: scroll;
+  position: relative;
+  margin: 10px auto;
 }
   .search_ab_top{
     top: 30%;
@@ -1580,7 +1583,10 @@ margin-top: 30px;
   width: 100%;
 }
   .slide_show{
-  
+  width: 335px;
+  overflow: scroll;
+  position: relative;
+  margin: 10px auto;
 }
   .search_ab_top{
     top: 30%;
@@ -1818,7 +1824,10 @@ margin-left: 7px !important;
 }
   /* CSS styles for small screens */
   .slide_show{
-  
+  width: 335px;
+  overflow: scroll;
+  position: relative;
+  margin: 10px auto;
 }
   .search_ab_top{
     top: 30%;
