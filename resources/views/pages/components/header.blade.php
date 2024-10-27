@@ -111,7 +111,7 @@ $blogs_nav=Blog::get();
                             @foreach($blogs_nav as $blog_nav)
                             
                               <li>
-                                <a  class="" href="/read_post?slug={{$product_nav->slug}}">{{$blog_nav->title}}</a>
+                                <a  class="" href="/read_post?slug={{$blog_nav->slug}}">{{$blog_nav->title}}</a>
                               </li>
                               @endforeach
                            
