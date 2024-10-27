@@ -79,9 +79,7 @@ if (!function_exists('find_product_slug')) {
               
 
               <div class="slide_wrap">
-                <div class="slide_show">
                 
-                </div>
               
               </div>
 
