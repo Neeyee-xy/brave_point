@@ -264,7 +264,7 @@ li{list-style: none;
   margin: 10px auto;
 }
 .slide_show .slide_img{
-  width: 5000px; overflow: hidden;
+/*  width: 5000px; overflow: hidden;*/
 }
 .slide_show .slide_img > div{
   float: left; width: 320px; padding: 5px;
