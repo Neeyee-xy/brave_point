@@ -359,7 +359,7 @@ if (!function_exists('find_product_slug')) {
         </div>
           
         </div>
-        <div class=" conslutation mt-5 pt-5" style="background: #EEEDED;
+        <div class=" conslutation mt-5 pt-5 d-none" style="background: #EEEDED;
   overflow-x: hidden;">
           
        
