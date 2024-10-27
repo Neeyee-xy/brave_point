@@ -173,10 +173,7 @@
       <script src="/plugins/toastr/toastr.min.js"></script>
       <script>
  $(document).ready(function(){
-$('.html').scroll(function () {
-  alert('jj')
-    this.scrollLeft = 0;
-});
+
    $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -200,6 +197,10 @@ $('.html').scroll(function () {
       $(".main-menu").addClass("default-transition");
       $(".theme-colors").addClass("default-transition");
       $("body > *").animate({ opacity: 1 }, 100);
+      $('html, body').css({
+    overflow: 'hidden',
+    height: '100%'
+});
     }, 300);
 
     // search box 
