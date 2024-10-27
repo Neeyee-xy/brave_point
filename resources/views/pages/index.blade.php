@@ -27,6 +27,43 @@ if (!function_exists('find_product_slug')) {
 
     <main>
         
+
+
+        <div class="mt-5  container">
+          <div class="row">
+            <div class="col-11 col-sm-11  col-md-6 col-lg-6" data-aos="fade-right" data-aos-delay="300">
+              <div class="w-100 ">
+                <h1>Why Choose Herbal Remedies?</h1>
+
+              </div>
+              <div class="w-100 mt-5 ">
+                <p>Herbal remedies have been used for centuries to support health and wellness. Here are some benefits of choosing our herbal products:
+                </p>
+
+              </div>
+            </div>
+           
+            <div class="col-11 col-sm-11 col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="w-100 ml-sm-0 ml-md-4">
+                <div class="">
+                <p><b>Natural Ingredients:</b> Made from pure, natural herbs with no artificial additives.</p>
+
+                </div>
+                <div class="w-100">
+                <p style="color:#7c8c9c"><b>Effective Solutions:</b> Scientifically formulated to provide relief and promote overall health.</p>
+
+                </div>
+                <div class="w-100">
+                <p style="color:#7c8c9c"><b>Holistic Approach:</b> Addresses the root cause of health issues rather than just symptoms.</p>
+
+                </div>
+                
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
         <div class="container mt-5 mb-5 relative" data-aos="zoom-in" data-aos-delay="300">
           <div class="player_center_button">
               <svg xmlns="http://www.w3.org/2000/svg"  width="4em" height="4em" viewBox="0 0 24 24"><path fill="#F68634" d="M6 4v16a1 1 0 0 0 1.524.852l13-8a1 1 0 0 0 0-1.704l-13-8A1 1 0 0 0 6 4"/></svg>
