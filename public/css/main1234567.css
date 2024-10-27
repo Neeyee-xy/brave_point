@@ -1347,9 +1347,12 @@ margin-top: 30px;
   height: 100%;
   width: 100%;
 }
-  .slide_show{
+  .slide_wrap{
+  width: 335px!important;
+}
+.slide_show{
   width: 335px;
-  overflow: scroll;
+  overflow: hidden;
   position: relative;
   margin: 10px auto;
 }
@@ -1582,9 +1585,12 @@ margin-top: 30px;
   height: 100%;
   width: 100%;
 }
-  .slide_show{
+  .slide_wrap{
+  width: 335px!important;
+}
+.slide_show{
   width: 335px;
-  overflow: scroll;
+  overflow: hidden;
   position: relative;
   margin: 10px auto;
 }
@@ -1823,9 +1829,12 @@ margin-left: 7px !important;
   width: 100%;
 }
   /* CSS styles for small screens */
-  .slide_show{
+  .slide_wrap{
+  width: 335px!important;
+}
+.slide_show{
   width: 335px;
-  overflow: scroll;
+  overflow: hidden;
   position: relative;
   margin: 10px auto;
 }
