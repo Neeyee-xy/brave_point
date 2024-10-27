@@ -44,7 +44,7 @@ if (!function_exists('find_product_slug')) {
 
         <div class="mt-5  container">
           <div class="row">
-            <div class="col-11 col-sm-11 col-md-12 col-lg-4" data-aos="fade-right" data-aos-delay="300">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4" data-aos="fade-right" data-aos-delay="300">
               <div class="w-100">
                 <h1>Explore Our Products</h1>
                 
@@ -75,12 +75,12 @@ if (!function_exists('find_product_slug')) {
               </div>
               
             </div>
-            <div class="col-11 col-sm-11 col-md-12 col-lg-8" data-aos="fade-left" data-aos-delay="300">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8" data-aos="fade-left" data-aos-delay="300">
               
 
               <div class="slide_wrap">
                 <div class="slide_show">
-                <div class="slide_img">
+                <div class="slide_img d_flex_grid">
                   <div class="slide  d-flex justify-content-center px-5 mr-3">
                     <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_1}}&slug={{find_product_slug($settings?->product_id_1)}}">
                     <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_1)}} >
@@ -135,7 +135,7 @@ if (!function_exists('find_product_slug')) {
 
         <div class="mt-5  container">
           <div class="row">
-            <div class="col-11 col-sm-11  col-md-6 col-lg-6" data-aos="fade-right" data-aos-delay="300">
+            <div class="col-12 col-sm-12  col-md-6 col-lg-6" data-aos="fade-right" data-aos-delay="300">
               <div class="w-100 ">
                 <h1>Why Choose Herbal Remedies?</h1>
 
@@ -147,7 +147,7 @@ if (!function_exists('find_product_slug')) {
               </div>
             </div>
            
-            <div class="col-11 col-sm-11 col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="300">
               <div class="w-100 ml-sm-0 ml-md-4">
                 <div class="">
                 <p><b>Natural Ingredients:</b> Made from pure, natural herbs with no artificial additives.</p>
@@ -204,7 +204,7 @@ if (!function_exists('find_product_slug')) {
           <div class="row">
             
           
-          <div class="col-11 col-sm-11 col-md-12 col-lg-6" data-aos="fade-up-right" data-aos-delay="300">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6" data-aos="fade-up-right" data-aos-delay="300">
              <div class="w-100">
                 <h1>Shop By Concern</h1>
                 
@@ -218,7 +218,7 @@ if (!function_exists('find_product_slug')) {
               </div>
             
           </div>
-          <div class="col-11 col-sm-11 col-md-12 col-lg-6">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6">
             <div class="d-flex justify-content-between mt-5" data-aos="flip-left" data-aos-delay="300">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 14 14"><g fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round"><path d="M.5 7a6.5 6.5 0 1 0 13 0a6.5 6.5 0 1 0-13 0"/><path d="M2.529 7.664c.286-.139.994-.312 1.535.105s.554 1.146.493 1.458c-.06.312-.047 1.04.494 1.457c.54.417 1.249.244 1.535.105M8.833 6.5A1.667 1.667 0 1 0 7.32 4.137a1.25 1.25 0 1 0 .385 1.922a1.66 1.66 0 0 0 1.13.441ZM8.25 9a.25.25 0 1 1 0-.5m0 .5a.25.25 0 1 0 0-.5m-5-3a.25.25 0 1 1 0-.5m0 .5a.25.25 0 1 0 0-.5m7 5a.25.25 0 0 1 0-.5m0 .5a.25.25 0 0 0 0-.5"/></g></svg>
@@ -277,14 +277,14 @@ if (!function_exists('find_product_slug')) {
         <div class="w-100 conslutation d-flex justify-content-center">
           <div class="conslutation_inner_box my-auto">
             <div class="row">
-              <div class="col-11 col-sm-11 col-md-12  col-lg-6 my-auto " data-aos="zoom-in" data-aos-delay="300">
+              <div class="col-12 col-sm-12 col-md-12  col-lg-6 my-auto " data-aos="zoom-in" data-aos-delay="300">
                 <div class="w-100">
                 <p>Not sure where to start?</p>
                 <h1>Book a Free 15 Minute Herbal Consultation</h1>
                 
               </div>
             </div>
-              <div class="col-11 col-sm-11 col-md-12  col-lg-6 conslutation_inner_box_right" data-aos="zoom-in" data-aos-delay="300">
+              <div class="col-12 col-sm-12 col-md-12  col-lg-6 conslutation_inner_box_right" data-aos="zoom-in" data-aos-delay="300">
                  <div class="w-100 mt-5">
                 <p>
                   Book a remote session with one of our experienced Holists to better understand your specific health concerns & goals.

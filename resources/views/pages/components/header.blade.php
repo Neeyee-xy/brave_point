@@ -21,7 +21,7 @@ $blogs_nav=Blog::get();
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/vendor/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="/css/main7.css" />
+    <link rel="stylesheet" href="/css/main71.css" />
    <link rel="stylesheet" href="/plugins/toastr/toastr.min.css">
 
 </head>

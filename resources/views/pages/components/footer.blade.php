@@ -1,7 +1,7 @@
 <div class="container subscrible_us relative" >
         <div class="subscrible_us_inner_box">
           <div class="row">
-            <div class="col-11 col-sm-11 col-md-12 col-lg-8" data-aos="zoom-out"  data-aos-delay="300">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8" data-aos="zoom-out"  data-aos-delay="300">
               <div class="w-100 px-5">
                  <h5 class="">
                 Subscribe to our newsletter for the latest updates, health tips, and exclusive offers straight to your inbox.
@@ -11,7 +11,7 @@
              
               
             </div>
-            <div class="col-11 col-sm-11 col-md-12 col-lg-4 px-5">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 px-5">
               <div class="w-100 subscrible_us_inner_form_box d-flex">
                 <div class="w-100 my-auto">
               
@@ -51,7 +51,7 @@
        
         <div class="container" >
           <div class="row">
-            <div class="col-11 col-sm-11 col-md-6 col-lg-3">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3">
               <div class="footer_about_us footer_logo">
                 <h5 data-aos="zoom-in" data-aos-delay="300">
                   BravePoint
@@ -71,7 +71,7 @@
             </div>
               
             </div>
-            <div class="col-11 col-sm-11 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
               <div class="d_flex_grid_justifly_end  " style="min-height: 100px;">
                 
               
@@ -98,7 +98,7 @@
               
               
             </div>
-            <div class="col-11 col-sm-11 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
               <div class="d_flex_grid_justifly_start" style="min-height: 100px;">
                 
               
@@ -123,7 +123,7 @@
               </div>
             </div>
             </div>
-            <div class="col-11 col-sm-11 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
               <div class="d_flex_grid justify-content-start" style="min-height: 100px;">
                 
               
