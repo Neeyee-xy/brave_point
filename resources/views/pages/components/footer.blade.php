@@ -1,5 +1,5 @@
 <div class="container subscrible_us relative d-flex justify-content-center" >
-        <div class="subscrible_us_inner_box" style="left: 20px;">
+        <div class="subscrible_us_inner_box" style="left: 10%;">
           <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-8" data-aos="zoom-out"  data-aos-delay="300">
               <div class="w-100 px-5">
