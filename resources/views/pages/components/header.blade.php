@@ -32,10 +32,40 @@ $blogs_nav=Blog::get();
 
 
 
-  
+
    <link rel="stylesheet" href="/plugins/toastr/toastr.min.css">
 
 </head>
+<style type="text/css">
+  .search_item{
+  display: none;
+  margin-top: 0.125em;
+  margin-left: 0.125em;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  border-radius: 0.375rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+.search_item{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  }
+.search_item li{
+  color: #e75e8d;
+
+  padding: 9px 10px;
+  letter-spacing: .3px;
+  }
+  .search_item li a{
+  color: #e75e8d;
+  }
+  .search_item li:hover{
+    color: #e75e8d;
+    background-color: #e9ecef;
+  }
+</style>
 <body class="show-spinner">
     <nav class="navbar navbar-expand-lg navbar-light white_background">
           <!-- <a class="navbar-brand" href="#">Navbar</a> -->
