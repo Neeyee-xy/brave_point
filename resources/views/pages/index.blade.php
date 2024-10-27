@@ -6,11 +6,21 @@ if (!function_exists('find_product_image')) {
   function find_product_image($product_id){
     if ($product_id!==null) {
       $product_image=Product::find($product_id);
-      return $product_image->image;
+      return "src=".$product_image->image." slug=".$product_image->slug." alt=".$product_image->slug."";
     }
 
   }
 }
+if (!function_exists('find_product_slug')) {
+  function find_product_slug($product_id){
+    if ($product_id!==null) {
+      $product_image=Product::find($product_id);
+      return $product_image->slug;
+    }
+
+  }
+}
+
 
 
  ?>
@@ -20,7 +30,7 @@ if (!function_exists('find_product_image')) {
             <div class="hero_text">
               <h1 class="hero_text_text" data-aos="fade-up" data-aos-delay="300">{{$settings?->hero_text}}</h1>
               <p data-aos="zoom-in" data-aos-delay="300">{{$settings?->hero_sub_text}}</p>
-              <button class="btn btn_primary low_radius" data-aos="fade-right" data-aos-delay="300">Discover Now</button>
+              <a href="/all_products" class="btn btn_primary low_radius" data-aos="fade-right" data-aos-delay="300">Discover Now</a>
             </div>
         </div> 
 
@@ -45,7 +55,7 @@ if (!function_exists('find_product_image')) {
 
               </div>
               <div class="w-100 mt-5">
-                <button class="btn btn_primary low_radius">Shop Now</button>
+                <a class="btn btn_primary low_radius" href="/all_products">Shop Now</a>
               </div>
               <div class="w-100 d-flex mt-5  partners">
                 <img src="/assets/img/partners/nafdac.svg">
@@ -68,7 +78,9 @@ if (!function_exists('find_product_image')) {
                 <div class="slide_show">
                 <div class="slide_img">
                   <div class="slide  d-flex justify-content-center px-5 mr-3">
-                    <img  class="slide_img_ my-auto" src="{{find_product_image($settings?->product_id_1)}}" >
+                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_1}}&slug={{find_product_slug($settings?->product_id_1)}}">
+                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_1)}} >
+                  </a>
                      <!-- <div class="slide_inner_box p-3">
                       <p>01-</p>
                       <p>Abdocare Herbal Tea</p>
@@ -76,20 +88,30 @@ if (!function_exists('find_product_image')) {
                     </div> -->
                   </div>
                   <div class="slide d-flex justify-content-center px-5 mr-3" style="background:#F1F0F3;">
-                    <img  class="slide_img_" src="{{find_product_image($settings?->product_id_2)}}" alt="">
+                     <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_2}}&slug={{find_product_slug($settings?->product_id_2)}}">
+                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_2)}} >
+                  </a>
 
                   </div>
                   <div class="slide d-flex justify-content-center px-5 mr-3">
-                    <img  class="slide_img_" src="{{find_product_image($settings?->product_id_3)}}" alt="">
+                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_3}}&slug={{find_product_slug($settings?->product_id_3)}}">
+                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_3)}} >
+                  </a>
                   </div>
                    <div class="slide d-flex justify-content-center px-5 mr-3">
-                    <img  class="slide_img_" src="{{find_product_image($settings?->product_id_4)}}" alt="">
+                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_4}}&slug={{find_product_slug($settings?->product_id_4)}}">
+                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_4)}} >
+                  </a>
                   </div>
                   <div class="slide d-flex justify-content-center px-5 mr-3">
-                    <img  class="slide_img_" src="{{find_product_image($settings?->product_id_5)}}" alt="">
+                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_5}}&slug={{find_product_slug($settings?->product_id_5)}}">
+                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_5)}} >
+                  </a>
                   </div>
                   <div class="slide d-flex justify-content-center px-5 mr-3">
-                    <img  class="slide_img_" src="{{find_product_image($settings?->product_id_6)}}" alt="">
+                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_6}}&slug={{find_product_slug($settings?->product_id_6)}}">
+                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_6)}} >
+                  </a>
                   </div>
                   
                   </div> 
@@ -150,16 +172,16 @@ if (!function_exists('find_product_image')) {
             <div class="vido_text p-3   justify-content-center">
               
               <h2 class="text-center font-weight-bold ">
-                Meticulously crafted & carefully sourced from natural herbs with no artificial additives
+               {{$settings?->video_text1}}
               </h2 class="text-center font-weight-bold ">
               <h2 class="text-center font-weight-bold ">
-                TRIED • TESTED • TRUSTED.
+                {{$settings?->video_text2}}.
               </h2 class="text-center font-weight-bold ">
           
               
             </div>
           <div class="player">
-            <video class="player__video viewer" src="https://player.vimeo.com/external/194837908.sd.mp4?s=c350076905b78c67f74d7ee39fdb4fef01d12420&profile_id=164"></video>
+            <video class="player__video viewer" src="{{$settings?->file}}"></video>
 
             <div class="player__controls">
               <div class="progress">
@@ -188,7 +210,7 @@ if (!function_exists('find_product_image')) {
 
               </div>
               <div class="w-100 mt-5">
-                <button class="btn btn_primary low_radius">Shop Now</button>
+                <a class="btn btn_primary low_radius" href="/all_products">Shop Now</a>
               </div>
             
           </div>
@@ -202,7 +224,7 @@ if (!function_exists('find_product_image')) {
                 <h5><b>Malaria and Typhoid</b></h5>
                 <p class="mt-2">Made from pure, natural herbs with no artificial additives.</p>
                 <div class="d-flex">
-                  <p class="">Shop Ibacode Herbal Tea</p>
+                  <p class=""><a href="/all_products">Shop Now</a></p>
                 <svg xmlns="http://www.w3.org/2000/svg"  class="mt-1 ml-2" width="3em" height="1.5em" viewBox="0 0 24 24"><path fill="#F68634" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd"/></svg>
                 </div>
                 
@@ -219,7 +241,7 @@ if (!function_exists('find_product_image')) {
                 <h5><b>Memory Boost</b></h5>
                 <p class="">Made from pure, natural herbs with no artificial additives.</p>
                 <div class="d-flex">
-                  <p class="">Shop Ibacode Herbal Tea</p>
+                  <p class=""><a href="/all_products">Shop Now</a></p>
                   <svg xmlns="http://www.w3.org/2000/svg" class="mt-1 ml-3 " width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="#F68634" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd"/></svg>
               </div>
             </div>
@@ -236,7 +258,7 @@ if (!function_exists('find_product_image')) {
                 <h5><b>Erectile Dysfunction</b></h5>
                 <p class="">Made from pure, natural herbs with no artificial additives.</p>
                 <div class="d-flex">
-                  <p class="">Shop Ibacode Herbal Tea</p>
+                  <p class=""><a href="/all_products">Shop Now</a></p>
                 <svg xmlns="http://www.w3.org/2000/svg" class="mt-1 ml-3 " width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="#F68634" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd"/></svg>
                 </div>
                 
@@ -267,7 +289,7 @@ if (!function_exists('find_product_image')) {
                 <br>
                 <p>n.b. not all Holists offer this type of consultation.</p>
                  <div class="w-100 mt-5">
-                <button class="btn btn_primary low_radius">Book Now</button>
+                <a class="btn btn_primary low_radius" href="/contact">Book Now</a>
               </div>
               </div>
             </div>
@@ -282,28 +304,55 @@ if (!function_exists('find_product_image')) {
               
             </div>
             <div class="d-flex justify-content-center">
-              <a href="#" data-aos="flip-up"  data-aos-delay="300">
+              <a href="{{$settings?->fb}}" data-aos="flip-up"  data-aos-delay="300">
               <svg class="ml-3" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 16 16"><path fill="black" d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131c.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
             </a>
-              <a href="#" data-aos="flip-up"  data-aos-delay="300">
+              <a href="{{$settings?->ig}}" data-aos="flip-up"  data-aos-delay="300">
               <svg class="ml-3" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="black" fill-rule="evenodd" d="M7.465 1.066C8.638 1.012 9.012 1 12 1s3.362.013 4.534.066s1.972.24 2.672.511c.733.277 1.398.71 1.948 1.27c.56.549.992 1.213 1.268 1.947c.272.7.458 1.5.512 2.67C22.988 8.639 23 9.013 23 12s-.013 3.362-.066 4.535c-.053 1.17-.24 1.97-.512 2.67a5.4 5.4 0 0 1-1.268 1.949c-.55.56-1.215.992-1.948 1.268c-.7.272-1.5.458-2.67.512c-1.174.054-1.548.066-4.536.066s-3.362-.013-4.535-.066c-1.17-.053-1.97-.24-2.67-.512a5.4 5.4 0 0 1-1.949-1.268a5.4 5.4 0 0 1-1.269-1.948c-.271-.7-.457-1.5-.511-2.67C1.012 15.361 1 14.987 1 12s.013-3.362.066-4.534s.24-1.972.511-2.672a5.4 5.4 0 0 1 1.27-1.948a5.4 5.4 0 0 1 1.947-1.269c.7-.271 1.5-.457 2.67-.511m8.98 1.98c-1.16-.053-1.508-.064-4.445-.064s-3.285.011-4.445.064c-1.073.049-1.655.228-2.043.379c-.513.2-.88.437-1.265.822a3.4 3.4 0 0 0-.822 1.265c-.151.388-.33.97-.379 2.043c-.053 1.16-.064 1.508-.064 4.445s.011 3.285.064 4.445c.049 1.073.228 1.655.379 2.043c.176.477.457.91.822 1.265c.355.365.788.646 1.265.822c.388.151.97.33 2.043.379c1.16.053 1.507.064 4.445.064s3.285-.011 4.445-.064c1.073-.049 1.655-.228 2.043-.379c.513-.2.88-.437 1.265-.822c.365-.355.646-.788.822-1.265c.151-.388.33-.97.379-2.043c.053-1.16.064-1.508.064-4.445s-.011-3.285-.064-4.445c-.049-1.073-.228-1.655-.379-2.043c-.2-.513-.437-.88-.822-1.265a3.4 3.4 0 0 0-1.265-.822c-.388-.151-.97-.33-2.043-.379m-5.85 12.345a3.669 3.669 0 0 0 4-5.986a3.67 3.67 0 1 0-4 5.986M8.002 8.002a5.654 5.654 0 1 1 7.996 7.996a5.654 5.654 0 0 1-7.996-7.996m10.906-.814a1.337 1.337 0 1 0-1.89-1.89a1.337 1.337 0 0 0 1.89 1.89" clip-rule="evenodd"/></svg>
               </a>
-              <a href="#" data-aos="flip-up"  data-aos-delay="300">
+              <a href="{{$settings?->yb}}" data-aos="flip-up"  data-aos-delay="300">
              <svg class="ml-3" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><g fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 8a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path d="m10 9l5 3l-5 3z"/></g></svg>
               </a>
             </div>
           </div>
-            <div class="w-100  product_grid">
-              <img  class="mr-2 ml-2" src="/assets/img/products/image4.webp" alt="" data-aos="zoom-in-right"  data-aos-delay="300">
-              <img  class="mr-2 ml-2" src="/assets/img/products/image1.webp" alt="" data-aos="zoom-in-right"  data-aos-delay="300">
-              <img  class="mr-2 ml-2" src="/assets/img/products/image6.webp" alt=""data-aos="zoom-in-right"  data-aos-delay="300">
-              <img  class="mr-2 ml-2" src="/assets/img/products/image7.webp" alt="" data-aos="zoom-in-right"  data-aos-delay="300"> 
-              <img  class="mr-2 ml-2" src="/assets/img/products/image3.webp" alt="" data-aos="zoom-in-right"  data-aos-delay="300">
+            <div class="w-100  product_grid d_flex_grid justify-content-between">
+              <div class="img_box_footer px-3 py-3 mr-3" data-aos="zoom-in-right"  data-aos-delay="300">
+                <a class="my-auto"  href="/all_products?product_id={{$settings?->product_id_7}}&slug={{find_product_slug($settings?->product_id_7)}}">
+                    
+                    <img  class="mr-2 ml-2 img_box_footer_img" {{find_product_image($settings?->product_id_7)}} >
+                  </a>
+                </div>
+                   <div class="img_box_footer px-3 py-3 mr-3" data-aos="zoom-in-right"  data-aos-delay="300">
+                    <a class="my-auto"  href="/all_products?product_id={{$settings?->product_id_8}}&slug={{find_product_slug($settings?->product_id_8)}}">
+                    
+                    <img  class="mr-2 ml-2 img_box_footer_img" {{find_product_image($settings?->product_id_8)}} >
+                  </a>
+                </div>
+                  <div class="img_box_footer px-3 py-3 mr-3" data-aos="zoom-in-right"  data-aos-delay="300">
+                    <a class="my-auto"  href="/all_products?product_id={{$settings?->product_id_9}}&slug={{find_product_slug($settings?->product_id_9)}}">
+                    
+                    <img  class="mr-2 ml-2 img_box_footer_img" {{find_product_image($settings?->product_id_9)}} >
+                  </a>
+                </div>
+                  <div class="img_box_footer px-3 py-3 mr-3" data-aos="zoom-in-right"  data-aos-delay="300">
+                    <a class="my-auto"  href="/all_products?product_id={{$settings?->product_id_10}}&slug={{find_product_slug($settings?->product_id_10)}}">
+                    
+                    <img  class="mr-2 ml-2 img_box_footer_img" {{find_product_image($settings?->product_id_10)}} >
+                  </a>
+                </div>
+                  <div class="img_box_footer px-3 py-3 mr-3" data-aos="zoom-in-right"  data-aos-delay="300">
+                    <a class="my-auto"  href="/all_products?product_id={{$settings?->product_id_11}}&slug={{find_product_slug($settings?->product_id_11)}}">
+                    
+                    <img  class="mr-2 ml-2 img_box_footer_img" {{find_product_image($settings?->product_id_11)}} >
+                  </a>
+                </div>
+              
+            
 
               
             </div>
             
-          </div>
+        </div>
           
         </div>
         <div class=" conslutation mt-5 pt-5" style="background: #EEEDED;">

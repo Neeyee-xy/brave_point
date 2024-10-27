@@ -18,7 +18,7 @@
 body, html {
     height: 100%;
      width: 100%;
-     overflow-x: hidden;
+    
 }
 
 
@@ -1110,6 +1110,9 @@ margin-top: 30px;
 .project_long_text{
   width: 50%;
 }
+.search_ab_top{
+    top: 63%;
+  }
 /* Desktop */
 @media (max-width: 1023px) {
   /* CSS styles for desktops */
@@ -1336,6 +1339,9 @@ margin-top: 30px;
 /* Mobile devices */
 @media (min-width: 568px) and (max-width: 767px) 
 {
+  .search_ab_top{
+    top: 30%;
+  }
   .navbar{
     padding-left: 50px;
     padding-right: 50px;
@@ -1555,6 +1561,9 @@ margin-top: 30px;
 /* Mobile devices */
 @media (min-width: 321px) and (max-width: 567px) {
   /* CSS styles for mobile devices */
+  .search_ab_top{
+    top: 30%;
+  }
   .product_grid{
   justify-content: center!important;
 }
@@ -1778,6 +1787,9 @@ margin-left: 7px !important;
 /* Small mobile devices */
 @media (max-width: 320px) {
   /* CSS styles for small screens */
+  .search_ab_top{
+    top: 30%;
+  }
   .navbar{
     padding-left: 20px;
     padding-right: 10px;
@@ -1898,5 +1910,7 @@ margin-left: 7px !important;
   object-fit: cover;
 }
 }
+
+
 
 
