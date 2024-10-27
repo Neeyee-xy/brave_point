@@ -202,7 +202,7 @@
     setTimeout(function () {
      
 $('.subscrible_us_inner_box').css({
-    width: '90%'
+    width: '80%'
 });
 $('.subscrible_us_inner_box').scrollLeft(10);
     }, 3000);
