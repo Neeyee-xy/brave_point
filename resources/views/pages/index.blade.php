@@ -46,7 +46,30 @@ if (!function_exists('find_product_slug')) {
 
 
         <div class="container subscrible_us relative" >
-        
+        <div class="">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8" data-aos="zoom-out"  data-aos-delay="300">
+              <div class="w-100 px-5">
+                 <h5 class="">
+                Subscribe to our newsletter for the latest updates, health tips, and exclusive offers straight to your inbox.
+              </h5>
+                
+              </div>
+             
+              
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 px-5">
+              <div class="w-100 subscrible_us_inner_form_box d-flex">
+                <div class="w-100 my-auto">
+              
+          
+            </div>
+          </div>
+              
+            </div>
+            
+          </div>
+        </div>
 
 
       </div>  
