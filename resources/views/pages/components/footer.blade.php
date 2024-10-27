@@ -197,10 +197,7 @@
       $(".main-menu").addClass("default-transition");
       $(".theme-colors").addClass("default-transition");
       $("body > *").animate({ opacity: 1 }, 100);
-      $('html, body').css({
-    overflowX: 'hidden',
-    height: '100%'
-});
+      
     }, 300);
 
     // search box 
