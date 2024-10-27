@@ -26,9 +26,11 @@ $blogs_nav=Blog::get();
 
 </head>
 <style type="text/css">
-   body {
-    
-    overflow-x: hidden!important;
+   html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
 }
   .search_item{
   display: none;
