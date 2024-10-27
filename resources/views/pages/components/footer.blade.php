@@ -149,7 +149,7 @@
             </div>
               
             </div>
-            <div class="col-12 border_t_1 py-5 mt-5 d-flex justify-content-between">
+            <div class="col-12 border_t_1 py-5 mt-5 d_flex_grid justify-content-between">
               <p>Bravepoint.ng © 2024-2030, All Rights Reserved</p>
                <img src="/assets/img/avater/pay.svg">
               
