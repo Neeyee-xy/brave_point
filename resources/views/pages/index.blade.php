@@ -78,45 +78,10 @@ if (!function_exists('find_product_slug')) {
             <div class="col-11 col-sm-11 col-md-12 col-lg-8" data-aos="fade-left" data-aos-delay="300">
               
 
-              <div class="slide_wrap ">
+              <div class="slide_wrap">
                 <div class="slide_show">
                 <div class="slide_img">
-                  <div class="slide  d-flex justify-content-center px-5 mr-3">
-                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_1}}&slug={{find_product_slug($settings?->product_id_1)}}">
-                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_1)}} >
-                  </a>
-                     <!-- <div class="slide_inner_box p-3">
-                      <p>01-</p>
-                      <p>Abdocare Herbal Tea</p>
-                      
-                    </div> -->
-                  </div>
-                  <div class="slide d-flex justify-content-center px-5 mr-3" style="background:#F1F0F3;">
-                     <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_2}}&slug={{find_product_slug($settings?->product_id_2)}}">
-                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_2)}} >
-                  </a>
-
-                  </div>
-                  <div class="slide d-flex justify-content-center px-5 mr-3">
-                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_3}}&slug={{find_product_slug($settings?->product_id_3)}}">
-                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_3)}} >
-                  </a>
-                  </div>
-                   <div class="slide d-flex justify-content-center px-5 mr-3">
-                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_4}}&slug={{find_product_slug($settings?->product_id_4)}}">
-                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_4)}} >
-                  </a>
-                  </div>
-                  <div class="slide d-flex justify-content-center px-5 mr-3">
-                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_5}}&slug={{find_product_slug($settings?->product_id_5)}}">
-                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_5)}} >
-                  </a>
-                  </div>
-                  <div class="slide d-flex justify-content-center px-5 mr-3">
-                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_6}}&slug={{find_product_slug($settings?->product_id_6)}}">
-                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_6)}} >
-                  </a>
-                  </div>
+                 
                   
                   </div> 
                 </div>

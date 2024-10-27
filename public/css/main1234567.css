@@ -267,7 +267,7 @@ li{list-style: none;
   width: 5000px; overflow: hidden;
 }
 .slide_show .slide_img > div{
-  float: left; width: 120px; padding: 5px;
+  float: left; width: 320px; padding: 5px;
 }
 
 
