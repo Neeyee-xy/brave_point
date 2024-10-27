@@ -21,7 +21,7 @@ $blogs_nav=Blog::get();
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/vendor/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/main11.css" />
    <link rel="stylesheet" href="/plugins/toastr/toastr.min.css">
 
 </head>
@@ -35,6 +35,7 @@ $blogs_nav=Blog::get();
   border-radius: 0.375rem;
   padding-left: 10px;
   padding-right: 10px;
+  z-index: 1000;
   }
 .search_item{
   list-style-type: none;
@@ -51,7 +52,7 @@ $blogs_nav=Blog::get();
   color: #e75e8d;
   }
   .search_item li:hover{
-    color: #e75e8d;
+    color: black;
     background-color: #e9ecef;
   }
 </style>
