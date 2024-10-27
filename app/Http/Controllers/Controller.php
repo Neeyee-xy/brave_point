@@ -17,18 +17,18 @@ class Controller extends BaseController
 
     public function __construct()
     {
-        try {
-            $settings = Setting::firstorfail();
+        // try {
+        //     $settings = Setting::firstorfail();
             
-        } catch (ModelNotFoundException $e) {
-           if (Auth::user()?->user_type==UserType::ADMIN->title()) {
-                       return ([
-                            'errors' => 'Paystack secret not found',
-                        ]);
-                   }else{
-                    return (['errors' => 'Something went wrong,contact admin ']);
-                   }
-        }
-        $this->settings =  $settings;
+        // } catch (ModelNotFoundException $e) {
+        //    if (Auth::user()?->user_type==UserType::ADMIN->title()) {
+        //                return ([
+        //                     'errors' => 'Paystack secret not found',
+        //                 ]);
+        //            }else{
+        //             return (['errors' => 'Something went wrong,contact admin ']);
+        //            }
+        // }
+        // $this->settings =  $settings;
     }
 }
