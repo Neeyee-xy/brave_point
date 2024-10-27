@@ -1,5 +1,5 @@
-<div class="container subscrible_us relative" >
-        <div class="subscrible_us_inner_box">
+<div class="container subscrible_us relative d-flex justify-content-center" >
+        <div class="subscrible_us_inner_box" style="left: 20px;">
           <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-8" data-aos="zoom-out"  data-aos-delay="300">
               <div class="w-100 px-5">
@@ -197,14 +197,12 @@
       $(".main-menu").addClass("default-transition");
       $(".theme-colors").addClass("default-transition");
       $("body > *").animate({ opacity: 1 }, 100);
-$('.subscrible_us_inner_box').css({
-    width: '95%'
-});
+
     }, 300);
     setTimeout(function () {
      
 $('.subscrible_us_inner_box').css({
-    width: '70%'
+    width: '90%'
 });
 $('.subscrible_us_inner_box').scrollLeft(10);
     }, 3000);
