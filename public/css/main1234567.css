@@ -1348,7 +1348,7 @@ margin-top: 30px;
   width: 100%;
 }
   .slide_show{
-  width: 335px;
+  width: 135px;
   overflow: hidden;
   position: relative;
   margin: 10px auto;
@@ -1583,7 +1583,7 @@ margin-top: 30px;
   width: 100%;
 }
   .slide_show{
-  width: 335px;
+  width: 135px;
   overflow: hidden;
   position: relative;
   margin: 10px auto;
@@ -1824,7 +1824,7 @@ margin-left: 7px !important;
 }
   /* CSS styles for small screens */
   .slide_show{
-  width: 335px;
+  width: 135px;
   overflow: hidden;
   position: relative;
   margin: 10px auto;
