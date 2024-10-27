@@ -27,6 +27,38 @@ if (!function_exists('find_product_slug')) {
 
     <main>
         
+        <div class="container mt-5 mb-5 relative" data-aos="zoom-in" data-aos-delay="300">
+          <div class="player_center_button">
+              <svg xmlns="http://www.w3.org/2000/svg"  width="4em" height="4em" viewBox="0 0 24 24"><path fill="#F68634" d="M6 4v16a1 1 0 0 0 1.524.852l13-8a1 1 0 0 0 0-1.704l-13-8A1 1 0 0 0 6 4"/></svg>
+              
+            </div>
+            <div class="vido_text p-3   justify-content-center">
+              
+              <h2 class="text-center font-weight-bold ">
+               {{$settings?->video_text1}}
+              </h2 class="text-center font-weight-bold ">
+              <h2 class="text-center font-weight-bold ">
+                {{$settings?->video_text2}}.
+              </h2 class="text-center font-weight-bold ">
+          
+              
+            </div>
+          <div class="player">
+            <video class="player__video viewer" src="{{$settings?->file}}"></video>
+
+            <div class="player__controls">
+              <div class="progress">
+                <div class="progress__filled"></div>
+              </div>
+              <button class="player__button toggle" title="Toggle Play">►</button>
+              <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
+              <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1">
+              <button data-skip="-10" class="player__button">« 10s</button>
+              <button data-skip="25" class="player__button">25s »</button>
+            </div>
+          </div>
+          
+        </div>
         <div class="container mt-5 mb-5">
           <div class="row">
             
