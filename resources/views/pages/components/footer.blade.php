@@ -173,6 +173,11 @@
       <script src="/plugins/toastr/toastr.min.js"></script>
       <script>
  $(document).ready(function(){
+  $(window).scroll(function() {
+        if ($(window).scrollLeft() !== 0) {
+            $(window).scrollLeft(0);
+        }
+    });
    $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
