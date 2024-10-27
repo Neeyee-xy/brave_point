@@ -99,7 +99,7 @@ $blogs_nav=Blog::get();
             </ul>
             <form class="form-inline my-2 my-lg-0" style="position: relative;">
               <input class="form-control search_box search_opacity" type="search" placeholder="Search" aria-label="Search" id="search_list" >
-              <div class="w-100 search_ab_top" style="position: absolute;">
+              <div class="w-100 search_ab_top" style="position: absolute;z-index: 1000;">
                           <ul class="search_item mt-3">
                             @foreach($products_nav as $product_nav)
                             
