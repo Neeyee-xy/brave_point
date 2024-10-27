@@ -62,21 +62,7 @@ if (!function_exists('find_product_slug')) {
               <div class="w-100 subscrible_us_inner_form_box d-flex">
                 <div class="w-100 my-auto">
               
-            <form name="subscribe">  
-                <div class="subscrible_us_email w-100 d-flex ">
-
-                  <div class="form_icon d-flex">
-                    <svg  class="my-auto" xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><g fill="none"><path fill="black" d="M3 5v-.75a.75.75 0 0 0-.75.75zm18 0h.75a.75.75 0 0 0-.75-.75zM3 5.75h18v-1.5H3zM20.25 5v12h1.5V5zM19 18.25H5v1.5h14zM3.75 17V5h-1.5v12zM5 18.25c-.69 0-1.25-.56-1.25-1.25h-1.5A2.75 2.75 0 0 0 5 19.75zM20.25 17c0 .69-.56 1.25-1.25 1.25v1.5A2.75 2.75 0 0 0 21.75 17z"/><path stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m3 5l9 9l9-9"/></g></svg>
-                    
-                  </div>
-                  <input type="email" name="email" class="form-control my-auto border-0" placeholder="Enter your email address">
-                 
-                  
-                </div>
-                 <div class="w-100 mt-1">
-                  <button class=" btn subscrible_us_email_btn low_radius w-100" data-aos="fade-up"  data-aos-delay="600" id="subscribe">Subscribe to Newsletter</button>
-                </div>
-            </form>
+          
             </div>
           </div>
               
