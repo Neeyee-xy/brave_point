@@ -45,7 +45,7 @@ if (!function_exists('find_product_slug')) {
  
 
 
-        <div class="container subscrible_us relative" >
+        <div class=" subscrible_us relative" >
         <div class="subscrible_us_inner_box">
           <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-8" data-aos="zoom-out"  data-aos-delay="300">
