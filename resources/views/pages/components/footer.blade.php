@@ -197,8 +197,17 @@
       $(".main-menu").addClass("default-transition");
       $(".theme-colors").addClass("default-transition");
       $("body > *").animate({ opacity: 1 }, 100);
-
+$('.subscrible_us_inner_box').css({
+    width: '95%'
+});
     }, 300);
+    setTimeout(function () {
+     
+$('.subscrible_us_inner_box').css({
+    width: '70%'
+});
+$('.subscrible_us_inner_box').scrollLeft(10);
+    }, 3000);
 
     // search box 
     $('.search_btn').on('click', function (e) {

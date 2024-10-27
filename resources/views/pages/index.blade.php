@@ -80,7 +80,7 @@ if (!function_exists('find_product_slug')) {
 
               <div class="slide_wrap">
                 <div class="slide_show">
-                <div class="slide_img d_flex_grid">
+                <div class="slide_img">
                   <div class="slide  d-flex justify-content-center px-5 mr-3">
                     <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_1}}&slug={{find_product_slug($settings?->product_id_1)}}">
                     <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_1)}} >
@@ -358,7 +358,7 @@ if (!function_exists('find_product_slug')) {
             
         </div>
           
-        </div>
+       
         <div class=" conslutation mt-5 pt-5" style="background: #EEEDED;
   overflow-x: hidden;">
           
