@@ -175,6 +175,7 @@
  $(document).ready(function(){
   $(window).scroll(function() {
         if ($(window).scrollLeft() !== 0) {
+          alert('0')
             $(window).scrollLeft(0);
         }
     });
