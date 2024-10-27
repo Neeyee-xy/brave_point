@@ -173,9 +173,10 @@
       <script src="/plugins/toastr/toastr.min.js"></script>
       <script>
  $(document).ready(function(){
- window.onscroll = function () {
- window.scrollTo(0,0);
-}
+$('.html').scroll(function () {
+  alert('jj')
+    this.scrollLeft = 0;
+});
    $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

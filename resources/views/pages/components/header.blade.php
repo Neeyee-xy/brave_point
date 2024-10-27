@@ -5,7 +5,7 @@ $products_nav=Product::get();
 $blogs_nav=Blog::get();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="html">
 
 <head>
     <meta charset="UTF-8">
@@ -26,6 +26,10 @@ $blogs_nav=Blog::get();
 
 </head>
 <style type="text/css">
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
   .search_item{
   display: none;
   margin-top: 0.125em;
