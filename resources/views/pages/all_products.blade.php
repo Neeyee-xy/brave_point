@@ -53,7 +53,7 @@ $fullUrl = Request::fullUrl();
           <div class="row">
 
             @foreach($products as $product)
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 fetch_product_details product_{{$product->id}}" product_id="{{$product->id}}" data-aos="fade-left" data-aos-delay="300">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-2 fetch_product_details product_{{$product->id}}" product_id="{{$product->id}}" data-aos="fade-up" data-aos-delay="300">
               <div data-toggle="modal" data-target="#product_details_modal" class="product_card product_card_{{$product->id}} pointer mb-0 mt-0 mt-sm-2 mb-sm-2 ">
                 <div class="product_card_imag_box">
                 <img src="{{$product->image}}">

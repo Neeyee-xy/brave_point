@@ -30,7 +30,7 @@ if (!function_exists('find_product_slug')) {
             <div class="hero_text">
               <h1 class="hero_text_text" data-aos="fade-up" data-aos-delay="300">{{$settings?->hero_text}}</h1>
               <p data-aos="zoom-in" data-aos-delay="300">{{$settings?->hero_sub_text}}</p>
-              <a href="/all_products" class="btn btn_primary low_radius" data-aos="fade-right" data-aos-delay="300">Discover Now</a>
+              <a href="/about_us" class="btn btn_primary low_radius" data-aos="fade-right" data-aos-delay="300">Discover Now</a>
             </div>
         </div> 
 
@@ -75,10 +75,10 @@ if (!function_exists('find_product_slug')) {
               </div>
               
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-8" data-aos="fade-left" data-aos-delay="300">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8" data-aos="fade-up" data-aos-delay="300">
               
 
-              <div class="slide_wrap">
+              <div class="slide_wrap w-100">
                 <div class="slide_show">
                 <div class="slide_img">
                   <div class="slide  d-flex justify-content-center px-5 mr-3">
@@ -219,12 +219,12 @@ if (!function_exists('find_product_slug')) {
             
           </div>
           <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-            <div class="d-flex justify-content-between mt-5" data-aos="flip-left" data-aos-delay="300">
-              <div>
+            <div class="d-flex justify-content-start mt-5" data-aos="flip-left" data-aos-delay="300">
+              <div class="mr-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 14 14"><g fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round"><path d="M.5 7a6.5 6.5 0 1 0 13 0a6.5 6.5 0 1 0-13 0"/><path d="M2.529 7.664c.286-.139.994-.312 1.535.105s.554 1.146.493 1.458c-.06.312-.047 1.04.494 1.457c.54.417 1.249.244 1.535.105M8.833 6.5A1.667 1.667 0 1 0 7.32 4.137a1.25 1.25 0 1 0 .385 1.922a1.66 1.66 0 0 0 1.13.441ZM8.25 9a.25.25 0 1 1 0-.5m0 .5a.25.25 0 1 0 0-.5m-5-3a.25.25 0 1 1 0-.5m0 .5a.25.25 0 1 0 0-.5m7 5a.25.25 0 0 1 0-.5m0 .5a.25.25 0 0 0 0-.5"/></g></svg>
                 
               </div>
-               <div>
+               <div class="mr-2">
                 <h5><b>Malaria and Typhoid</b></h5>
                 <p class="mt-2">Made from pure, natural herbs with no artificial additives.</p>
                 <div class="d-flex">
@@ -236,8 +236,8 @@ if (!function_exists('find_product_slug')) {
               
 
             </div>
-            <div class="d-flex justify-content-between mt-5" data-aos="flip-left" data-aos-delay="300">
-              <div>
+            <div class="d-flex justify-content-start mt-5" data-aos="flip-left" data-aos-delay="300">
+              <div class="mr-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 48 48"><g fill="none" stroke="black"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4.67" d="M19.036 44q-1.47-4.793-4.435-7.147c-2.965-2.353-7.676-.89-9.416-3.318s1.219-6.892 2.257-9.526s-3.98-3.565-3.394-4.313q.585-.748 7.609-4.316Q13.652 4 26.398 4C39.144 4 44 14.806 44 21.68c0 6.872-5.88 14.276-14.256 15.873q-1.123 1.636 3.24 6.447"/><path stroke-linejoin="round" stroke-width="4" d="M19.5 14.5q-.981 3.801.583 5.339q1.563 1.537 5.328 2.01q-.855 4.903 2.083 4.6q2.937-.302 3.53-2.44q4.59 1.29 4.976-2.16c.385-3.45-1.475-6.201-2.238-6.201s-2.738-.093-2.738-1.148s-2.308-1.65-4.391-1.65s-.83-1.405-3.69-.85q-2.86.555-3.443 2.5Z" clip-rule="evenodd"/><path stroke-linecap="round" stroke-width="4" d="M30.5 25.5c-1.017.631-2.412 1.68-3 2.5c-1.469 2.05-2.66 3.298-2.92 4.608"/></g></svg>
                 
               </div>
@@ -253,7 +253,7 @@ if (!function_exists('find_product_slug')) {
 
             </div>
 
-            <div class="d-flex justify-content-between mt-5"  data-aos="flip-left" data-aos-delay="300">
+            <div class="d-flex justify-content-start mt-5"  data-aos="flip-left" data-aos-delay="300">
               <div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 48 48"><path fill="black" fill-rule="evenodd" d="M29.587 16.464c.305-.305.369-.77.235-1.18c-.704-2.149.038-4.903 2.08-6.945c2.687-2.687 6.609-3.123 8.76-.973s1.713 6.072-.974 8.76c-2.018 2.017-4.73 2.766-6.868 2.104c-.406-.126-.862-.057-1.163.244l-.24.241a3.55 3.55 0 0 1-2.719 1.14l-3.224-.12c-2.464-.091-4.308 2.39-3.49 4.699l.273.774c1.29 3.647-1.644 7.562-5.534 7.38l-1.964-.09c-.969-.045-1.748.852-1.566 1.803l.31 1.628c.487 2.549-1.34 5.046-3.934 5.378l-1.46.188a1.467 1.467 0 1 1-.373-2.911l1.57-.202c.865-.11 1.474-.943 1.312-1.792l-.31-1.629c-.545-2.853 1.792-5.544 4.697-5.41l1.965.092c1.768.082 3.102-1.698 2.515-3.355l-.274-.774c-1.517-4.287 1.908-8.896 6.483-8.726l3.224.12a.5.5 0 0 0 .389-.162z" clip-rule="evenodd"/></svg>
                 
@@ -358,7 +358,7 @@ if (!function_exists('find_product_slug')) {
             
         </div>
           
-       
+        </div>
         <div class=" conslutation mt-5 pt-5" style="background: #EEEDED;
   overflow-x: hidden;">
           

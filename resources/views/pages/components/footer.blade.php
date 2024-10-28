@@ -1,5 +1,5 @@
-<div class="container subscrible_us relative d-flex justify-content-center" >
-        <div class="subscrible_us_inner_box" style="left: 10%;">
+<div class="container subscrible_us relative" >
+        <div class="subscrible_us_inner_box">
           <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-8" data-aos="zoom-out"  data-aos-delay="300">
               <div class="w-100 px-5">
@@ -164,7 +164,7 @@
     </footer>
     
 </body>
-
+<footer>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script src="/js/vendor/jquery-3.3.1.min.js"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -173,6 +173,31 @@
       <script src="/plugins/toastr/toastr.min.js"></script>
       <script>
  $(document).ready(function(){
+  
+$(document).on("keyup","#search_list", function(e){
+          var value = $(this).val().toLowerCase();
+          // alert(value)
+          var count=0;
+          $("ul.search_item li").filter(function() {
+            if (value=="") {
+               $('.search_item').hide();
+          }else{
+               $('.search_item').show();
+          }
+            if($(this).text().indexOf(value) > -1) count++;
+        
+
+      // alert(count)
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+
+          if (count===0 && value.length>2) {
+       // $('#not_found').show();
+          }else{
+            // $('#not_found').hide();   
+          }
+
+  });
 
    $.ajaxSetup({
         headers: {
@@ -197,15 +222,7 @@
       $(".main-menu").addClass("default-transition");
       $(".theme-colors").addClass("default-transition");
       $("body > *").animate({ opacity: 1 }, 100);
-
     }, 300);
-    setTimeout(function () {
-     
-$('.subscrible_us_inner_box').css({
-    width: '80%'
-});
-$('.subscrible_us_inner_box').scrollLeft(10);
-    }, 3000);
 
     // search box 
     $('.search_btn').on('click', function (e) {
@@ -1020,7 +1037,7 @@ const ImageSlider = new Slider(document.querySelector(".image-slider"));
 
 })
       </script>
-
+</footer>
 </html>
 
 

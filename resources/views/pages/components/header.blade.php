@@ -21,7 +21,7 @@ $blogs_nav=Blog::get();
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/vendor/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="/css/main71.css" />
+    <link rel="stylesheet" href="/css/main711.css" />
    <link rel="stylesheet" href="/plugins/toastr/toastr.min.css">
 
 </head>
@@ -48,7 +48,7 @@ $blogs_nav=Blog::get();
   letter-spacing: .3px;
   }
   .search_item li a{
-  color: #e75e8d;
+  color: black;
   }
   .search_item li:hover{
     color: black;
@@ -98,7 +98,7 @@ $blogs_nav=Blog::get();
             </ul>
             <form class="form-inline my-2 my-lg-0" style="position: relative;">
               <input class="form-control search_box search_opacity" type="search" placeholder="Search" aria-label="Search" id="search_list" >
-              <div class="w-100 search_ab_top" style="position: absolute;">
+              <div class="w-100 search_ab_top" style="position: absolute;z-index: 10000;">
                           <ul class="search_item mt-3">
                             @foreach($products_nav as $product_nav)
                             
@@ -110,7 +110,7 @@ $blogs_nav=Blog::get();
                             @foreach($blogs_nav as $blog_nav)
                             
                               <li>
-                                <a  class="" href="/read_post?slug={{$product_nav->slug}}">{{$blog_nav->title}}</a>
+                                <a  class="" href="/read_post/{{$blog_nav->slug}}">{{$blog_nav->title}}</a>
                               </li>
                               @endforeach
                            
