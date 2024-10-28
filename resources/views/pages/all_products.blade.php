@@ -37,7 +37,8 @@ $fullUrl = Request::fullUrl();
               <!-- <p class="ml-0 mt-3 ml-sm-0  ml-md-5 mt-sm-2 mt-md-0 w-100 w-sm-100">Showing page 1 of 3</p> -->
               
             </div>
-            <div class="d_flex_grid">
+            <div class="d-none">
+                <!-- <div class="d_flex_grid"> -->
               <select class="form-control select " style="background:#b3b3b3;color: #000000;">
                 <option>Sort By</option>
               </select>
