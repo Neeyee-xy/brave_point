@@ -17,17 +17,17 @@
 </style>
 
 
-<div class="modal fade " id="product_details_modal" tabindex="-1" aria-labelledby="product_details_modalLabel" aria-hidden="true">
+<div class="modal fade " id="view_profile" tabindex="-1" aria-labelledby="view_profileLabel" aria-hidden="true">
   <div class="modal-dialog product_detail_model">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="product_details_modalLabel font-weight-bold">Biography</h5>
+        <h5 class="modal-title" id="view_profileLabel font-weight-bold">Biography</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <img src="/assets/img/about_us/about_us_4.webp" style="height: 300px;width: 100%;">
+        <img src="/assets/img/about_us/about_us_4.webp" style="height: 100%;width: 100%;">
         <div class="w-100">
           <p class="mb-2">Managing Director</p>
           <h3 class=" mb-2">Dr. Abolaji Saheed Alimi</h3>
@@ -70,7 +70,7 @@
 
         
         </div>
-        <div class="w-100" data-aos="fade-left" data-aos-delay="300">
+        <div class="w-100" data-aos="fade-up" data-aos-delay="300">
           
               
 
@@ -113,16 +113,16 @@
             
         </div>
         <div class="container header_text mt-5 ">
-          <h1 class="little_page_title" data-aos="fade-left" data-aos-delay="300">The History of Bravepoint</h1>
-          <h3 data-aos="fade-left" data-aos-delay="300">The Beginnings</h3>
+          <h1 class="little_page_title" data-aos="fade-up" data-aos-delay="300">The History of Bravepoint</h1>
+          <h3 data-aos="fade-up" data-aos-delay="300">The Beginnings</h3>
           <p class="mt-3" data-aos="flip-left" data-aos-delay="300">Dr. Abolaji Saheed Alimi, born on December 24, 1978, into the prestigious royal family of Adeniyi Alimi in Ibadan, Oyo State, has carved a niche for himself in the realm of natural therapy and traditional medicine. His journey, rooted in a rich cultural heritage and driven by an unwavering commitment to health and wellness, is nothing short of inspiring.</p>
           <br>
           <p data-aos="flip-left" data-aos-delay="300">From his early education at CAC Primary School in Ibadan and Renainscent High School, Dr. Alimi exhibited a keen interest in the sciences. This curiosity laid the foundation for his later pursuits. After completing his secondary education in 1996, he joined TOMOLOJU HERBAL COMPANY in 1997, where he quickly rose through the ranks to become a production manager. His tenure there solidified his expertise in herbal medicine and production processes, particularly with the renowned KEBE MIXTURE.</p>
-           <h3 data-aos="fade-left" data-aos-delay="300">The Birth of Bravepoint</h3>
+           <h3 data-aos="fade-up" data-aos-delay="300">The Birth of Bravepoint</h3>
           <p class="mt-3" data-aos="flip-left" data-aos-delay="300">Eager to broaden his horizons, Dr. Alimi transitioned to a sales executive role at GLOBAL POINT ENTERPRISES, where he honed his business acumen between 2004 and 2006. However, his true calling beckoned, and in 2007, he embarked on an entrepreneurial venture that would redefine natural therapy in Nigeria. Establishing Brave Point Holistic Natural Therapy in Lagos, he provided herbal remedies and health solutions that gained significant recognition.</p>
           <br>
           <p data-aos="flip-left" data-aos-delay="300">With a solid educational background and practical experience, Dr. Alimi launched BRAVEPOINT GLOBAL LTD in 2018. Under his leadership, the company introduced a range of NAFDAC-approved and clinically certified products such as AKONI BITTERS, ABDOCARE, IBACODE, and BRAVE MAN BOOSTER. These products, produced in a state-of-the-art facility, have made a significant impact in the herbal medicine industry.</p>
-           <h3 data-aos="fade-left" data-aos-delay="300">Our Process</h3>
+           <h3 data-aos="fade-up" data-aos-delay="300">Our Process</h3>
           <p class="mt-3" data-aos="flip-left" data-aos-delay="300">At Brave Point Global Limited, we meticulously select the finest natural ingredients to create products that are both safe and beneficial. Our team of experts combines traditional herbal knowledge with modern scientific research to develop innovative products that address various health needs. Whether you are seeking remedies to boost your immune system, manage stress, or improve overall vitality, our range of herbal products is designed to support and nurture your health naturally.</p>
           <br>
           <p data-aos="flip-left" data-aos-delay="300">We take pride in our rigorous quality control processes, ensuring that every product meets the highest standards of purity and potency. Our dedication to sustainability and ethical sourcing further reflects our commitment to the well-being of our customers and the environment. By choosing Brave Point Global Limited, you are choosing a company that values integrity, quality, and the healing power of nature.</p>
@@ -133,18 +133,18 @@
                 <p class="text-uppercase little_page_title font-weight-bold">
                 Managing Director
               </p>
-              <h3 class="text-white">
+              <h5 class="text-white">
                 Dr. Abolaji Saheed Alimi
-              </h3>
+              </h5>
                 
               </div>
-              <button class="white_btn mr-lg-3 mr-sm-1 my-auto" data-toggle="modal" data-target="#product_details_modal" data-aos="fade-up"  data-aos-delay="600">View Profile</button>
+              <button class="white_btn mr-lg-3 mr-sm-1 my-auto" data-toggle="modal" data-target="#view_profile" data-aos="fade-up"  data-aos-delay="600">View Profile</button>
               
               
             </div>
           </div>
           <div class="row mt-5">
-            <div class="col-12 col-sm-12 col-md-4" data-aos="fade-left" data-aos-delay="300">
+            <div class="col-12 col-sm-12 col-md-4" data-aos="fade-up" data-aos-delay="300">
                <p class="little_page_title font-weight-bold">OUR VISION</p>
             </div>
            <div class="col-12 col-sm-12 col-md-8" data-aos="flip-left" data-aos-delay="300">
@@ -159,7 +159,7 @@
         </div>
           <div class="row mt-5">
 
-          <div class="col-12 col-sm-12 col-md-4" data-aos="fade-left" data-aos-delay="300">
+          <div class="col-12 col-sm-12 col-md-4" data-aos="fade-up" data-aos-delay="300">
                <p class="little_page_title font-weight-bold">OUR MISSION</p>
             </div>
            <div class="col-12 col-sm-12 col-md-8" data-aos="flip-left" data-aos-delay="300">
@@ -187,7 +187,7 @@
           
         </div>
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 mb-5 mt-5" data-aos="fade-left" data-aos-delay="300">
+            <div class="col-12 col-sm-12 col-md-12 mb-5 mt-5" data-aos="fade-up" data-aos-delay="300">
           <h2>OUR CORE VALUE</h2>
         </div>
           <div class="col-12 col-sm-12 col-md-4" data-aos="flip-up" data-aos-delay="300">
