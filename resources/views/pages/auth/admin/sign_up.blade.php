@@ -7,7 +7,9 @@
     <div class="left_sign_box w_50_100">
          <img  src="/assets/img/hero_image/login.webp" alt="">
          <div class="left_sign_box_inner_box pl-4 pt-2">
+             <a href="/index">
               <img src="/assets/img/logos/logo.jpg" data-aos="zoom-in" data-aos-delay="300">
+          </a>
              
          </div>
         
