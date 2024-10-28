@@ -1,7 +1,7 @@
 <div class="container subscrible_us relative" >
         <div class="subscrible_us_inner_box">
           <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-8" data-aos="zoom-out"  data-aos-delay="300">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8"   data-aos-delay="300">
               <div class="w-100 px-5">
                  <h5 class="">
                 Subscribe to our newsletter for the latest updates, health tips, and exclusive offers straight to your inbox.
@@ -173,7 +173,7 @@
       <script src="/plugins/toastr/toastr.min.js"></script>
       <script>
  $(document).ready(function(){
-  
+
 $(document).on("keyup","#search_list", function(e){
           var value = $(this).val().toLowerCase();
           // alert(value)
