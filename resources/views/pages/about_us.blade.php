@@ -180,7 +180,7 @@
             </h3>
            
            <div class="text-center mt-5">
-                <button class="btn btn_primary low_radius" data-aos="zoom-in" data-aos-delay="300">Shop Now</button>
+                <a href="/all_products" class="btn btn_primary low_radius" data-aos="zoom-in" data-aos-delay="300">Shop Now</a>
               </div>
           </div>
 
