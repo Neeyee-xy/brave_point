@@ -16,8 +16,9 @@
     </div>
     <div class="right_sign_box w_50_100 cart_page">
         <div class="w-100">
+             <a href="/index">
             <img src="/assets/img/logos/BravePoint.svg" data-aos="zoom-in" data-aos-delay="300">
-            
+</a>            
         </div>
         <div class="w-100 mt-5 mb-5">
             <h4>Reset Password</h4>
