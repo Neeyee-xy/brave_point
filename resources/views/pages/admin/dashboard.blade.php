@@ -145,7 +145,7 @@
             <div class="card">
               <div class="card-header border-0">
                 <div class="d-flex justify-content-between">
-                  <h3 class="card-title">Sales</h3>
+                  <h3 class="card-title mt-3 mr-3">Sales</h3>
                  <div class="btn-group float-right float-none-xs mt-2">
                                  <input type="year" name="year" id="year" value="{{$year}}">
                                 <button class="btn  btn-primary  new_btn" type="button" >
@@ -156,7 +156,7 @@
               </div>
               <div class="card-body">
                 <div class="d-flex justify-content-between">
-                  <p class="d-flex flex-column bg-success p-2 rounded">
+                  <p class="d-flex flex-column bg-success p-2 rounded mr-3">
                     <span class="text-bold text-lg">NGN {{number_format(array_sum($amount),2)}}</span>
                     <span>Successfull Sales Over {{$year}}</span>
                   </p>

@@ -167,7 +167,7 @@ function int_payment($order,$transaction)
         
        
         $ref=$transaction->cart_order_id; 
-        $callback_url=env('APP_URL')."verify_payment?ref=".$ref."&order_id=".$order->cart_order_id."";
+        $callback_url=env('APP_URL')."/verify_payment?ref=".$ref."&order_id=".$order->cart_order_id."";
       
         $total=$order->amount*100;
         $url = "https://api.paystack.co/transaction/initialize";
