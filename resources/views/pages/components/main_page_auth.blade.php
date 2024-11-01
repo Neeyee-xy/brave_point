@@ -14,7 +14,7 @@
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/vendor/bootstrap.min.css" />
      <link rel="stylesheet" href="/plugins/toastr/toastr.min.css">
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/main44.css" />
 
 <style>
     .input-group-text {
