@@ -14,10 +14,33 @@
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/vendor/bootstrap.min.css" />
      <link rel="stylesheet" href="/plugins/toastr/toastr.min.css">
+
+
+
+     
     <link rel="stylesheet" href="/css/main44.css" />
 
 <style>
     .input-group-text {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: .375rem .75rem;
+      margin-bottom: 0;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: black;
+      text-align: center;
+      white-space: nowrap;
+      background-color: transparent;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+}
+.input-group-text {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
