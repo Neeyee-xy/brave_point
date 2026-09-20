@@ -235,7 +235,17 @@ Mail::to($request->email)->queue(new NotificationMaller($data));
 
 
 
-    public function verify_token(Request $request)
+    public function change_password_page()
+    {
+        $user = Auth::user();
+        $user->remember_token = Str::random(10);
+        $user->save();
+        $token = $user->remember_token;
+
+        return view('pages.auth.change_password', compact('token'));
+    }
+
+     public function verify_token(Request $request)
     {
        $user=User::where('remember_token',$request->verification_code)->first();
 

@@ -117,6 +117,7 @@ Route::get('/cart', [CartController::class, 'checkout'])->name('checkout')->with
 Route::post('/create_order', [OrderController::class, 'create_order'])->name('create_order')->withoutMiddleware('IncompleteTransactions');;
 Route::get('/verify_payment', [OrderController::class, 'verify_payment'])->name('verify_payment')->withoutMiddleware('IncompleteTransactions');;
 
+Route::get('/account/change_password', [RegisterController::class, 'change_password_page'])->name('change_password_page');
 Route::get('/sign_out', [LoginController::class, 'sign_out'])->name('sign_out');
 Route::post('/view_order', [OrderController::class, 'view_order'])->name('view_order');
 Route::middleware(['Role'])->group(function () {
