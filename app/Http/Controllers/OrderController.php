@@ -296,18 +296,18 @@ public function verify_payment(Request $request)
 
 if ($reponse['data']['status']=="success") {
     // code...
-$transaction->status=$reponse['data']['status'];
- $transaction->save();
- $order->status='Confirmed';
- $order->save();
+    $transaction->status=$reponse['data']['status'];
+    $transaction->save();
+    $order->status='Confirmed';
+    $order->save();
 
 
 }else{
 
     $transaction->status=$reponse['data']['status'];
- $transaction->save();
- $order->status=$reponse['data']['status'];
- $order->save();
+    $transaction->save();
+    $order->status=$reponse['data']['status'];
+    $order->save();
 
 }
 
