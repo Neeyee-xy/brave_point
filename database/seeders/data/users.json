@@ -1,0 +1,53 @@
+[
+    {
+        "id": 10,
+        "name": "Malik akee",
+        "email": "kunleneeyee@gmail.com",
+        "email_verified_at": "2024-10-13 15:03:53",
+        "password": "$2y$10$BTcxvaJZGWwn1cJ9k5pPIun.s1PPGyqMztbhR3cFphLqxDIsSeRby",
+        "remember_token": "ZT9owM4ol5CGTCzBtAZGsXinzn0mbcq4vpFrRaaYsYRHnyMqfnikxCcvs8OI",
+        "created_at": "2024-09-30 04:30:19",
+        "updated_at": "2024-10-15 06:40:46",
+        "user_type": "Admin",
+        "phone": "1311212",
+        "verification_code": "93bt7qcRju",
+        "address": "hhjk",
+        "country": "Afghanistan",
+        "city": "5",
+        "postal_code": "111"
+    },
+    {
+        "id": 11,
+        "name": "Malik akee",
+        "email": "neeyeeakee@gmail.com",
+        "email_verified_at": "2024-10-10 18:46:03",
+        "password": "$2y$10$kZRhfHt8firhLtGwjHhwReEzJx/O/tbZmY18BV2wORVBp1hzaBtti",
+        "remember_token": null,
+        "created_at": "2024-10-08 18:21:02",
+        "updated_at": "2024-10-13 10:23:21",
+        "user_type": "Client",
+        "phone": "090000",
+        "verification_code": "9lR5hmsbVd",
+        "address": "nmnm",
+        "country": "Afghanistan",
+        "city": "5",
+        "postal_code": "111"
+    },
+    {
+        "id": 12,
+        "name": "Malik akee",
+        "email": "neeyeeakee1@gmail.com",
+        "email_verified_at": "2024-10-10 18:46:03",
+        "password": "$2y$10$kZRhfHt8firhLtGwjHhwReEzJx/O/tbZmY18BV2wORVBp1hzaBtti",
+        "remember_token": null,
+        "created_at": "2024-10-08 18:21:02",
+        "updated_at": "2024-10-10 18:46:03",
+        "user_type": "Client",
+        "phone": "090000",
+        "verification_code": "9lR5hmsbVd",
+        "address": null,
+        "country": null,
+        "city": null,
+        "postal_code": null
+    }
+]

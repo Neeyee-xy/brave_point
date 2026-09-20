@@ -1,0 +1,62 @@
+[
+    {
+        "id": 2,
+        "post": "Place <em>some</em> <u>text</u> <strong>here</strong>",
+        "title": "Uncover the potential of herbal remedies in improving overall well-being",
+        "image": "/assets/img/blog/17290582164.webp",
+        "created_at": "2024-10-15 18:18:37",
+        "updated_at": "2024-10-26 23:31:01",
+        "user_id": "10",
+        "slug": "Uncover_the_potential_of_herbal_remedies_in_improving_overall_well-being"
+    },
+    {
+        "id": 3,
+        "post": "Place <em>some</em> <u>text</u> <strong>here</strong>",
+        "title": "Discover the advantages of incorporating herbal solutions for common health problems",
+        "image": "/assets/img/blog/17290584934.webp",
+        "created_at": "2024-10-15 18:19:17",
+        "updated_at": "2024-10-26 23:30:52",
+        "user_id": "10",
+        "slug": "Discover_the_advantages_of_incorporating_herbal_solutions_for_common_health_problems"
+    },
+    {
+        "id": 4,
+        "post": "Place <em>some</em> <u>text</u> <strong>here</strong>",
+        "title": "Delve into the world of herbal API Stack and its potential in addressing health challenges",
+        "image": "/assets/img/blog/17290585074.webp",
+        "created_at": "2024-10-15 18:19:31",
+        "updated_at": "2024-10-26 23:30:35",
+        "user_id": "10",
+        "slug": "Delve_into_the_world_of_herbal_API_Stack_and_its_potential_in_addressing_health_challenges"
+    },
+    {
+        "id": 5,
+        "post": "Place <em>some</em> <u>text</u> <strong>here</strong>",
+        "title": "Delve into the world of herbal API Stack and its potential in addressing health challenges",
+        "image": "/assets/img/blog/17300129534.png",
+        "created_at": "2024-10-27 07:09:13",
+        "updated_at": "2024-10-27 07:09:13",
+        "user_id": "10",
+        "slug": "Delve_into_the_world_of_herbal_API_Stack_and_its_potential_in_addressing_health_challenges"
+    },
+    {
+        "id": 6,
+        "post": "Place <em>some</em> <u>text</u> <strong>here</strong>",
+        "title": "Delve into the world of herbal API Stack and its potential in addressing health challenges",
+        "image": "/assets/img/blog/17300129734.png",
+        "created_at": "2024-10-27 07:09:33",
+        "updated_at": "2024-10-27 07:09:33",
+        "user_id": "10",
+        "slug": "Delve_into_the_world_of_herbal_API_Stack_and_its_potential_in_addressing_health_challenges"
+    },
+    {
+        "id": 7,
+        "post": "Place <em>some</em> <u>text</u> <strong>here</strong>",
+        "title": "Delve into the world of herbal API Stack and its potential in addressing health challenges",
+        "image": "/assets/img/blog/17300130024.png",
+        "created_at": "2024-10-27 07:10:02",
+        "updated_at": "2024-10-27 07:10:02",
+        "user_id": "10",
+        "slug": "Delve_into_the_world_of_herbal_API_Stack_and_its_potential_in_addressing_health_challenges"
+    }
+]
