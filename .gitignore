@@ -16,3 +16,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# Local DB snapshot (contains user data)
+/database/seeders/data/
