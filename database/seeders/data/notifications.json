@@ -1,0 +1,92 @@
+[
+    {
+        "id": 2,
+        "user_id": "11",
+        "user_type": "Client",
+        "status": "true",
+        "message": "Your Order Has Been Completed,Thank you for your recent order",
+        "created_at": "2024-10-15 09:17:35",
+        "updated_at": "2024-10-15 10:28:57",
+        "message_type": "order"
+    },
+    {
+        "id": 3,
+        "user_id": "11",
+        "user_type": "Client",
+        "status": "true",
+        "message": "Your Order is Shipped",
+        "created_at": "2024-10-15 09:18:14",
+        "updated_at": "2024-10-15 10:28:57",
+        "message_type": "order"
+    },
+    {
+        "id": 4,
+        "user_id": "10",
+        "user_type": "Client",
+        "status": "false",
+        "message": "Your Order Has Been Completed,Thank you for your recent order",
+        "created_at": "2024-10-15 09:18:49",
+        "updated_at": "2024-10-15 09:18:49",
+        "message_type": "order"
+    },
+    {
+        "id": 5,
+        "user_id": "10",
+        "user_type": "Client",
+        "status": "false",
+        "message": "Your Order is Confirmed",
+        "created_at": "2024-10-15 10:48:19",
+        "updated_at": "2024-10-15 10:48:19",
+        "message_type": "order"
+    },
+    {
+        "id": 6,
+        "user_id": null,
+        "user_type": "Admin",
+        "status": "true",
+        "message": "New User",
+        "created_at": "2024-10-15 10:48:19",
+        "updated_at": "2024-10-28 20:36:09",
+        "message_type": "user"
+    },
+    {
+        "id": 7,
+        "user_id": "10",
+        "user_type": "Client",
+        "status": "false",
+        "message": "Your Order is Confirmed",
+        "created_at": "2024-10-16 08:10:39",
+        "updated_at": "2024-10-16 08:10:39",
+        "message_type": "order"
+    },
+    {
+        "id": 8,
+        "user_id": null,
+        "user_type": "Admin",
+        "status": "true",
+        "message": "New Order from Malik akee",
+        "created_at": "2024-10-16 08:10:39",
+        "updated_at": "2024-10-28 20:36:09",
+        "message_type": "order"
+    },
+    {
+        "id": 9,
+        "user_id": null,
+        "user_type": "Admin",
+        "status": "true",
+        "message": "New User Registered",
+        "created_at": "2024-10-27 08:10:03",
+        "updated_at": "2024-10-28 20:36:09",
+        "message_type": "user"
+    },
+    {
+        "id": 10,
+        "user_id": null,
+        "user_type": "Admin",
+        "status": "true",
+        "message": "New User Registered",
+        "created_at": "2024-10-27 08:10:38",
+        "updated_at": "2024-10-28 20:36:09",
+        "message_type": "user"
+    }
+]
