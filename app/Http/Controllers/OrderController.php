@@ -130,6 +130,8 @@ class OrderController extends Controller
                 $transaction->save();
                 
                 Cart::where('user_id',$order->user_id)->where('status','In Cart')->update(['cart_order_id'=>$order->cart_order_id,'status'=>'In Order']);
+                $user->name=$request->name;
+                $user->phone=$request->phone;
                 $user->city=$request->city;
                $user->address=$request->address;
                $user->country=$request->country;

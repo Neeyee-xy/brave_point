@@ -11,11 +11,11 @@
           <div class="col-12 col-sm-12 col-md-6">
             <h5 class="font-weight-bold">Contact</h5>
             <input type="email" name="email" class="form-control add_font_league_spartan mt-2" placeholder="Email Address" value="{{Auth::user()->email}}" readonly >
-             <input type="number" name="phone" class="form-control add_font_league_spartan mt-2" placeholder="Phone Number" value="{{Auth::user()->phone}}" readonly>
+             <input type="number" name="phone" class="form-control add_font_league_spartan mt-2" placeholder="Phone Number" value="{{Auth::user()->phone}}">
              <h5 class="font-weight-bold mt-4">Delivery</h5>
              <div class="row mt-2">
               <div class="col-12 col-sm-12 col-md-12">
-                <input type="text" name="name" class="form-control add_font_league_spartan mt-2" placeholder="First Name" value="{{Auth::user()->name}}" readonly>
+                <input type="text" name="name" class="form-control add_font_league_spartan mt-2" placeholder="First Name" value="{{Auth::user()->name}}">
               </div>
              
              </div>
