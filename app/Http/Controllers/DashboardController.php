@@ -193,17 +193,18 @@ Herbal Remedies for Modern Health Challenges']);
     public function save_home_page_settings(Request $request)
     {
       $settings=HomePageSetting::get();
-       
+      $file = null;
+
+        if ($request->hasFile('file')) {
+            $file = "/assets/videos/".time() . '4.' . $request->file->getClientOriginalExtension();
+
+            $request->file->move(public_path('assets/videos/'), $file);
+        }
 
         if (count($settings)>0) {
             $settings = HomePageSetting::first();
-            if ($request->file!==null) {
-
-                $file = "/assets/videos/".time() . '4.' . $request->file->getClientOriginalExtension();
-
-            $request->file->move(public_path('assets/videos/'), $file);
-                // code...
-            }
+            // Keep the existing video when no new one was uploaded
+            $file = $file ?? $settings->file;
             if ($settings?->update(array_merge($request->all(),['file' =>$file]))){
         
         // code...
