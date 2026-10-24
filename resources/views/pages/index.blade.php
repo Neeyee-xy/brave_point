@@ -2,28 +2,26 @@
  <?php
  use App\Models\HomePageSetting;
  use App\Models\Product;
-if (!function_exists('find_product_image')) {
-  function find_product_image($product_id){
-    if ($product_id!==null) {
-      $product_image=Product::find($product_id);
-      if ($product_image!==null) {
-        return "src=".$product_image->image." slug=".$product_image->slug." alt=".$product_image->slug."";
-      }
-    }
 
-  }
-}
-if (!function_exists('find_product_slug')) {
-  function find_product_slug($product_id){
-    if ($product_id!==null) {
-      $product_image=Product::find($product_id);
-      if ($product_image!==null) {
-        return $product_image->slug;
-      }
-    }
+// Load all 11 slot products in one query
+$slotProducts = Product::whereIn('id', array_filter(array_map(fn ($i) => $settings?->{'product_id_'.$i}, range(1, 11))))
+    ->get()->keyBy('id');
 
-  }
-}
+$slotProduct = fn ($i) => $slotProducts->get($settings?->{'product_id_'.$i});
+
+// Image attributes for slot $i: custom slot image first, then the product's image
+$slotImg = function ($i) use ($settings, $slotProduct) {
+    $product = $slotProduct($i);
+    $src = $settings?->{'image_'.$i} ?: $product?->image;
+    if (!$src) {
+        return '';
+    }
+    $alt = $product ? str_replace('_', ' ', $product->name ?? $product->slug) : '';
+    // Slider slots (1-6) are near the top of the page; only lazy-load the footer slots
+    return 'src="'.e($src).'" alt="'.e($alt).'"'.($i > 6 ? ' loading="lazy"' : '');
+};
+
+$slotSlug = fn ($i) => $slotProduct($i)?->slug;
 
 
 
@@ -86,8 +84,8 @@ if (!function_exists('find_product_slug')) {
                 <div class="slide_show">
                 <div class="slide_img">
                   <div class="slide  d-flex justify-content-center px-5 mr-3">
-                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_1}}&slug={{find_product_slug($settings?->product_id_1)}}">
-                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_1)}} >
+                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_1}}&slug={{ $slotSlug(1) }}">
+                    <img  class="slide_img_ my-auto" {!! $slotImg(1) !!} >
                   </a>
                      <!-- <div class="slide_inner_box p-3">
                       <p>01-</p>
@@ -96,29 +94,29 @@ if (!function_exists('find_product_slug')) {
                     </div> -->
                   </div>
                   <div class="slide d-flex justify-content-center px-5 mr-3" style="background:#F1F0F3;">
-                     <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_2}}&slug={{find_product_slug($settings?->product_id_2)}}">
-                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_2)}} >
+                     <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_2}}&slug={{ $slotSlug(2) }}">
+                    <img  class="slide_img_ my-auto" {!! $slotImg(2) !!} >
                   </a>
 
                   </div>
                   <div class="slide d-flex justify-content-center px-5 mr-3">
-                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_3}}&slug={{find_product_slug($settings?->product_id_3)}}">
-                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_3)}} >
+                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_3}}&slug={{ $slotSlug(3) }}">
+                    <img  class="slide_img_ my-auto" {!! $slotImg(3) !!} >
                   </a>
                   </div>
                    <div class="slide d-flex justify-content-center px-5 mr-3">
-                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_4}}&slug={{find_product_slug($settings?->product_id_4)}}">
-                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_4)}} >
+                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_4}}&slug={{ $slotSlug(4) }}">
+                    <img  class="slide_img_ my-auto" {!! $slotImg(4) !!} >
                   </a>
                   </div>
                   <div class="slide d-flex justify-content-center px-5 mr-3">
-                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_5}}&slug={{find_product_slug($settings?->product_id_5)}}">
-                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_5)}} >
+                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_5}}&slug={{ $slotSlug(5) }}">
+                    <img  class="slide_img_ my-auto" {!! $slotImg(5) !!} >
                   </a>
                   </div>
                   <div class="slide d-flex justify-content-center px-5 mr-3">
-                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_6}}&slug={{find_product_slug($settings?->product_id_6)}}">
-                    <img  class="slide_img_ my-auto" {{find_product_image($settings?->product_id_6)}} >
+                    <a  class="my-auto" href="/all_products?product_id={{$settings?->product_id_6}}&slug={{ $slotSlug(6) }}">
+                    <img  class="slide_img_ my-auto" {!! $slotImg(6) !!} >
                   </a>
                   </div>
                   
@@ -325,33 +323,33 @@ if (!function_exists('find_product_slug')) {
           </div>
             <div class="w-100  product_grid d_flex_grid justify-content-between">
               <div class="img_box_footer px-3 py-3 mr-3" data-aos="zoom-in-right"  data-aos-delay="300">
-                <a class="my-auto"  href="/all_products?product_id={{$settings?->product_id_7}}&slug={{find_product_slug($settings?->product_id_7)}}">
+                <a class="my-auto"  href="/all_products?product_id={{$settings?->product_id_7}}&slug={{ $slotSlug(7) }}">
                     
-                    <img  class="mr-2 ml-2 img_box_footer_img" {{find_product_image($settings?->product_id_7)}} >
+                    <img  class="mr-2 ml-2 img_box_footer_img" {!! $slotImg(7) !!} >
                   </a>
                 </div>
                    <div class="img_box_footer px-3 py-3 mr-3" data-aos="zoom-in-right"  data-aos-delay="300">
-                    <a class="my-auto"  href="/all_products?product_id={{$settings?->product_id_8}}&slug={{find_product_slug($settings?->product_id_8)}}">
+                    <a class="my-auto"  href="/all_products?product_id={{$settings?->product_id_8}}&slug={{ $slotSlug(8) }}">
                     
-                    <img  class="mr-2 ml-2 img_box_footer_img" {{find_product_image($settings?->product_id_8)}} >
+                    <img  class="mr-2 ml-2 img_box_footer_img" {!! $slotImg(8) !!} >
                   </a>
                 </div>
                   <div class="img_box_footer px-3 py-3 mr-3" data-aos="zoom-in-right"  data-aos-delay="300">
-                    <a class="my-auto"  href="/all_products?product_id={{$settings?->product_id_9}}&slug={{find_product_slug($settings?->product_id_9)}}">
+                    <a class="my-auto"  href="/all_products?product_id={{$settings?->product_id_9}}&slug={{ $slotSlug(9) }}">
                     
-                    <img  class="mr-2 ml-2 img_box_footer_img" {{find_product_image($settings?->product_id_9)}} >
+                    <img  class="mr-2 ml-2 img_box_footer_img" {!! $slotImg(9) !!} >
                   </a>
                 </div>
                   <div class="img_box_footer px-3 py-3 mr-3" data-aos="zoom-in-right"  data-aos-delay="300">
-                    <a class="my-auto"  href="/all_products?product_id={{$settings?->product_id_10}}&slug={{find_product_slug($settings?->product_id_10)}}">
+                    <a class="my-auto"  href="/all_products?product_id={{$settings?->product_id_10}}&slug={{ $slotSlug(10) }}">
                     
-                    <img  class="mr-2 ml-2 img_box_footer_img" {{find_product_image($settings?->product_id_10)}} >
+                    <img  class="mr-2 ml-2 img_box_footer_img" {!! $slotImg(10) !!} >
                   </a>
                 </div>
                   <div class="img_box_footer px-3 py-3 mr-3" data-aos="zoom-in-right"  data-aos-delay="300">
-                    <a class="my-auto"  href="/all_products?product_id={{$settings?->product_id_11}}&slug={{find_product_slug($settings?->product_id_11)}}">
+                    <a class="my-auto"  href="/all_products?product_id={{$settings?->product_id_11}}&slug={{ $slotSlug(11) }}">
                     
-                    <img  class="mr-2 ml-2 img_box_footer_img" {{find_product_image($settings?->product_id_11)}} >
+                    <img  class="mr-2 ml-2 img_box_footer_img" {!! $slotImg(11) !!} >
                   </a>
                 </div>
               

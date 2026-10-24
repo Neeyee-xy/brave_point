@@ -55,103 +55,9 @@
                     
                   </div>
                 </div>
-                 <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                   <label for="exampleInputEmail1">Leading Product Image 1</label>
-                   <br>
-                   <div class="row" id="heading_image1">
-                    @foreach($products as $product)
-
-                    <div class="col-lg-3"><input type="radio"  class="ml-2" id="" name="product_id_1" placeholder="Enter name"value="{{$product?->id}}">
-                     <h6>{{$product->name}}</h6>
-                   </div>
-                    
-                    @endforeach
-                  </div>
-                    
-                  </div>
-                </div>
-                 <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                   <label for="exampleInputEmail1">Leading Product Image 2</label>
-                   <br>
-                   <div class="row" id="heading_image2">
-                    @foreach($products as $product)
-
-                    <div class="col-lg-3"><input type="radio"  class="ml-2" id="" name="product_id_2" placeholder="Enter name"value="{{$product?->id}}">
-                     <h6>{{$product->name}}</h6>
-                   </div>
-                    
-                    @endforeach
-                  </div>
-                    
-                  </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                   <label for="exampleInputEmail1">Leading Product Image 3</label>
-                   <br>
-                   <div class="row" id="heading_image3">
-                    @foreach($products as $product)
-
-                    <div class="col-lg-3"><input type="radio"  class="ml-2" id="" name="product_id_3" placeholder="Enter name"value="{{$product?->id}}">
-                     <h6>{{$product->name}}</h6>
-                   </div>
-                    
-                    @endforeach
-                  </div>
-                    
-                  </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                   <label for="exampleInputEmail1">Leading Product Image 4</label>
-                   <br>
-                   <div class="row" id="heading_image4">
-                    @foreach($products as $product)
-
-                    <div class="col-lg-3"><input type="radio"  class="ml-2" id="" name="product_id_4" placeholder="Enter name"value="{{$product?->id}}">
-                     <h6>{{$product->name}}</h6>
-                   </div>
-                    
-                    @endforeach
-                  </div>
-                    
-                  </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                   <label for="exampleInputEmail1">Leading Product Image 5</label>
-                   <br>
-                   <div class="row" id="heading_image5">
-                    @foreach($products as $product)
-
-                    <div class="col-lg-3"><input type="radio"  class="ml-2" id="" name="product_id_5" placeholder="Enter name"value="{{$product?->id}}">
-                     <h6>{{$product->name}}</h6>
-                   </div>
-                    
-                    @endforeach
-                  </div>
-                    
-                  </div>
-                </div>
-                 
-                  <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                   <label for="exampleInputEmail1">Leading Product Image 6</label>
-                   <br>
-                   <div class="row" id="heading_image6">
-                    @foreach($products as $product)
-
-                    <div class="col-lg-3"><input type="radio"  class="ml-2" id="" name="product_id_6" placeholder="Enter name"value="{{$product?->id}}">
-                     <h6>{{$product->name}}</h6>
-                   </div>
-                    
-                    @endforeach
-                  </div>
-                    
-                  </div>
-                </div>
+                @for ($slot = 1; $slot <= 6; $slot++)
+                  @include("pages.admin.partials.home_slot", ["slot" => $slot, "label" => "Leading Product Image ".$slot])
+                @endfor
                 <div class="col-12 col-sm-12 col-md-12">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Home Page Video</label>
@@ -195,86 +101,9 @@
                   </div>
                 </div>
                
-                <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                   <label for="exampleInputEmail1">Footer Product Image 1</label>
-                   <br>
-                   <div class="row" id="heading_image7">
-                    @foreach($products as $product)
-
-                    <div class="col-lg-3"><input type="radio"  class="ml-2" id="" name="product_id_7" placeholder="Enter name"value="{{$product?->id}}">
-                     <h6>{{$product->name}}</h6>
-                   </div>
-                    
-                    @endforeach
-                  </div>
-                    
-                  </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                   <label for="exampleInputEmail1">Footer Product Image 2</label>
-                   <br>
-                   <div class="row" id="heading_image8">
-                    @foreach($products as $product)
-
-                    <div class="col-lg-3"><input type="radio"  class="ml-2" id="" name="product_id_8" placeholder="Enter name"value="{{$product?->id}}">
-                     <h6>{{$product->name}}</h6>
-                   </div>
-                    
-                    @endforeach
-                  </div>
-                    
-                  </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                   <label for="exampleInputEmail1">Footer Product Image 3</label>
-                   <br>
-                   <div class="row" id="heading_image9">
-                    @foreach($products as $product)
-
-                    <div class="col-lg-3"><input type="radio"  class="ml-2" id="" name="product_id_9" placeholder="Enter name"value="{{$product?->id}}">
-                     <h6>{{$product->name}}</h6>
-                   </div>
-                    
-                    @endforeach
-                  </div>
-                    
-                  </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                   <label for="exampleInputEmail1">Footer Product Image 4</label>
-                   <br>
-                   <div class="row" id="heading_image10">
-                    @foreach($products as $product)
-
-                    <div class="col-lg-3"><input type="radio"  class="ml-2" id="" name="product_id_10" placeholder="Enter name"value="{{$product?->id}}">
-                     <h6>{{$product->name}}</h6>
-                   </div>
-                    
-                    @endforeach
-                  </div>
-                    
-                  </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                   <label for="exampleInputEmail1">Footer Product Image 5</label>
-                   <br>
-                   <div class="row" id="heading_image11">
-                    @foreach($products as $product)
-
-                    <div class="col-lg-3"><input type="radio"  class="ml-2" id="" name="product_id_11" placeholder="Enter name"value="{{$product?->id}}">
-                     <h6>{{$product->name}}</h6>
-                   </div>
-                    
-                    @endforeach
-                  </div>
-                    
-                  </div>
-                </div>
+                @for ($slot = 7; $slot <= 11; $slot++)
+                  @include("pages.admin.partials.home_slot", ["slot" => $slot, "label" => "Footer Product Image ".($slot - 6)])
+                @endfor
                  
                 
                  
@@ -326,17 +155,6 @@ $('#summernote').summernote({
 
 
  
-$('#heading_image1').find('input[type="radio"]').filter('[value="{{$settings?->product_id_1}}"]').prop('checked', true);
-$('#heading_image2').find('input[type="radio"]').filter('[value="{{$settings?->product_id_2}}"]').prop('checked', true);
-$('#heading_image3').find('input[type="radio"]').filter('[value="{{$settings?->product_id_3}}"]').prop('checked', true);
-$('#heading_image4').find('input[type="radio"]').filter('[value="{{$settings?->product_id_4}}"]').prop('checked', true);
-$('#heading_image5').find('input[type="radio"]').filter('[value="{{$settings?->product_id_5}}"]').prop('checked', true);
-$('#heading_image6').find('input[type="radio"]').filter('[value="{{$settings?->product_id_6}}"]').prop('checked', true);
-$('#heading_image7').find('input[type="radio"]').filter('[value="{{$settings?->product_id_7}}"]').prop('checked', true);
-$('#heading_image8').find('input[type="radio"]').filter('[value="{{$settings?->product_id_8}}"]').prop('checked', true);
-$('#heading_image9').find('input[type="radio"]').filter('[value="{{$settings?->product_id_9}}"]').prop('checked', true);
-$('#heading_image10').find('input[type="radio"]').filter('[value="{{$settings?->product_id_10}}"]').prop('checked', true);
-$('#heading_image11').find('input[type="radio"]').filter('[value="{{$settings?->product_id_11}}"]').prop('checked', true);
 
 
 
@@ -368,7 +186,9 @@ $('#heading_image11').find('input[type="radio"]').filter('[value="{{$settings?->
           var errors_msg=data.hasOwnProperty('errors')
            if (success_msg== true) {
             toastr.success(data.success)
-               
+            // Reload so the slot previews show the newly saved images
+            setTimeout(function () { location.reload(); }, 1000);
+
             $("#save_settings").html("Save Settings");
             $("#save_settings").prop("disabled",false);
              // toastr.success_msg(data.errors)

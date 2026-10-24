@@ -4,6 +4,15 @@
 
 
 <link rel="stylesheet" href="/plugins/summernote/summernote-bs4.min.css">
+<style>
+  .leading-post-option { cursor: pointer; position: relative; }
+  .leading-post-option input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+  .leading-post-option .card { border: 2px solid #dee2e6; transition: border-color .15s, box-shadow .15s; }
+  .leading-post-option:hover .card { border-color: #9ec5fe; }
+  .leading-post-option input:checked + .card { border-color: #007bff; box-shadow: 0 0 0 .2rem rgba(0,123,255,.25); }
+  .leading-post-option input:focus-visible + .card { outline: 2px solid #007bff; outline-offset: 2px; }
+  .leading-post-option .card-img-top { height: 90px; object-fit: cover; }
+</style>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -42,73 +51,33 @@
                   <div class="row">
                     
                   
-                  <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Heading 1</label>
-                    <input type="text" class="form-control" id="heading1" name="heading1" placeholder="Enter name" value="{{$settings?->heading1}}">
-                    
+                  <div class="col-12">
+                    <h5 class="mb-3">Page Headings</h5>
                   </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Heading 2</label>
-                    <input type="text" class="form-control" id="heading2" name="heading2" placeholder="Enter name"value="{{$settings?->heading2}}">
-                    
+                  <div class="col-12 col-md-4">
+                    <div class="form-group">
+                      <label for="heading1">Heading 1 <small class="text-muted">(small label above the title)</small></label>
+                      <input type="text" class="form-control" id="heading1" name="heading1" placeholder="e.g. Our Blog" value="{{$settings?->heading1}}">
+                    </div>
                   </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Heading 3</label>
-                    <input type="text" class="form-control" id="heading3" name="heading3" placeholder="Enter name"value="{{$settings?->heading3}}">
-                    
+                  <div class="col-12 col-md-4">
+                    <div class="form-group">
+                      <label for="heading2">Heading 2 <small class="text-muted">(main title)</small></label>
+                      <input type="text" class="form-control" id="heading2" name="heading2" placeholder="e.g. Herbal health insights" value="{{$settings?->heading2}}">
+                    </div>
                   </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                   <label for="exampleInputEmail1">Leading Post 1</label>
-                   <br>
-                   <div id="heading_image1">
-                    @foreach($blogs as $blog)
-
-                    <input type="radio"  class="ml-2" id="" name="heading_image1" placeholder="Enter name"value="{{$blog?->id}}">
-                     <label for="exampleInputEmail1">{{$blog->title}}</label>
-                    
-                    @endforeach
+                  <div class="col-12 col-md-4">
+                    <div class="form-group">
+                      <label for="heading3">Heading 3 <small class="text-muted">(subtitle)</small></label>
+                      <input type="text" class="form-control" id="heading3" name="heading3" placeholder="e.g. Tips and stories from our experts" value="{{$settings?->heading3}}">
+                    </div>
                   </div>
-                    
+                  <div class="col-12">
+                    <h5 class="mt-2 mb-3">Leading Posts</h5>
                   </div>
-                </div>
-                 
-                 <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                   <label for="exampleInputEmail1">Leading Post 2</label>
-                   <br>
-                   <div id="heading_image2">
-                    @foreach($blogs as $blog)
-
-                    <input type="radio"  class="ml-2" id="" name="heading_image2" placeholder="Enter name"value="{{$blog?->id}}">
-                     <label for="exampleInputEmail1">{{$blog->title}}</label>
-                    
-                    @endforeach
-                  </div>
-                    
-                  </div>
-                </div>
-                  <div class="col-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                   <label for="exampleInputEmail1">Leading Post 3</label>
-                   <br>
-                   <div id="heading_image3">
-                    @foreach($blogs as $blog)
-
-                    <input type="radio"  class="ml-2" id="" name="heading_image3" placeholder="Enter name"value="{{$blog?->id}}">
-                     <label for="exampleInputEmail1">{{$blog->title}}</label>
-                    
-                    @endforeach
-                  </div>
-                    
-                  </div>
-                </div>
+                @for ($slot = 1; $slot <= 3; $slot++)
+                  @include("pages.admin.blog.partials.leading_post", ["slot" => $slot])
+                @endfor
                  
                    
                  
@@ -159,9 +128,6 @@ $('#summernote').summernote({
 
  
 
-$('#heading_image1').find('input[type="radio"]').filter('[value="{{$settings?->heading_image1}}"]').prop('checked', true);
-$('#heading_image2').find('input[type="radio"]').filter('[value="{{$settings?->heading_image2}}"]').prop('checked', true);
-$('#heading_image3').find('input[type="radio"]').filter('[value="{{$settings?->heading_image3}}"]').prop('checked', true);
 
   $('form[name="product_form"]').on('submit',(function(e){
  
@@ -190,6 +156,8 @@ $('#heading_image3').find('input[type="radio"]').filter('[value="{{$settings?->h
           var errors_msg=data.hasOwnProperty('errors')
            if (success_msg== true) {
             toastr.success(data.success)
+            // Reload so the previews show the newly saved images
+            setTimeout(function () { location.reload(); }, 1000);
                
             $("#save_settings").html("Save Settings");
             $("#save_settings").prop("disabled",false);

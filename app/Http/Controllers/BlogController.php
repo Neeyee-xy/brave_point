@@ -35,23 +35,51 @@ class BlogController extends Controller
 
     public function save_settings(Request $request)
     {
-      $settings=BlogSetting::get();
-      if (count($settings)>0) {
-        $settings = BlogSetting::first();
-        if ($settings?->update(array_merge($request->all()))){
-    
-    // code...
-
-  
-      return (['success' => 'Setting update successfully']);
-
-       }
-
-      }else{
-         if (BlogSetting::create( array_merge($request->all()))) {
-            return (['success' => 'Setting saved successfully']);
-         }
+      $slots = range(1, 3);
+      $rules = [];
+      foreach ($slots as $i) {
+          $rules['leading_image'.$i] = 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048';
       }
+      $this->validate($request, $rules, [
+          'image' => 'Each leading post image must be an image file (jpeg, png, jpg, gif, svg, webp).',
+          'max' => 'Each leading post image must not be larger than 2MB.',
+      ]);
+
+      $settings = BlogSetting::first();
+
+      $data = $request->except(array_merge(
+          ['_token'],
+          array_map(fn ($i) => 'leading_image'.$i, $slots),
+          array_map(fn ($i) => 'remove_leading_image'.$i, $slots)
+      ));
+
+      // Custom leading post images: an upload replaces the image, "remove" falls back to the post image
+      foreach ($slots as $i) {
+          $old = $settings?->{'leading_image'.$i};
+
+          if ($request->hasFile('leading_image'.$i)) {
+              $upload = $request->file('leading_image'.$i);
+              $name = time().'_leading'.$i.'_'.uniqid().'.'.$upload->getClientOriginalExtension();
+              $upload->move(public_path('assets/img/blog/leading/'), $name);
+              $data['leading_image'.$i] = '/assets/img/blog/leading/'.$name;
+          } elseif ($request->boolean('remove_leading_image'.$i)) {
+              $data['leading_image'.$i] = null;
+          } else {
+              continue;
+          }
+
+          if ($old && is_file(public_path($old))) {
+              unlink(public_path($old));
+          }
+      }
+
+      if ($settings) {
+          $settings->update($data);
+          return (['success' => 'Setting update successfully']);
+      }
+
+      BlogSetting::create($data);
+      return (['success' => 'Setting saved successfully']);
     }
 
      public function create(Request $request)

@@ -192,33 +192,57 @@ Herbal Remedies for Modern Health Challenges']);
 
     public function save_home_page_settings(Request $request)
     {
-      $settings=HomePageSetting::get();
-      $file = null;
-
-        if ($request->hasFile('file')) {
-            $file = "/assets/videos/".time() . '4.' . $request->file->getClientOriginalExtension();
-
-            $request->file->move(public_path('assets/videos/'), $file);
-        }
-
-        if (count($settings)>0) {
-            $settings = HomePageSetting::first();
-            // Keep the existing video when no new one was uploaded
-            $file = $file ?? $settings->file;
-            if ($settings?->update(array_merge($request->all(),['file' =>$file]))){
-        
-        // code...
-
-      
-                return (['success' => 'Setting update successfully']);
-
-           }
-
-      }else{
-         if (HomePageSetting::create(array_merge($request->all(),['file' =>$file]))) {
-            return (['success' => 'Setting saved successfully']);
-         }
+      $slots = range(1, 11);
+      $rules = [];
+      foreach ($slots as $i) {
+          $rules['image_'.$i] = 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048';
       }
+      $this->validate($request, $rules, [
+          'image' => 'Each slot image must be an image file (jpeg, png, jpg, gif, svg, webp).',
+          'max' => 'Each slot image must not be larger than 2MB.',
+      ]);
+
+      $settings = HomePageSetting::first();
+
+      $data = $request->except(array_merge(
+          ['file', '_token'],
+          array_map(fn ($i) => 'image_'.$i, $slots),
+          array_map(fn ($i) => 'remove_image_'.$i, $slots)
+      ));
+
+      if ($request->hasFile('file')) {
+          $file = "/assets/videos/".time() . '4.' . $request->file->getClientOriginalExtension();
+          $request->file->move(public_path('assets/videos/'), $file);
+          $data['file'] = $file;
+      }
+
+      // Custom slot images: an upload replaces the slot image, "remove" falls back to the product image
+      foreach ($slots as $i) {
+          $old = $settings?->{'image_'.$i};
+
+          if ($request->hasFile('image_'.$i)) {
+              $upload = $request->file('image_'.$i);
+              $name = time().'_slot'.$i.'_'.uniqid().'.'.$upload->getClientOriginalExtension();
+              $upload->move(public_path('assets/img/home/'), $name);
+              $data['image_'.$i] = '/assets/img/home/'.$name;
+          } elseif ($request->boolean('remove_image_'.$i)) {
+              $data['image_'.$i] = null;
+          } else {
+              continue;
+          }
+
+          if ($old && is_file(public_path($old))) {
+              unlink(public_path($old));
+          }
+      }
+
+      if ($settings) {
+          $settings->update($data);
+          return (['success' => 'Setting update successfully']);
+      }
+
+      HomePageSetting::create($data);
+      return (['success' => 'Setting saved successfully']);
       
     }
 

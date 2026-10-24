@@ -72,12 +72,12 @@ if (!function_exists('find_first_post')) {
         <div class="container">
           <div class="row">
             <div class="col-12 col-sm-12 col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="300">
-              @if($settings?->heading_image1!==null)
+              @if($settings?->heading_image1!==null && ($first_post=find_first_post($settings?->heading_image1)))
               @php
-              $first_post=find_first_post($settings?->heading_image1)
+              $first_post_image=$settings?->leading_image1 ?: $first_post->image
               @endphp
               <div class="w-100 leading_blog_box_1">
-                <img src="{{$first_post->image}}">
+                <img src="{{$first_post_image}}" alt="{{$first_post->title}}">
                 <div class="mb-2 mt-2">
                   <p class="little_page_title " data-aos="zoom-in" data-aos-delay="300">{{ucfirst($first_post?->user?->name)}} • {{Helper::time_elapsed_string($first_post->created_at, $full = false)}}</p>
                 </div>
@@ -105,12 +105,12 @@ if (!function_exists('find_first_post')) {
 
                
               <div class="w-100 leading_blog_box_2 d_flex_grid">
-              @if($settings?->heading_image2!==null)
+              @if($settings?->heading_image2!==null && ($first_post=find_first_post($settings?->heading_image2)))
               @php
-              $first_post=find_first_post($settings?->heading_image2)
+              $first_post_image=$settings?->leading_image2 ?: $first_post->image
               @endphp
 
-              <img src="{{$first_post->image}}">
+              <img src="{{$first_post_image}}" alt="{{$first_post->title}}">
                 <div class="ml-2">
                 <div class="mb-1 mt-1">
                   <p class="little_page_title " data-aos="zoom-in" data-aos-delay="300">{{ucfirst($first_post?->user?->name)}} • {{Helper::time_elapsed_string($first_post->created_at, $full = false)}}</p>
@@ -133,12 +133,12 @@ if (!function_exists('find_first_post')) {
               </div>
 
               <div class="w-100 leading_blog_box_2 d_flex_grid">
-              @if($settings?->heading_image3!==null)
+              @if($settings?->heading_image3!==null && ($first_post=find_first_post($settings?->heading_image3)))
               @php
-              $first_post=find_first_post($settings?->heading_image3)
+              $first_post_image=$settings?->leading_image3 ?: $first_post->image
               @endphp
 
-              <img src="{{$first_post->image}}">
+              <img src="{{$first_post_image}}" alt="{{$first_post->title}}">
                 <div class="ml-2">
                 <div class="mb-1 mt-1">
                   <p class="little_page_title " data-aos="zoom-in" data-aos-delay="300">{{ucfirst($first_post?->user?->name)}} • {{Helper::time_elapsed_string($first_post->created_at, $full = false)}}</p>
