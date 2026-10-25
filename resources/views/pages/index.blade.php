@@ -187,7 +187,8 @@ $slotSlug = fn ($i) => $slotProduct($i)?->slug;
               
             </div>
           <div class="player">
-            <video class="player__video viewer" src="{{$settings?->file}}"></video>
+            {{-- The video is only downloaded when play is clicked (see player script in footer) --}}
+            <video class="player__video viewer video-pending" data-src="{{$settings?->file}}" preload="none" playsinline></video>
 
             <div class="player__controls">
               <div class="progress">

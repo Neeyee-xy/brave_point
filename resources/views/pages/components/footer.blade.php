@@ -852,7 +852,19 @@ $('.player_center_button').on('click', function (e) {
   const ranges = player.find(".player__slider");
 
   // Function definitions
+  // The homepage video has no src until first play, so it isn't downloaded on page load
+  function loadVideo() {
+    const el = video[0];
+    if (el && !el.getAttribute("src") && el.dataset.src) {
+      el.src = el.dataset.src;
+      el.preload = "auto";
+      el.classList.remove("video-pending");
+    }
+  }
+
   function togglePlay() {
+    if (!video[0]) return;
+    loadVideo();
     const method = video[0].paused ? "play" : "pause";
     video[0][method](); // Use element[0] to access the DOM element
   }
@@ -876,6 +888,7 @@ $('.player_center_button').on('click', function (e) {
   }
 
   function scrub(e) {
+    if (!video[0].duration) return;
     const scrubTime = e.offsetX / progress.width() * video[0].duration;
     video[0].currentTime = scrubTime;
   }

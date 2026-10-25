@@ -382,6 +382,13 @@ height: auto;
   width: 100%;
 }
 
+/* Placeholder size for the homepage video before it is loaded on first play */
+.player__video.video-pending {
+  aspect-ratio: 16 / 9;
+  background: #1a1a1a;
+  display: block;
+}
+
 .player__button {
   background: none;
   border: 0;
