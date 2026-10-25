@@ -49,7 +49,13 @@
                      <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="black" d="M12 13a1.49 1.49 0 0 0-1 2.61V17a1 1 0 0 0 2 0v-1.39A1.49 1.49 0 0 0 12 13m5-4V7A5 5 0 0 0 7 7v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3M9 7a3 3 0 0 1 6 0v2H9Zm9 12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1Z"/></svg>
                   </div>
                 </div>
-                <input type="text" class="form-control google_login" id="password" style="border-left: 0px !important;" placeholder="Password">
+                <input type="password" autocomplete="current-password" class="form-control google_login" id="password" style="border-left: 0px !important; border-right: 0px !important;" placeholder="Password">
+                <div class="input-group-append">
+                  <button type="button" class="input-group-text google_login toggle_password" data-target="#password" aria-label="Show password" title="Show password" style="cursor: pointer;">
+                    <svg class="eye_open" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><g fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7s10 7 10 7s-3.5 7-10 7s-10-7-10-7"/><circle cx="12" cy="12" r="3"/></g></svg>
+                    <svg class="eye_closed d-none" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><g fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.6 6.1A9.8 9.8 0 0 1 12 6c6.5 0 10 6 10 6a17 17 0 0 1-2.4 3.1M6.6 6.6C3.7 8.4 2 12 2 12s3.5 7 10 7a9.7 9.7 0 0 0 5.4-1.6"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2M3 3l18 18"/></g></svg>
+                  </button>
+                </div>
               </div>
         </div>
         <div class="w-100">
@@ -70,8 +76,22 @@
         
         
     </div>
-    
+
 </div>
 
+<script>
+  // Show / hide the password field
+  document.querySelectorAll('.toggle_password').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var input = document.querySelector(btn.dataset.target);
+      var show = input.type === 'password';
+      input.type = show ? 'text' : 'password';
+      btn.querySelector('.eye_open').classList.toggle('d-none', show);
+      btn.querySelector('.eye_closed').classList.toggle('d-none', !show);
+      btn.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+      btn.title = show ? 'Hide password' : 'Show password';
+    });
+  });
+</script>
 </body>
 @endsection

@@ -54,11 +54,11 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Password</label>
-                    <input type="number" class="form-control" id="password" name="password" placeholder="Enter Password">
+                    <input type="password" autocomplete="new-password" class="form-control" id="password" name="password" placeholder="Enter Password">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Confrim Password</label>
-                    <input type="number" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Enter Confrim Password">
+                    <input type="password" autocomplete="new-password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Enter Confrim Password">
                   </div>
                   
                  
